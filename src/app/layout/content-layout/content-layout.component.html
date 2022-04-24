@@ -1,9 +1,0 @@
-<app-header *ngIf="mobileQuery.matches"></app-header>
-<div fxLayout="row"
-     fxFlex>
-    <app-sidenav *ngIf="!mobileQuery.matches"></app-sidenav>
-    <div class="container"
-         fxFlex>
-        <router-outlet></router-outlet>
-    </div>
-</div>

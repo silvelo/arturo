@@ -1,29 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 
+
 html,
 body {
-  height: 100%;
+    overflow-x: hidden;
+    padding   : 0;
+    margin    : 0;
+    height    : 100%;
+    width     : 100%;
 }
-
-body {
-  margin: 0;
-  font-family: "Helvetica", sans-serif;
-}
-
-.img-responsive {
-  width: 100%;
-  max-width: 160px;
-  height: auto;
-}
-
-
-//lt-sm	
-@media screen and (max-width: 599px){}
-//lt-md	
-@media screen and (max-width: 959px){}
-//lt-lg	
-@media screen and (max-width: 1279px){}
-//lt-xl	
-@media screen and (max-width: 1919px){}
-
-
