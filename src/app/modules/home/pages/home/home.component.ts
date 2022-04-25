@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'
+import { ButterService } from 'src/app/data/butter/service/butter.service'
+import { Me } from 'src/app/data/butter/types/me'
 
 @Component({
   selector: 'app-home',
@@ -6,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  public me: Me | null = null
+  constructor(private butterService: ButterService) {}
 
-  constructor() { }
-
-  ngOnInit(): void {
+  async ngOnInit() {
+    const butterResponse = await this.butterService.getMe()
+    this.me = butterResponse.data.me[0]
   }
-
 }

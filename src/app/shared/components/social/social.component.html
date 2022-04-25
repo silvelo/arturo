@@ -1,0 +1,17 @@
+<div *ngFor="let social of socialList"
+     [ngSwitch]="social.id">
+    <div *ngSwitchCase="'github'">
+        <button mat-icon-button
+                (click)="onClick(social.link)">
+            <fa-icon size="2x"
+                     [icon]="faGithub"></fa-icon>
+        </button>
+    </div>
+    <div *ngSwitchCase="'linkedin'">
+        <button mat-icon-button
+                (click)="onClick(social.link)">
+            <fa-icon size="2x"
+                     [icon]="faLinkedin"></fa-icon>
+        </button>
+    </div>
+</div>

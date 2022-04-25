@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, NgZone, OnInit } from '@angular/core'
+import { ButterService } from 'src/app/data/butter/service/butter.service'
+import { Sidenav } from 'src/app/data/butter/types/sidenav'
 
 @Component({
   selector: 'app-custom-layout',
@@ -6,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./custom-layout.component.scss']
 })
 export class CustomLayoutComponent implements OnInit {
+  public sidenav: Sidenav[] = []
 
-  constructor() { }
+  constructor(
+    private cdf: ChangeDetectorRef,
+    private butterService: ButterService
+  ) {}
 
-  ngOnInit(): void {
+  async ngOnInit() {
+    const butterResponse = await this.butterService.getSidenav()
+    this.sidenav = butterResponse.data.sidenav
   }
-
 }

@@ -1,14 +1,9 @@
 <img class="avatar"
-     src="https://cdn.buttercms.com/pwKIS23RhyxXS2Cx4R2B" />
+     alt="Profile"
+     [src]="me?.profile_photo" />
 
 
-<h3 class="name">Arturo <span>Silvelo</span></h3>
-<p class="job">Javascript Full Stack Developer</p>
-<div class="social">
-    <ul>
-        <li><a href="#"><i class="icon-facebook-squared"></i></a></li>
-        <li><a href="#"><i class="icon-twitter-squared"></i></a></li>
-        <li><a href="#"><i class="icon-behance-squared"></i></a></li>
-        <li><a href="#"><i class="icon-linkedin-squared"></i></a></li>
-    </ul>
-</div>
+<h3 class="name">{{me?.name}} <span>{{me?.surname}}</span></h3>
+<p class="job">{{me?.job}}</p>
+
+<app-social></app-social>
