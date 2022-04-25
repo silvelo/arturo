@@ -1,6 +1,6 @@
 <app-header (toggle)="snav.toggle()"></app-header>
 
-<mat-sidenav-container fxFill>
+<mat-sidenav-container>
     <mat-sidenav #snav
                  position="end">
         <mat-nav-list *ngIf="sidenav">
@@ -10,7 +10,7 @@
         </mat-nav-list>
     </mat-sidenav>
 
-    <mat-sidenav-content fxFill>
+    <mat-sidenav-content>
         <router-outlet></router-outlet>
     </mat-sidenav-content>
 </mat-sidenav-container>
