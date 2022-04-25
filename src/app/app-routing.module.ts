@@ -16,6 +16,32 @@ const routes: Routes = [
         path: 'home',
         loadChildren: () =>
           import('./modules/home/home.module').then((m) => m.HomeModule)
+      },
+      {
+        path: 'education',
+        loadChildren: () =>
+          import('./modules/education/education.module').then(
+            (m) => m.EducationModule
+          )
+      },
+      {
+        path: 'experience',
+        loadChildren: () =>
+          import('./modules/experience/experience.module').then(
+            (m) => m.ExperienceModule
+          )
+      },
+      {
+        path: 'portfolio',
+        loadChildren: () =>
+          import('./modules/portfolio/portfolio.module').then(
+            (m) => m.PortfolioModule
+          )
+      },
+      {
+        path: 'about',
+        loadChildren: () =>
+          import('./modules/about/about.module').then((m) => m.AboutModule)
       }
     ]
   },

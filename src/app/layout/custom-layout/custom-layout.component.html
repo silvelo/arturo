@@ -5,7 +5,7 @@
                  position="end">
         <mat-nav-list *ngIf="sidenav">
             <a mat-list-item
-               routerLink="."
+               [routerLink]="nav.link"
                *ngFor="let nav of sidenav">{{nav.name}}</a>
         </mat-nav-list>
     </mat-sidenav>
