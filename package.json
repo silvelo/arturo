@@ -6,7 +6,13 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "tag:patch": "npm version patch",
+    "tag:minor": "npm version minor",
+    "tag:mayor": "npm version mayor",
+    "deploy:patch": "npm run tag:patch && git push --tags",
+    "deploy:minor": "npm run tag:minor && git push --tags",
+    "deploy:mayor": "npm run tag:mayor && git push --tags"
   },
   "private": true,
   "dependencies": {
