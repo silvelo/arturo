@@ -1,1 +1,22 @@
-<p>experience works!</p>
+<mat-tab-group mat-align-tabs="center">
+    <mat-tab label="Experience">
+        <mat-card *ngFor="let experience of experienceList"
+                  class="mat-elevation-z8">
+            <mat-card-header>
+                <img mat-card-avatar
+                     [src]="experience.company_logo"
+                     alt="Institution Logo">
+                <mat-card-title>{{experience.company_name}}</mat-card-title>
+                <mat-card-subtitle>{{experience.job}}</mat-card-subtitle>
+                <mat-card-subtitle>{{experience.start_date | date:'yyyy'}} -
+
+                    <span *ngIf="experience.current; else endJob">actualidad</span>
+                    <ng-template #endJob>{{experience.end_date | date:'yyyy'}}</ng-template>
+                    · <span>{{experience.start_date | timeDiff: experience.end_date}}</span>
+                </mat-card-subtitle>
+            </mat-card-header>
+        </mat-card>
+
+    </mat-tab>
+    <mat-tab label="Cursos"> Cursos </mat-tab>
+</mat-tab-group>

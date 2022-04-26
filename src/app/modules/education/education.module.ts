@@ -7,6 +7,6 @@ import { SharedModule } from 'src/app/shared/shared.module'
 
 @NgModule({
   declarations: [EducationComponent],
-  imports: [CommonModule, EducationRoutingModule, SharedModule]
+  imports: [EducationRoutingModule, SharedModule]
 })
 export class EducationModule {}

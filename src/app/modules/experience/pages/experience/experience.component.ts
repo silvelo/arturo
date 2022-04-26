@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'
+import { ButterService } from 'src/app/data/butter/service/butter.service'
+import { Experience } from 'src/app/data/butter/types/experience'
 
 @Component({
   selector: 'app-experience',
@@ -6,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./experience.component.scss']
 })
 export class ExperienceComponent implements OnInit {
+  public experienceList: Experience[] = []
 
-  constructor() { }
+  constructor(private butterService: ButterService) {}
 
-  ngOnInit(): void {
+  async ngOnInit() {
+    const butterResponse = await this.butterService.getExperience()
+    this.experienceList = butterResponse.data.experience
   }
-
 }

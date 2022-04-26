@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core'
 import Butter from 'buttercms'
 import { IButterData } from '../types/butter'
 import { EducationObject } from '../types/education'
+import { ExperienceObject } from '../types/experience'
 import { MeObject } from '../types/me'
 import { SidenavObject } from '../types/sidenav'
 import { SocialObject } from '../types/social'
@@ -45,9 +46,9 @@ export class ButterService {
       .then((response) => response.data as IButterData<EducationObject>)
   }
 
-  getCurriculum() {
+  getExperience() {
     return this.butter.content
-      .retrieve(['curriculum'])
-      .then((response) => response.data as IButterData<MeObject>)
+      .retrieve(['experience'])
+      .then((response) => response.data as IButterData<ExperienceObject>)
   }
 }

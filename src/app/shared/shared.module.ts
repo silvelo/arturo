@@ -4,10 +4,17 @@ import { FlexLayoutModule } from '@angular/flex-layout'
 import { SocialComponent } from './components/social/social.component'
 import { CommonModule } from '@angular/common'
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
+import { TimeDiffPipe } from './pipes/time-diff.pipe'
 
 @NgModule({
-  declarations: [SocialComponent],
+  declarations: [SocialComponent, TimeDiffPipe],
   imports: [CommonModule, FontAwesomeModule, MaterialModule],
-  exports: [CommonModule, MaterialModule, FlexLayoutModule, SocialComponent]
+  exports: [
+    CommonModule,
+    MaterialModule,
+    FlexLayoutModule,
+    SocialComponent,
+    TimeDiffPipe
+  ]
 })
 export class SharedModule {}
