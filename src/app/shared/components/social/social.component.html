@@ -14,4 +14,11 @@
                      [icon]="faLinkedin"></fa-icon>
         </button>
     </div>
+    <div *ngSwitchCase="'email'">
+        <a mat-icon-button
+           href="mailto:{{social.link}}">
+            <fa-icon size="2x"
+                     [icon]="faEnvelope"></fa-icon>
+        </a>
+    </div>
 </div>

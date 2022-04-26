@@ -1,1 +1,21 @@
-<p>about works!</p>
+<mat-card class="mat-elevation-z8">
+
+    <img mat-card-image
+         alt="Profile"
+         [src]="me?.profile_photo" />
+
+    <mat-card-title>{{me?.name}} {{me?.surname}}</mat-card-title>
+    <mat-card-subtitle>{{me?.job}}</mat-card-subtitle>
+
+    <mat-card-content>
+        <p>
+            {{me?.description}}
+        </p>
+    </mat-card-content>
+
+    <mat-card-footer fxLayout="row"
+                     fxLayoutAlign="center center">
+        <app-social></app-social>
+    </mat-card-footer>
+
+</mat-card>

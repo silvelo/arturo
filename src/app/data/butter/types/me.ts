@@ -3,6 +3,7 @@ export interface Me {
   surname: string
   job: string
   profile_photo: string
+  description: string
 }
 
 export interface MeObject {
