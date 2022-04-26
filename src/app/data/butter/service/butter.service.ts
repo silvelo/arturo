@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core'
 import Butter from 'buttercms'
 import { IButterData } from '../types/butter'
+import { EducationObject } from '../types/education'
 import { MeObject } from '../types/me'
 import { SidenavObject } from '../types/sidenav'
 import { SocialObject } from '../types/social'
@@ -41,7 +42,7 @@ export class ButterService {
   getEducation() {
     return this.butter.content
       .retrieve(['education'])
-      .then((response) => response.data as IButterData<SidenavObject>)
+      .then((response) => response.data as IButterData<EducationObject>)
   }
 
   getCurriculum() {
