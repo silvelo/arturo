@@ -2,8 +2,12 @@
 
 <mat-sidenav-container>
     <mat-sidenav #snav
-                 position="end">
-        <mat-nav-list *ngIf="sidenav">
+                 position="end"
+                 fxLayoutAlign="center center">
+        <mat-nav-list *ngIf="sidenav"
+                      fxFill
+                      fxLayout="column"
+                      fxLayoutAlign="center center">
             <a mat-list-item
                [routerLink]="nav.link"
                *ngFor="let nav of sidenav">{{nav.name}}</a>
