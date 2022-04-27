@@ -1,9 +1,12 @@
 import { Injectable } from '@angular/core'
 import Butter from 'buttercms'
+import { AwardObject } from '../types/award'
 import { IButterData } from '../types/butter'
+import { CertificationObject } from '../types/certification'
 import { EducationObject } from '../types/education'
 import { ExperienceObject } from '../types/experience'
 import { MeObject } from '../types/me'
+import { PublicationObject } from '../types/publication'
 import { SidenavObject } from '../types/sidenav'
 import { SocialObject } from '../types/social'
 
@@ -50,5 +53,23 @@ export class ButterService {
     return this.butter.content
       .retrieve(['experience'])
       .then((response) => response.data as IButterData<ExperienceObject>)
+  }
+
+  getCertifications() {
+    return this.butter.content
+      .retrieve(['certification'])
+      .then((response) => response.data as IButterData<CertificationObject>)
+  }
+
+  getPublications() {
+    return this.butter.content
+      .retrieve(['publications'])
+      .then((response) => response.data as IButterData<PublicationObject>)
+  }
+
+  getAwards() {
+    return this.butter.content
+      .retrieve(['awards'])
+      .then((response) => response.data as IButterData<AwardObject>)
   }
 }

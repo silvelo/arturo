@@ -7,14 +7,14 @@
                  fxLayoutAlign="space-between center">
 
         <mat-nav-list *ngIf="sidenav"
-                      fxFlex="90"
+                      fxFlex
                       fxLayout="column"
                       fxLayoutAlign="center center">
             <a mat-list-item
                [routerLink]="nav.link"
                *ngFor="let nav of sidenav">{{nav.name}}</a>
         </mat-nav-list>
-        <span fxLayoutAlign="center center">v{{version}}</span>
+        <small fxLayoutAlign="center ">v{{version}}</small>
 
     </mat-sidenav>
 

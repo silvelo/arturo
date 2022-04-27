@@ -14,6 +14,7 @@ import { TimeDiffPipe } from './pipes/time-diff.pipe'
     MaterialModule,
     FlexLayoutModule,
     SocialComponent,
+    FontAwesomeModule,
     TimeDiffPipe
   ]
 })

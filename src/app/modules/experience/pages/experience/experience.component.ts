@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core'
+import { Publication } from '@app/data/butter/types/publication'
 import { ButterService } from '@data/butter/service/butter.service'
 import { Experience } from '@data/butter/types/experience'
+import { faExternalLink } from '@fortawesome/free-solid-svg-icons'
 
 @Component({
   selector: 'app-experience',
@@ -9,11 +11,15 @@ import { Experience } from '@data/butter/types/experience'
 })
 export class ExperienceComponent implements OnInit {
   public experienceList: Experience[] = []
-
+  public publications: Publication[] = []
+  public faExternalLink = faExternalLink
   constructor(private butterService: ButterService) {}
 
   async ngOnInit() {
-    const butterResponse = await this.butterService.getExperience()
-    this.experienceList = butterResponse.data.experience
+    const butterExperienceResponse = await this.butterService.getExperience()
+    const butterPublicationResponse = await this.butterService.getPublications()
+
+    this.experienceList = butterExperienceResponse.data.experience
+    this.publications = butterPublicationResponse.data.publications
   }
 }

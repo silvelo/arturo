@@ -1,22 +1,40 @@
-<mat-tab-group mat-align-tabs="center">
+<mat-tab-group mat-align-tabs="center"
+               headerPosition="below">
     <mat-tab label="Experience">
         <mat-card *ngFor="let experience of experienceList"
-                  class="mat-elevation-z8">
-            <mat-card-header>
+                  class="mat-elevation-z4">
+            <mat-card-header class="margin-subtitle-remove">
                 <img mat-card-avatar
                      [src]="experience.company_logo"
                      alt="Institution Logo">
                 <mat-card-title>{{experience.company_name}}</mat-card-title>
-                <mat-card-subtitle>{{experience.job}}</mat-card-subtitle>
-                <mat-card-subtitle>{{experience.start_date | date:'yyyy'}} -
+                <mat-card-subtitle fxLayout="column">
+                    <span> {{experience.job}}</span>
+                    <span>{{experience.start_date | date:'yyyy'}} -
 
-                    <span *ngIf="experience.current; else endJob">actualidad</span>
-                    <ng-template #endJob>{{experience.end_date | date:'yyyy'}}</ng-template>
-                    · <span>{{experience.start_date | timeDiff: experience.end_date}}</span>
+                        <span *ngIf="experience.current; else endJob">actualidad</span>
+                        <ng-template #endJob>{{experience.end_date | date:'yyyy'}}</ng-template>
+                        · <span>{{experience.start_date | timeDiff: experience.end_date}}</span>
+                    </span>
                 </mat-card-subtitle>
             </mat-card-header>
         </mat-card>
-
     </mat-tab>
-    <mat-tab label="Cursos"> Cursos </mat-tab>
+    <mat-tab label="Publicaciones">
+        <mat-card *ngFor="let publication of publications"
+                  class="mat-elevation-z4">
+            <mat-card-header class="margin-header-remove">
+                <mat-card-title>{{publication.title}}</mat-card-title>
+                <mat-card-subtitle>{{publication.editorial}} · {{publication.publication_date | date: 'yyyy'}}
+                </mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-actions fxLayoutAlign="center center">
+                <a mat-raised-button
+                   [href]="publication.url"
+                   target="_blank">Mostrar publicación
+                    <fa-icon [icon]="faExternalLink"></fa-icon>
+                </a>
+            </mat-card-actions>
+        </mat-card>
+    </mat-tab>
 </mat-tab-group>
