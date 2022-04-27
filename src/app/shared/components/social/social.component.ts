@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
-import { ButterService } from 'src/app/data/butter/service/butter.service'
-import { Social } from 'src/app/data/butter/types/social'
+import { ButterService } from '@data/butter/service/butter.service'
+import { Social } from '@data/butter/types/social'
 
 @Component({
   selector: 'app-social',

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core'
-import { ButterService } from 'src/app/data/butter/service/butter.service'
-import { Me } from 'src/app/data/butter/types/me'
+import { ButterService } from '@data/butter/service/butter.service'
+import { Me } from '@data/butter/types/me'
 
 @Component({
   selector: 'app-about',

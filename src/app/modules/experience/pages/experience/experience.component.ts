@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core'
-import { ButterService } from 'src/app/data/butter/service/butter.service'
-import { Experience } from 'src/app/data/butter/types/experience'
+import { ButterService } from '@data/butter/service/butter.service'
+import { Experience } from '@data/butter/types/experience'
 
 @Component({
   selector: 'app-experience',

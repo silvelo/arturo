@@ -3,15 +3,19 @@
 <mat-sidenav-container>
     <mat-sidenav #snav
                  position="end"
-                 fxLayoutAlign="center center">
+                 fxLayout="column"
+                 fxLayoutAlign="space-between center">
+
         <mat-nav-list *ngIf="sidenav"
-                      fxFill
+                      fxFlex="90"
                       fxLayout="column"
                       fxLayoutAlign="center center">
             <a mat-list-item
                [routerLink]="nav.link"
                *ngFor="let nav of sidenav">{{nav.name}}</a>
         </mat-nav-list>
+        <span fxLayoutAlign="center center">v{{version}}</span>
+
     </mat-sidenav>
 
     <mat-sidenav-content class="container">

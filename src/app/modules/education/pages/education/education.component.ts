@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core'
-import { ButterService } from 'src/app/data/butter/service/butter.service'
-import { Education } from 'src/app/data/butter/types/education'
+import { ButterService } from '@data/butter/service/butter.service'
+import { Education } from '@data/butter/types/education'
 
 @Component({
   selector: 'app-education',
