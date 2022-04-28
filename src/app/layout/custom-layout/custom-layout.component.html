@@ -11,6 +11,7 @@
                       fxLayout="column"
                       fxLayoutAlign="center center">
             <a mat-list-item
+               (click)="snav.toggle()"
                [routerLink]="nav.link"
                *ngFor="let nav of sidenav">{{nav.name}}</a>
         </mat-nav-list>

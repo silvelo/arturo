@@ -10,9 +10,9 @@
     "tag:patch": "npm version patch",
     "tag:minor": "npm version minor",
     "tag:major": "npm version major",
-    "deploy:patch": "npm run tag:patch && git push --tags",
-    "deploy:minor": "npm run tag:minor && git push --tags",
-    "deploy:major": "npm run tag:major && git push --tags",
+    "deploy:patch": "npm run tag:patch && git push && git push --tags",
+    "deploy:minor": "npm run tag:minor && git push && git push --tags",
+    "deploy:major": "npm run tag:major && git push && git push --tags",
     "postbuild": "copy-files-from-to"
   },
   "private": true,
