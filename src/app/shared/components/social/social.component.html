@@ -1,22 +1,25 @@
 <div *ngFor="let social of socialList"
      [ngSwitch]="social.id">
     <div *ngSwitchCase="'github'">
-        <button mat-icon-button
-                (click)="onClick(social.link)">
+        <a mat-icon-button
+           (click)="onClick(social.link)"
+           aria-label="Github">
             <fa-icon size="2x"
                      [icon]="['fab','github']"></fa-icon>
-        </button>
+        </a>
     </div>
     <div *ngSwitchCase="'linkedin'">
-        <button mat-icon-button
-                (click)="onClick(social.link)">
+        <a mat-icon-button
+           (click)="onClick(social.link)"
+           aria-label="Linkedin">
             <fa-icon size="2x"
                      [icon]="['fab','linkedin']"></fa-icon>
-        </button>
+        </a>
     </div>
     <div *ngSwitchCase="'email'">
         <a mat-icon-button
-           href="mailto:{{social.link}}">
+           href="mailto:{{social.link}}"
+           aria-label="Email">
             <fa-icon size="2x"
                      [icon]="['far', 'envelope']"></fa-icon>
         </a>
