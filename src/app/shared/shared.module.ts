@@ -9,9 +9,10 @@ import {
 } from '@fortawesome/angular-fontawesome'
 import { TimeDiffPipe } from './pipes/time-diff.pipe'
 import { LoaderComponent } from './components/loader/loader.component'
-import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
-import { faExternalLink } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons/faEnvelope'
+import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub'
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons/faLinkedin'
+import { faExternalLink } from '@fortawesome/free-solid-svg-icons/faExternalLink'
 
 @NgModule({
   declarations: [SocialComponent, TimeDiffPipe, LoaderComponent],

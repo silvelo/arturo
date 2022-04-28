@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core'
-import { CommonModule } from '@angular/common'
 
 import { ExperienceRoutingModule } from './experience-routing.module'
 import { ExperienceComponent } from './pages/experience/experience.component'
 import { SharedModule } from 'src/app/shared/shared.module'
 import { LuxonModule } from 'luxon-angular'
+import { MatTabsModule } from '@angular/material/tabs'
 
 @NgModule({
   declarations: [ExperienceComponent],
-  imports: [ExperienceRoutingModule, SharedModule, LuxonModule]
+  imports: [ExperienceRoutingModule, SharedModule, LuxonModule, MatTabsModule]
 })
 export class ExperienceModule {}
