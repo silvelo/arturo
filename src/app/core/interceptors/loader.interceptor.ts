@@ -5,7 +5,7 @@ import {
   HttpEvent,
   HttpInterceptor
 } from '@angular/common/http'
-import { finalize, Observable } from 'rxjs'
+import { delay, finalize, Observable } from 'rxjs'
 import { LoaderService } from '@app/core/services/loader.service'
 
 @Injectable()
@@ -16,11 +16,11 @@ export class LoaderInterceptor implements HttpInterceptor {
     request: HttpRequest<unknown>,
     next: HttpHandler
   ): Observable<HttpEvent<unknown>> {
-    console.log('Interceptor')
     this.loaderService.addRequest()
 
-    return next
-      .handle(request)
-      .pipe(finalize(() => this.loaderService.removeRequest()))
+    return next.handle(request).pipe(
+      delay(500),
+      finalize(() => this.loaderService.removeRequest())
+    )
   }
 }

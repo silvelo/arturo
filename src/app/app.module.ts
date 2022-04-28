@@ -8,7 +8,7 @@ import { FooterComponent } from './layout/footer/footer.component'
 import { CustomLayoutComponent } from './layout/custom-layout/custom-layout.component'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { SharedModule } from './shared/shared.module'
-import { CoreModule } from '@angular/flex-layout'
+import { CoreModule } from '@core/core.module'
 
 @NgModule({
   declarations: [

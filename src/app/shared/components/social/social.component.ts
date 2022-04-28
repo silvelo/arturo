@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core'
 
 import { ButterService } from '@data/butter/service/butter.service'
 import { Social } from '@data/butter/types/social'
+import { firstValueFrom } from 'rxjs'
 
 @Component({
   selector: 'app-social',
@@ -14,7 +15,7 @@ export class SocialComponent implements OnInit {
   constructor(private butterService: ButterService) {}
 
   async ngOnInit() {
-    const butterResponse = await this.butterService.getSocial()
+    const butterResponse = await firstValueFrom(this.butterService.getSocial())
     this.socialList = butterResponse.data.social
   }
 

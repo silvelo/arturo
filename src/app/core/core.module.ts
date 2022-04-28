@@ -3,12 +3,16 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
 import { OverlayModule } from '@angular/cdk/overlay'
 import { LoaderInterceptor } from './interceptors/loader.interceptor'
 import { throwIfAlreadyLoaded } from './guard/module-import.guard'
-import { SharedModule } from '@app/shared/shared.module'
+
 @NgModule({
   declarations: [],
-  imports: [HttpClientModule, SharedModule, OverlayModule],
+  imports: [HttpClientModule, OverlayModule],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: LoaderInterceptor, multi: true }
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: LoaderInterceptor,
+      multi: true
+    }
   ]
 })
 export class CoreModule {

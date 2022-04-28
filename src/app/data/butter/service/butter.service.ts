@@ -1,3 +1,4 @@
+import { HttpClient, HttpParams } from '@angular/common/http'
 import { Injectable } from '@angular/core'
 import Butter from 'buttercms'
 import { AwardObject } from '../types/award'
@@ -10,66 +11,68 @@ import { PublicationObject } from '../types/publication'
 import { SidenavObject } from '../types/sidenav'
 import { SocialObject } from '../types/social'
 
-const routes = {}
-
 @Injectable({
   providedIn: 'root'
 })
 export class ButterService {
-  private butter = Butter('fed7d717ce0e71dd943cba17237589d3eaafb275')
-  constructor() {}
+  constructor(private http: HttpClient) {}
 
   getSidenav() {
-    return this.butter.content
-      .retrieve(['sidenav'])
-      .then((response) => response.data as IButterData<SidenavObject>)
+    return this.butterContent<IButterData<SidenavObject>>('sidenav', {})
   }
 
   getMe() {
-    return this.butter.content
-      .retrieve(['me'])
-      .then((response) => response.data as IButterData<MeObject>)
+    return this.butterContent<IButterData<MeObject>>('me', {})
   }
 
   getSocial() {
-    return this.butter.content
-      .retrieve(['social'])
-      .then((response) => response.data as IButterData<SocialObject>)
+    return this.butterContent<IButterData<SocialObject>>('social', {})
   }
 
   getPortfolio() {
-    return this.butter.content
-      .retrieve(['portfolio'])
-      .then((response) => response.data as IButterData<SidenavObject>)
+    return this.butterContent<IButterData<SidenavObject>>('portfolio', {})
   }
 
   getEducation() {
-    return this.butter.content
-      .retrieve(['education'])
-      .then((response) => response.data as IButterData<EducationObject>)
+    return this.butterContent<IButterData<EducationObject>>('education', {})
   }
 
   getExperience() {
-    return this.butter.content
-      .retrieve(['experience'])
-      .then((response) => response.data as IButterData<ExperienceObject>)
+    return this.butterContent<IButterData<ExperienceObject>>('experience', {})
   }
 
   getCertifications() {
-    return this.butter.content
-      .retrieve(['certification'])
-      .then((response) => response.data as IButterData<CertificationObject>)
+    return this.butterContent<IButterData<CertificationObject>>(
+      'certification',
+      {}
+    )
   }
 
   getPublications() {
-    return this.butter.content
-      .retrieve(['publications'])
-      .then((response) => response.data as IButterData<PublicationObject>)
+    return this.butterContent<IButterData<PublicationObject>>(
+      'publications',
+      {}
+    )
   }
 
   getAwards() {
-    return this.butter.content
-      .retrieve(['awards'])
-      .then((response) => response.data as IButterData<AwardObject>)
+    return this.butterContent<IButterData<AwardObject>>('awards', {})
+  }
+
+  private butterContent<T>(
+    key: string,
+    params: { [key: string]: string | number | boolean }
+  ) {
+    let httpParams = new HttpParams().set(
+      'auth_token',
+      'fed7d717ce0e71dd943cba17237589d3eaafb275'
+    )
+    Object.entries(params).forEach(
+      ([key, value]) => (httpParams = httpParams.set(key, value))
+    )
+
+    return this.http.get<T>(`https://api.buttercms.com/v2/content/${key}`, {
+      params: httpParams
+    })
   }
 }

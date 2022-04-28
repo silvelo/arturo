@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core'
 import { Publication } from '@app/data/butter/types/publication'
 import { ButterService } from '@data/butter/service/butter.service'
 import { Experience } from '@data/butter/types/experience'
+import { firstValueFrom } from 'rxjs'
 
 @Component({
   selector: 'app-experience',
@@ -15,8 +16,11 @@ export class ExperienceComponent implements OnInit {
   constructor(private butterService: ButterService) {}
 
   async ngOnInit() {
-    const butterExperienceResponse = await this.butterService.getExperience()
-    const butterPublicationResponse = await this.butterService.getPublications()
+    const [butterExperienceResponse, butterPublicationResponse] =
+      await Promise.all([
+        firstValueFrom(this.butterService.getExperience()),
+        firstValueFrom(this.butterService.getPublications())
+      ])
 
     this.experienceList = butterExperienceResponse.data.experience
     this.publications = butterPublicationResponse.data.publications

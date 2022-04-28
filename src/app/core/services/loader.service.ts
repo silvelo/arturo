@@ -22,10 +22,11 @@ export class LoaderService {
     })
 
     this.pendingRequest.subscribe((numOfRequest) => {
-      console.log(`#${numOfRequest}`)
-      if (numOfRequest > 0) {
+      if (numOfRequest > 0 && !this.overlayRef.hasAttached()) {
         this.showOverlay()
-      } else {
+      }
+
+      if (numOfRequest <= 0 && this.overlayRef.hasAttached()) {
         this.hideOverlay()
       }
     })
