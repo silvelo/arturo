@@ -9,23 +9,29 @@ import { CustomLayoutComponent } from './layout/custom-layout/custom-layout.comp
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { SharedModule } from './shared/shared.module'
 import { HttpClientModule } from '@angular/common/http'
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
+import { CoreModule } from '@angular/flex-layout'
+import { OverlayModule } from '@angular/cdk/overlay'
+import { LoaderComponent } from './loader/loader.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    CustomLayoutComponent
+    CustomLayoutComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    CoreModule,
     SharedModule,
-    HttpClientModule
+    HttpClientModule,
+    OverlayModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [LoaderComponent]
 })
 export class AppModule {}
