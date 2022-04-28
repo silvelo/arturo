@@ -5,15 +5,10 @@ import { CustomLayoutComponent } from './layout/custom-layout/custom-layout.comp
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/home',
-    pathMatch: 'full'
-  },
-  {
-    path: '',
     component: CustomLayoutComponent,
     children: [
       {
-        path: 'home',
+        path: '',
         loadChildren: () =>
           import('./modules/home/home.module').then((m) => m.HomeModule)
       },
@@ -45,7 +40,7 @@ const routes: Routes = [
       }
     ]
   },
-  { path: '**', redirectTo: '/home', pathMatch: 'full' }
+  { path: '**', redirectTo: '', pathMatch: 'full' }
 ]
 
 @NgModule({
