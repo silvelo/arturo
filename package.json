@@ -1,6 +1,6 @@
 {
   "name": "silvelo.github.io",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -9,10 +9,11 @@
     "test": "ng test",
     "tag:patch": "npm version patch",
     "tag:minor": "npm version minor",
-    "tag:mayor": "npm version mayor",
+    "tag:major": "npm version major",
     "deploy:patch": "npm run tag:patch && git push --tags",
     "deploy:minor": "npm run tag:minor && git push --tags",
-    "deploy:mayor": "npm run tag:mayor && git push --tags"
+    "deploy:major": "npm run tag:major && git push --tags",
+    "postbuild": "copy-files-from-to"
   },
   "private": true,
   "dependencies": {
@@ -46,6 +47,7 @@
     "@types/jasmine": "~3.10.0",
     "@types/luxon": "^2.3.1",
     "@types/node": "^12.11.1",
+    "copy-files-from-to": "^3.2.2",
     "jasmine-core": "~4.0.0",
     "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",
@@ -53,5 +55,11 @@
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
     "typescript": "~4.6.2"
-  }
+  },
+  "copyFiles": [
+    {
+      "from": "dist/silvelo.github.io/index.html",
+      "to": "dist/silvelo.github.io/404.html"
+    }
+  ]
 }
