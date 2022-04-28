@@ -1,6 +1,5 @@
 import { HttpClient, HttpParams } from '@angular/common/http'
 import { Injectable } from '@angular/core'
-import Butter from 'buttercms'
 import { AwardObject } from '../types/award'
 import { IButterData } from '../types/butter'
 import { CertificationObject } from '../types/certification'
