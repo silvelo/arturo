@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core'
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
-import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
+
 import { ButterService } from '@data/butter/service/butter.service'
 import { Social } from '@data/butter/types/social'
 
@@ -11,9 +10,6 @@ import { Social } from '@data/butter/types/social'
 })
 export class SocialComponent implements OnInit {
   public socialList: Social[] = []
-  public faLinkedin = faLinkedin
-  public faGithub = faGithub
-  public faEnvelope = faEnvelope
 
   constructor(private butterService: ButterService) {}
 

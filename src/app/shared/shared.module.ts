@@ -1,13 +1,20 @@
 import { NgModule } from '@angular/core'
-import { MaterialModule } from './material/material.module'
+import { MaterialModule } from './material.module'
 import { FlexLayoutModule } from '@angular/flex-layout'
 import { SocialComponent } from './components/social/social.component'
 import { CommonModule } from '@angular/common'
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
+import {
+  FaIconLibrary,
+  FontAwesomeModule
+} from '@fortawesome/angular-fontawesome'
 import { TimeDiffPipe } from './pipes/time-diff.pipe'
+import { LoaderComponent } from './components/loader/loader.component'
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faExternalLink } from '@fortawesome/free-solid-svg-icons'
 
 @NgModule({
-  declarations: [SocialComponent, TimeDiffPipe],
+  declarations: [SocialComponent, TimeDiffPipe, LoaderComponent],
   imports: [CommonModule, FontAwesomeModule, MaterialModule],
   exports: [
     CommonModule,
@@ -15,7 +22,12 @@ import { TimeDiffPipe } from './pipes/time-diff.pipe'
     FlexLayoutModule,
     SocialComponent,
     FontAwesomeModule,
-    TimeDiffPipe
+    TimeDiffPipe,
+    LoaderComponent
   ]
 })
-export class SharedModule {}
+export class SharedModule {
+  constructor(faIconLibrary: FaIconLibrary) {
+    faIconLibrary.addIcons(faEnvelope, faGithub, faLinkedin, faExternalLink)
+  }
+}

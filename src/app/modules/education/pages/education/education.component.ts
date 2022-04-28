@@ -3,7 +3,7 @@ import { Award } from '@app/data/butter/types/award'
 import { Certification } from '@app/data/butter/types/certification'
 import { ButterService } from '@data/butter/service/butter.service'
 import { Education } from '@data/butter/types/education'
-import { faExternalLink } from '@fortawesome/free-solid-svg-icons'
+
 @Component({
   selector: 'app-education',
   templateUrl: './education.component.html',
@@ -13,7 +13,6 @@ export class EducationComponent implements OnInit {
   public educationList: Education[] = []
   public awards: Award[] = []
   public certifications: Certification[] = []
-  public faExternalLink = faExternalLink
 
   constructor(private butterService: ButterService) {}
 

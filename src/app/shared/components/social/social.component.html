@@ -4,21 +4,21 @@
         <button mat-icon-button
                 (click)="onClick(social.link)">
             <fa-icon size="2x"
-                     [icon]="faGithub"></fa-icon>
+                     [icon]="['fab','github']"></fa-icon>
         </button>
     </div>
     <div *ngSwitchCase="'linkedin'">
         <button mat-icon-button
                 (click)="onClick(social.link)">
             <fa-icon size="2x"
-                     [icon]="faLinkedin"></fa-icon>
+                     [icon]="['fab','linkedin']"></fa-icon>
         </button>
     </div>
     <div *ngSwitchCase="'email'">
         <a mat-icon-button
            href="mailto:{{social.link}}">
             <fa-icon size="2x"
-                     [icon]="faEnvelope"></fa-icon>
+                     [icon]="['far', 'envelope']"></fa-icon>
         </a>
     </div>
 </div>
