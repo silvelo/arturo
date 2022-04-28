@@ -2,7 +2,8 @@
      [ngSwitch]="social.id">
     <div *ngSwitchCase="'github'">
         <a mat-icon-button
-           (click)="onClick(social.link)"
+           [href]="social.link"
+           target="_blank"
            aria-label="Github">
             <fa-icon size="2x"
                      [icon]="['fab','github']"></fa-icon>
@@ -10,7 +11,8 @@
     </div>
     <div *ngSwitchCase="'linkedin'">
         <a mat-icon-button
-           (click)="onClick(social.link)"
+           [href]="social.link"
+           target="_blank"
            aria-label="Linkedin">
             <fa-icon size="2x"
                      [icon]="['fab','linkedin']"></fa-icon>

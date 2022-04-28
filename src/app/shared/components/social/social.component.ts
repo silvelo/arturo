@@ -18,8 +18,4 @@ export class SocialComponent implements OnInit {
     const butterResponse = await firstValueFrom(this.butterService.getSocial())
     this.socialList = butterResponse.data.social
   }
-
-  onClick(link: string) {
-    window.open(link)
-  }
 }
