@@ -4,6 +4,7 @@
         <a mat-icon-button
            [href]="social.link"
            target="_blank"
+           role="link"
            aria-label="Github">
             <fa-icon size="2x"
                      [icon]="['fab','github']"></fa-icon>
@@ -13,6 +14,7 @@
         <a mat-icon-button
            [href]="social.link"
            target="_blank"
+           role="link"
            aria-label="Linkedin">
             <fa-icon size="2x"
                      [icon]="['fab','linkedin']"></fa-icon>
@@ -21,6 +23,7 @@
     <div *ngSwitchCase="'email'">
         <a mat-icon-button
            href="mailto:{{social.link}}"
+           role="link"
            aria-label="Email">
             <fa-icon size="2x"
                      [icon]="['far', 'envelope']"></fa-icon>
