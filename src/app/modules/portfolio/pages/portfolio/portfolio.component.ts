@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'
+import { ButterService } from '@app/data/butter/service/butter.service'
+import { Portfolio } from '@app/data/butter/types/portfolio'
+import { firstValueFrom } from 'rxjs'
 
 @Component({
   selector: 'app-portfolio',
@@ -6,10 +9,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./portfolio.component.scss']
 })
 export class PortfolioComponent implements OnInit {
+  public portfolioList: Portfolio[] = []
 
-  constructor() { }
+  constructor(private butterService: ButterService) {}
 
-  ngOnInit(): void {
+  async ngOnInit() {
+    const butterPortfolioResponse = await firstValueFrom(
+      this.butterService.getPortfolio()
+    )
+    this.portfolioList = butterPortfolioResponse.data.portfolio
   }
-
 }

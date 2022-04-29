@@ -6,6 +6,7 @@ import { CertificationObject } from '../types/certification'
 import { EducationObject } from '../types/education'
 import { ExperienceObject } from '../types/experience'
 import { MeObject } from '../types/me'
+import { PortfolioObject } from '../types/portfolio'
 import { PublicationObject } from '../types/publication'
 import { SidenavObject } from '../types/sidenav'
 import { SocialObject } from '../types/social'
@@ -26,10 +27,6 @@ export class ButterService {
 
   getSocial() {
     return this.butterContent<IButterData<SocialObject>>('social', {})
-  }
-
-  getPortfolio() {
-    return this.butterContent<IButterData<SidenavObject>>('portfolio', {})
   }
 
   getEducation() {
@@ -56,6 +53,10 @@ export class ButterService {
 
   getAwards() {
     return this.butterContent<IButterData<AwardObject>>('awards', {})
+  }
+
+  getPortfolio() {
+    return this.butterContent<IButterData<PortfolioObject>>('portfolio', {})
   }
 
   private butterContent<T>(
