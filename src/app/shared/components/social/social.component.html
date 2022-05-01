@@ -2,6 +2,11 @@
      [ngSwitch]="social.id">
     <div *ngSwitchCase="'github'">
         <a mat-icon-button
+           angulartics2On="click"
+           angularticsAction="click"
+           angularticsLabel="view"
+           angularticsValue="social"
+           [angularticsCategory]="social.link"
            [href]="social.link"
            target="_blank"
            role="link"
@@ -12,6 +17,11 @@
     </div>
     <div *ngSwitchCase="'linkedin'">
         <a mat-icon-button
+           angulartics2On="click"
+           angularticsAction="click"
+           angularticsLabel="view"
+           angularticsValue="social"
+           [angularticsCategory]="social.link"
            [href]="social.link"
            target="_blank"
            role="link"
@@ -22,6 +32,11 @@
     </div>
     <div *ngSwitchCase="'email'">
         <a mat-icon-button
+           angulartics2On="click"
+           angularticsAction="click"
+           angularticsLabel="view"
+           angularticsValue="social"
+           [angularticsCategory]="social.link"
            href="mailto:{{social.link}}"
            role="link"
            aria-label="Email">
