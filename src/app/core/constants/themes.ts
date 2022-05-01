@@ -1,8 +1,8 @@
 export const themes = [
   {
-    name: 'afs-light-theme'
+    name: 'silvelo-light-theme'
   },
   {
-    name: 'afs-dark-theme'
+    name: 'silvelo-dark-theme'
   }
 ]

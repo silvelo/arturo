@@ -1,10 +1,16 @@
 <mat-toolbar color="primary"
              fxLayout="row"
              fxLayoutAlign="space-between center">
-    <span>Silvelo</span>
-    <button mat-icon-button
-            (click)="toggle.emit()"
-            aria-label="search">
-        <mat-icon>menu</mat-icon>
-    </button>
+    <div fxLayout="row"
+         fxLayoutAlign="start center">
+        <button mat-icon-button
+                (click)="toggle.emit()"
+                aria-label="search">
+            <mat-icon>menu</mat-icon>
+        </button>
+
+        <span>Silvelo Portfolio</span>
+    </div>
+    <!-- <mat-slide-toggle>Dark Theme</mat-slide-toggle> -->
+
 </mat-toolbar>

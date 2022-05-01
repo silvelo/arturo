@@ -2,10 +2,10 @@
 
 @include mat.core();
 
-@import './styles/themes/white-theme.scss';
+@import './styles/themes/light-theme.scss';
+/* @import './styles/themes/black-theme.scss'; */
 
-
-@include mat.all-component-themes($silvelo-theme);
+@include mat.all-component-themes($silvelo-light-theme);
 
 /* You can add global styles to this file, and also import other style files */
 
@@ -66,10 +66,11 @@ mat-card {
   padding: 0 !important;
 }
 
-/* .silvelo-light-theme {
-  @include mat.all-component-themes($afs-light-theme);
+/* 
+.silvelo-light-theme {
+  @include mat.all-component-themes($silvelo-light-theme);
 }
 
 .silvelo-dark-theme {
-  @include mat.all-component-themes($afs-black-theme);
+  @include mat.all-component-themes($silvelo-black-theme);
 } */

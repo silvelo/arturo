@@ -1,10 +1,10 @@
 @use '@angular/material'as mat;
 
-$silvelo-primary: mat.define-palette(mat.$pink-palette);
-$silvelo-accent : mat.define-palette(mat.$pink-palette, A200, A100, A400);
-$silvelo-warn   : mat.define-palette(mat.$red-palette);
+$silvelo-dark-primary: mat.define-palette(mat.$pink-palette);
+$silvelo-dark-accent : mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$silvelo-dark-warn   : mat.define-palette(mat.$red-palette);
 
-$silvelo-theme: mat.define-light-theme((color: (primary: $silvelo-primary,
-            accent: $silvelo-accent,
-            warn: $silvelo-warn,
+$silvelo-black-theme: mat.define-dark-theme((color: (primary: $silvelo-dark-primary,
+            accent: $silvelo-dark-accent,
+            warn: $silvelo-dark-warn,
         )));
