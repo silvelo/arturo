@@ -9,10 +9,18 @@ import {
 } from '@fortawesome/angular-fontawesome'
 import { TimeDiffPipe } from './pipes/time-diff.pipe'
 import { LoaderComponent } from './components/loader/loader.component'
-import { faEnvelope } from '@fortawesome/free-regular-svg-icons/faEnvelope'
-import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub'
-import { faLinkedin } from '@fortawesome/free-brands-svg-icons/faLinkedin'
-import { faExternalLink } from '@fortawesome/free-solid-svg-icons/faExternalLink'
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import {
+  faExternalLink,
+  faBriefcase,
+  faGraduationCap,
+  faHome,
+  faEnvelope,
+  faClipboardList,
+  faUser,
+  faMoon,
+  faBars
+} from '@fortawesome/free-solid-svg-icons'
 
 @NgModule({
   declarations: [SocialComponent, TimeDiffPipe, LoaderComponent],
@@ -29,6 +37,18 @@ import { faExternalLink } from '@fortawesome/free-solid-svg-icons/faExternalLink
 })
 export class SharedModule {
   constructor(faIconLibrary: FaIconLibrary) {
-    faIconLibrary.addIcons(faEnvelope, faGithub, faLinkedin, faExternalLink)
+    faIconLibrary.addIcons(
+      faEnvelope,
+      faGithub,
+      faLinkedin,
+      faExternalLink,
+      faHome,
+      faGraduationCap,
+      faBriefcase,
+      faMoon,
+      faClipboardList,
+      faUser,
+      faBars
+    )
   }
 }

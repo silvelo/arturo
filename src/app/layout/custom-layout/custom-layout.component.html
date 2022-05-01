@@ -12,9 +12,16 @@
             <a mat-list-item
                (click)="snav.toggle()"
                [routerLink]="nav.link"
-               *ngFor="let nav of sidenav">{{nav.name}}</a>
+               fxLayout="row"
+               fxLayoutAlign="start center"
+               *ngFor="let nav of sidenav">
+                <fa-icon fxFlex="15"
+                         [icon]="['fas', nav.icon]"></fa-icon>
+                <span fxFlex="85">{{nav.name}}</span>
+            </a>
         </mat-nav-list>
-        <small fxLayoutAlign="center ">v{{version}}</small>
+        <small class="version"
+               fxLayoutAlign="start ">v{{version}}</small>
 
     </mat-sidenav>
 

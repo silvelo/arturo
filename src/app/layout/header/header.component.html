@@ -2,19 +2,20 @@
              fxLayout="row"
              fxLayoutAlign="space-between center">
     <div fxLayout="row"
-         fxLayoutAlign="start center">
-        <button mat-icon-button
+         fxLayoutAlign="center center">
+        <button mat-button
                 (click)="toggle.emit()"
-                aria-label="search">
-            <mat-icon>menu</mat-icon>
+                aria-label="menu">
+            <fa-icon class="fa-2x"
+                     [icon]="['fas','bars']"></fa-icon>
         </button>
 
         <span>Silvelo Portfolio</span>
     </div>
-    <!-- <mat-slide-toggle>Dark Theme</mat-slide-toggle> -->
     <mat-slide-toggle (change)="themService.setDarkTheme($event.checked)"
                       [checked]="themService.getDarkTheme() | async">
-        <mat-icon>brightness_2</mat-icon>
+        <fa-icon class="icon-margin"
+                 [icon]="['fas','moon']"></fa-icon>
     </mat-slide-toggle>
 
 </mat-toolbar>

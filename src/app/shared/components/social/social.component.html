@@ -1,38 +1,38 @@
 <div *ngFor="let social of socialList"
      gaCategory="social"
      [ngSwitch]="social.id">
-    <a *ngSwitchCase="'github'"
-       gaEvent
-       mat-icon-button
-       gaAction="github"
-       [href]="social.link"
-       target="_blank"
-       role="link"
-       aria-label="Github">
-        <fa-icon size="2x"
-                 [icon]="['fab','github']"></fa-icon>
-    </a>
+   <a *ngSwitchCase="'github'"
+      gaEvent
+      mat-icon-button
+      gaAction="github"
+      [href]="social.link"
+      target="_blank"
+      role="link"
+      aria-label="Github">
+      <fa-icon size="2x"
+               [icon]="['fab','github']"></fa-icon>
+   </a>
 
-    <a *ngSwitchCase="'linkedin'"
-       gaEvent
-       gaAction="linkedin"
-       mat-icon-button
-       [href]="social.link"
-       target="_blank"
-       role="link"
-       aria-label="Linkedin">
-        <fa-icon size="2x"
-                 [icon]="['fab','linkedin']"></fa-icon>
-    </a>
+   <a *ngSwitchCase="'linkedin'"
+      gaEvent
+      gaAction="linkedin"
+      mat-icon-button
+      [href]="social.link"
+      target="_blank"
+      role="link"
+      aria-label="Linkedin">
+      <fa-icon size="2x"
+               [icon]="['fab','linkedin']"></fa-icon>
+   </a>
 
-    <a *ngSwitchCase="'email'"
-       gaEvent
-       gaAction="email"
-       mat-icon-button
-       href="mailto:{{social.link}}"
-       role="link"
-       aria-label="Email">
-        <fa-icon size="2x"
-                 [icon]="['far', 'envelope']"></fa-icon>
-    </a>
+   <a *ngSwitchCase="'email'"
+      gaEvent
+      gaAction="email"
+      mat-icon-button
+      href="mailto:{{social.link}}"
+      role="link"
+      aria-label="Email">
+      <fa-icon size="2x"
+               [icon]="['fas', 'envelope']"></fa-icon>
+   </a>
 </div>
