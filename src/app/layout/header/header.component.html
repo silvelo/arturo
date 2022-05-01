@@ -12,5 +12,9 @@
         <span>Silvelo Portfolio</span>
     </div>
     <!-- <mat-slide-toggle>Dark Theme</mat-slide-toggle> -->
+    <mat-slide-toggle (change)="themService.setDarkTheme($event.checked)"
+                      [checked]="themService.getDarkTheme() | async">
+        <mat-icon>brightness_2</mat-icon>
+    </mat-slide-toggle>
 
 </mat-toolbar>

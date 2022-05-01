@@ -1,11 +1,13 @@
-@use '@angular/material'as mat;
-
-@include mat.core();
-
 @import './styles/themes/light-theme.scss';
-/* @import './styles/themes/black-theme.scss'; */
+@import './styles/themes/black-theme.scss';
 
-@include mat.all-component-themes($silvelo-light-theme);
+.light-theme {
+  @include angular-material-theme($light-theme);
+}
+
+.dark-theme {
+  @include angular-material-theme($dark-theme);
+}
 
 /* You can add global styles to this file, and also import other style files */
 
@@ -65,12 +67,3 @@ mat-card {
 .mat-card-actions {
   padding: 0 !important;
 }
-
-/* 
-.silvelo-light-theme {
-  @include mat.all-component-themes($silvelo-light-theme);
-}
-
-.silvelo-dark-theme {
-  @include mat.all-component-themes($silvelo-black-theme);
-} */
