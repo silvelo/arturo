@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core'
 import { Title } from '@angular/platform-browser'
-import { NavigationEnd, Router } from '@angular/router'
 import { SwUpdate } from '@angular/service-worker'
 import { environment } from '@env'
+import { Angulartics2GoogleTagManager } from 'angulartics2'
 
-declare let gtag: (property: string, value: any, configs: any) => {}
+declare let gtag: (property: string, value: any, configs?: any) => {}
 
 @Component({
   selector: 'app-root',
@@ -15,18 +15,12 @@ export class AppComponent implements OnInit {
   public constructor(
     private swUpdate: SwUpdate,
     private titleService: Title,
-    public router: Router
-  ) {
-    this.router.events.subscribe((event) => {
-      if (event instanceof NavigationEnd) {
-        gtag('config', environment.googleAnalyticsId, {
-          page_path: event.urlAfterRedirects
-        })
-      }
-    })
-  }
+    private angulartics2GoogleTagManager: Angulartics2GoogleTagManager
+  ) {}
 
   ngOnInit(): void {
+    gtag('config', environment.googleAnalyticsId)
+    this.angulartics2GoogleTagManager.startTracking()
     this.titleService.setTitle('Silvelo Portfolio')
     if (this.swUpdate.isEnabled) {
       this.swUpdate.available.subscribe(() => {

@@ -1,5 +1,6 @@
 <mat-tab-group mat-align-tabs="center"
-               headerPosition="below">
+               headerPosition="below"
+               (selectedTabChange)="onChangeTab($event)">
     <mat-tab label="Educación">
 
         <mat-card *ngFor="let education of educationList"
@@ -34,6 +35,11 @@
             </mat-card-header>
             <mat-card-actions fxLayoutAlign="center center">
                 <a mat-raised-button
+                   angulartics2On="click"
+                   angularticsAction="click"
+                   angularticsLabel="view"
+                   angularticsValue="certification"
+                   [angularticsCategory]="certification.url"
                    [href]="certification.url"
                    target="_blank">Mostrar credencial
                     <fa-icon [icon]="['fas','external-link']"></fa-icon>

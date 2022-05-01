@@ -8,9 +8,10 @@ import { FooterComponent } from './layout/footer/footer.component'
 import { CustomLayoutComponent } from './layout/custom-layout/custom-layout.component'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { SharedModule } from './shared/shared.module'
-import { CoreModule } from '@core/core.module';
-import { ServiceWorkerModule } from '@angular/service-worker';
+import { CoreModule } from '@core/core.module'
+import { ServiceWorkerModule } from '@angular/service-worker'
 import { environment } from '../environments/environment'
+import { Angulartics2GoogleTagManager, Angulartics2Module } from 'angulartics2'
 
 @NgModule({
   declarations: [
@@ -33,7 +34,9 @@ import { environment } from '../environments/environment'
       // Register the ServiceWorker as soon as the application is stable
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000'
-    })
+    }),
+
+    Angulartics2Module.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

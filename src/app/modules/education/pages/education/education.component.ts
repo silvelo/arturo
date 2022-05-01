@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core'
+import { MatTabChangeEvent } from '@angular/material/tabs'
 import { Award } from '@app/data/butter/types/award'
 import { Certification } from '@app/data/butter/types/certification'
 import { ButterService } from '@data/butter/service/butter.service'
 import { Education } from '@data/butter/types/education'
+import { Angulartics2 } from 'angulartics2'
 import { firstValueFrom } from 'rxjs'
 
 @Component({
@@ -15,7 +17,10 @@ export class EducationComponent implements OnInit {
   public awards: Award[] = []
   public certifications: Certification[] = []
 
-  constructor(private butterService: ButterService) {}
+  constructor(
+    private angulartics2: Angulartics2,
+    private butterService: ButterService
+  ) {}
 
   async ngOnInit() {
     const [
@@ -31,5 +36,15 @@ export class EducationComponent implements OnInit {
     this.educationList = butterEducationResponse.data.education
     this.certifications = butterCertificationResponse.data.certification
     this.awards = butterAwardResponse.data.awards
+  }
+
+  onChangeTab(event: MatTabChangeEvent) {
+    this.angulartics2.eventTrack.next({
+      action: 'click',
+      properties: {
+        category: event.tab.textLabel,
+        label: 'navigate'
+      }
+    })
   }
 }
