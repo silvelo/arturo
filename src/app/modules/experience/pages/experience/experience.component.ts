@@ -3,7 +3,8 @@ import { MatTabChangeEvent } from '@angular/material/tabs'
 import { Publication } from '@app/data/butter/types/publication'
 import { ButterService } from '@data/butter/service/butter.service'
 import { Experience } from '@data/butter/types/experience'
-import { Angulartics2 } from 'angulartics2'
+import { GoogleAnalyticsService } from 'ngx-google-analytics'
+
 import { firstValueFrom } from 'rxjs'
 
 @Component({
@@ -16,7 +17,7 @@ export class ExperienceComponent implements OnInit {
   public publications: Publication[] = []
 
   constructor(
-    private angulartics2: Angulartics2,
+    private gaService: GoogleAnalyticsService,
     private butterService: ButterService
   ) {}
 
@@ -32,12 +33,6 @@ export class ExperienceComponent implements OnInit {
   }
 
   onChangeTab(event: MatTabChangeEvent) {
-    this.angulartics2.eventTrack.next({
-      action: 'click',
-      properties: {
-        category: event.tab.textLabel,
-        label: 'navigate'
-      }
-    })
+    this.gaService.pageView(window.location.pathname, event.tab.textLabel)
   }
 }

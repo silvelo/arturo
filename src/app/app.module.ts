@@ -11,7 +11,10 @@ import { SharedModule } from './shared/shared.module'
 import { CoreModule } from '@core/core.module'
 import { ServiceWorkerModule } from '@angular/service-worker'
 import { environment } from '../environments/environment'
-import { Angulartics2GoogleTagManager, Angulartics2Module } from 'angulartics2'
+import {
+  NgxGoogleAnalyticsModule,
+  NgxGoogleAnalyticsRouterModule
+} from 'ngx-google-analytics'
 
 @NgModule({
   declarations: [
@@ -36,7 +39,8 @@ import { Angulartics2GoogleTagManager, Angulartics2Module } from 'angulartics2'
       registrationStrategy: 'registerWhenStable:30000'
     }),
 
-    Angulartics2Module.forRoot()
+    NgxGoogleAnalyticsModule.forRoot(environment.googleAnalyticsId),
+    NgxGoogleAnalyticsRouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

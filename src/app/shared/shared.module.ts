@@ -13,16 +13,10 @@ import { faEnvelope } from '@fortawesome/free-regular-svg-icons/faEnvelope'
 import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons/faLinkedin'
 import { faExternalLink } from '@fortawesome/free-solid-svg-icons/faExternalLink'
-import { Angulartics2Module } from 'angulartics2'
 
 @NgModule({
   declarations: [SocialComponent, TimeDiffPipe, LoaderComponent],
-  imports: [
-    CommonModule,
-    FontAwesomeModule,
-    MaterialModule,
-    Angulartics2Module
-  ],
+  imports: [CommonModule, FontAwesomeModule, MaterialModule],
   exports: [
     CommonModule,
     MaterialModule,
@@ -30,8 +24,7 @@ import { Angulartics2Module } from 'angulartics2'
     SocialComponent,
     FontAwesomeModule,
     TimeDiffPipe,
-    LoaderComponent,
-    Angulartics2Module
+    LoaderComponent
   ]
 })
 export class SharedModule {

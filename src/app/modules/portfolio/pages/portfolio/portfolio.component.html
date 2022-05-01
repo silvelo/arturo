@@ -12,11 +12,9 @@
     </mat-card-content>
     <mat-card-actions align="start">
         <a mat-icon-button
-           angulartics2On="click"
-           angularticsAction="click"
-           angularticsLabel="view"
-           angularticsValue="portfolio"
-           [angularticsCategory]="portfolio.url"
+           gaEvent
+           gaCategory="shared"
+           gaAction="portfolio"
            [href]="portfolio.url"
            target="_blank">
             <fa-icon [icon]="['fas','external-link']"></fa-icon>

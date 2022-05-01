@@ -4,7 +4,8 @@ import { Award } from '@app/data/butter/types/award'
 import { Certification } from '@app/data/butter/types/certification'
 import { ButterService } from '@data/butter/service/butter.service'
 import { Education } from '@data/butter/types/education'
-import { Angulartics2 } from 'angulartics2'
+import { GoogleAnalyticsService } from 'ngx-google-analytics'
+
 import { firstValueFrom } from 'rxjs'
 
 @Component({
@@ -18,7 +19,7 @@ export class EducationComponent implements OnInit {
   public certifications: Certification[] = []
 
   constructor(
-    private angulartics2: Angulartics2,
+    private gaService: GoogleAnalyticsService,
     private butterService: ButterService
   ) {}
 
@@ -39,12 +40,6 @@ export class EducationComponent implements OnInit {
   }
 
   onChangeTab(event: MatTabChangeEvent) {
-    this.angulartics2.eventTrack.next({
-      action: 'click',
-      properties: {
-        category: event.tab.textLabel,
-        label: 'navigate'
-      }
-    })
+    this.gaService.pageView(window.location.pathname, event.tab.textLabel)
   }
 }
