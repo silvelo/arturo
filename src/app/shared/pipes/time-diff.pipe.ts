@@ -12,8 +12,14 @@ export class TimeDiffPipe implements PipeTransform {
     const startDate = DateTime.fromISO(startDateStr || '')
     const endDate = endDateStr ? DateTime.fromISO(endDateStr) : DateTime.now()
     const diff = endDate.diff(startDate, ['years', 'months'], {
-      conversionAccuracy: 'longterm'
+      conversionAccuracy: 'casual'
     })
-    return diff.toHuman({ notation: 'compact' })
+
+    return diff.toHuman({
+      unitDisplay: 'long',
+      notation: 'compact',
+      signDisplay: 'never',
+      maximumFractionDigits: 0
+    })
   }
 }

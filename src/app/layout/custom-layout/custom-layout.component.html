@@ -1,7 +1,10 @@
-<app-header (toggle)="snav.toggle()"></app-header>
+<app-header (toggle)="snav.toggle()"
+            [show]="mobileQuery.matches"></app-header>
 
 <mat-sidenav-container>
     <mat-sidenav #snav
+                 [opened]="!mobileQuery.matches"
+                 [mode]="mobileQuery.matches ? 'over' : 'side'"
                  fxLayout="column"
                  fxLayoutAlign="space-between center">
 
@@ -10,7 +13,9 @@
                       fxLayout="column"
                       fxLayoutAlign="center center">
             <a mat-list-item
-               (click)="snav.toggle()"
+               [routerLinkActiveOptions]="{exact: true}"
+               routerLinkActive="active-route"
+               (click)="closeSidenav(snav)"
                [routerLink]="nav.link"
                fxLayout="row"
                fxLayoutAlign="start center"
@@ -31,7 +36,7 @@
                  alt="buttercms logo">
         </div>
         <small class="version"
-               fxLayoutAlign="start ">v{{version}}</small>
+               fxLayoutAlign="start ">Current version: {{version}}</small>
 
     </mat-sidenav>
 

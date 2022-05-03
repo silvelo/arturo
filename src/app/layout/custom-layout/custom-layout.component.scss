@@ -17,6 +17,11 @@ mat-sidenav-container {
     flex-direction: column !important;
 }
 
+a:hover,
+.active-route {
+    background: #607d8b !important
+}
+
 .mat-list-item,
 ::ng-deep .mat-list-item-content {
     width: 100% !important;

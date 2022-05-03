@@ -4,6 +4,7 @@
     <div fxLayout="row"
          fxLayoutAlign="center center">
         <button mat-button
+                *ngIf="show"
                 (click)="toggle.emit()"
                 aria-label="menu">
             <fa-icon class="fa-2x"

@@ -6,14 +6,13 @@
                             [education]="education"></app-education-card>
     </mat-tab>
     <mat-tab label="Cursos">
+
         <app-certification-card *ngFor="let certification of certifications"
                                 [certification]="certification"></app-certification-card>
-
     </mat-tab>
 
     <mat-tab label="Premios">
         <app-award-card [award]="award"
                         *ngFor="let award of awards"></app-award-card>
-
     </mat-tab>
 </mat-tab-group>
