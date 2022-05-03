@@ -1,8 +1,6 @@
 <div *ngFor="let social of socialList"
-     gaCategory="social"
      [ngSwitch]="social.id">
    <a *ngSwitchCase="'github'"
-      gaEvent
       mat-icon-button
       gaAction="github"
       [href]="social.link"
@@ -14,8 +12,6 @@
    </a>
 
    <a *ngSwitchCase="'linkedin'"
-      gaEvent
-      gaAction="linkedin"
       mat-icon-button
       [href]="social.link"
       target="_blank"
@@ -26,8 +22,6 @@
    </a>
 
    <a *ngSwitchCase="'email'"
-      gaEvent
-      gaAction="email"
       mat-icon-button
       href="mailto:{{social.link}}"
       role="link"

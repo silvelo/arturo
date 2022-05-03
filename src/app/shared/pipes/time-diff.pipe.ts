@@ -5,8 +5,11 @@ import { DateTime } from 'luxon'
   name: 'timeDiff'
 })
 export class TimeDiffPipe implements PipeTransform {
-  transform(startDateStr: string, endDateStr: string): string {
-    const startDate = DateTime.fromISO(startDateStr)
+  transform(
+    startDateStr: string | undefined,
+    endDateStr: string | undefined
+  ): string {
+    const startDate = DateTime.fromISO(startDateStr || '')
     const endDate = endDateStr ? DateTime.fromISO(endDateStr) : DateTime.now()
     const diff = endDate.diff(startDate, ['years', 'months'], {
       conversionAccuracy: 'longterm'

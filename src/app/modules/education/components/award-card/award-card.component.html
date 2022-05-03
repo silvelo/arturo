@@ -1,0 +1,9 @@
+<mat-card class="mat-elevation-z2">
+    <mat-card-header class="margin-header-remove">
+        <mat-card-title>{{award?.title}}</mat-card-title>
+        <mat-card-subtitle>{{award?.issued}} · {{award?.expedition_date | date:'yyyy'}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        {{award?.description}}
+    </mat-card-content>
+</mat-card>
