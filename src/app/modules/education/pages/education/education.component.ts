@@ -11,7 +11,11 @@ import { firstValueFrom } from 'rxjs'
 @Component({
   selector: 'app-education',
   templateUrl: './education.component.html',
-  styleUrls: ['./education.component.scss']
+  styleUrls: [
+    './education.component.scss',
+    '../../../../../styles/shared/material-card.scss',
+    '../../../../../styles/shared/material-tab.scss'
+  ]
 })
 export class EducationComponent implements OnInit {
   public educationList: Education[] = []

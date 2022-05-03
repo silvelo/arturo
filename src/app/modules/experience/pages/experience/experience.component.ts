@@ -10,7 +10,11 @@ import { firstValueFrom } from 'rxjs'
 @Component({
   selector: 'app-experience',
   templateUrl: './experience.component.html',
-  styleUrls: ['./experience.component.scss']
+  styleUrls: [
+    './experience.component.scss',
+    '../../../../../styles/shared/material-card.scss',
+    '../../../../../styles/shared/material-tab.scss'
+  ]
 })
 export class ExperienceComponent implements OnInit {
   public experienceList: Experience[] = []
