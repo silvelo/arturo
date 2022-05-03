@@ -20,6 +20,16 @@
                 <span fxFlex="85">{{nav.name}}</span>
             </a>
         </mat-nav-list>
+
+        <div class="version"
+             *ngIf="(theme$ | async) as theme"
+             fxLayout="row"
+             fxLayoutAlign="start center">
+            <small>Powered By</small>
+            <img class="butter_logo"
+                 [src]="theme"
+                 alt="buttercms logo">
+        </div>
         <small class="version"
                fxLayoutAlign="start ">v{{version}}</small>
 
