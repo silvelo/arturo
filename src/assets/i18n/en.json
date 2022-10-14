@@ -22,6 +22,7 @@
   },
   "COMMON": {
     "NO_EXPIRE": "No expiration date",
-    "CURRENT": "Current"
+    "CURRENT": "Current",
+    "WAIT_MESSAGE": "Fetching Data..."
   }
 }

@@ -22,6 +22,7 @@
   },
   "COMMON": {
     "NO_EXPIRE": "Sin fecha de vencimiento",
-    "CURRENT": "Actual"
+    "CURRENT": "Actual",
+    "LOAD_MESSAGE": "Obtiendo información..."
   }
 }

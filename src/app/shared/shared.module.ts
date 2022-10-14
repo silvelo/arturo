@@ -46,14 +46,14 @@ import { TranslateModule } from '@ngx-translate/core'
     CommonModule,
     MaterialModule,
     FlexLayoutModule,
+    TranslateModule,
     SocialComponent,
     FontAwesomeModule,
     TimeDiffPipe,
     LoaderComponent,
     CardComponent,
     ExpiresDateComponent,
-    RangeDateComponent,
-    TranslateModule
+    RangeDateComponent
   ]
 })
 export class SharedModule {

@@ -1,8 +1,8 @@
 import { Overlay, OverlayRef } from '@angular/cdk/overlay'
 import { ComponentPortal } from '@angular/cdk/portal'
 import { Injectable } from '@angular/core'
+import { LoaderComponent } from '@app/shared/components/loader/loader.component'
 import { BehaviorSubject } from 'rxjs'
-import { LoaderComponent } from '../../shared/components/loader/loader.component'
 
 @Injectable({
   providedIn: 'root'

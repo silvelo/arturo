@@ -7,7 +7,11 @@ import {
 import { OverlayModule } from '@angular/cdk/overlay'
 import { LoaderInterceptor } from './interceptors/loader.interceptor'
 import { throwIfAlreadyLoaded } from './guard/module-import.guard'
-import { TranslateModule, TranslateLoader } from '@ngx-translate/core'
+import {
+  TranslateModule,
+  TranslateLoader,
+  TranslateService
+} from '@ngx-translate/core'
 import { jsonTranslateLoader } from './common/translate'
 
 @NgModule({
@@ -16,12 +20,12 @@ import { jsonTranslateLoader } from './common/translate'
     HttpClientModule,
     OverlayModule,
     TranslateModule.forRoot({
-      defaultLanguage: 'en',
       loader: {
         provide: TranslateLoader,
         useFactory: jsonTranslateLoader,
         deps: [HttpClient]
-      }
+      },
+      isolate: true
     })
   ],
   providers: [
@@ -33,7 +37,11 @@ import { jsonTranslateLoader } from './common/translate'
   ]
 })
 export class CoreModule {
-  constructor(@Optional() @SkipSelf() parentModule: CoreModule) {
+  constructor(
+    @Optional() @SkipSelf() parentModule: CoreModule,
+    private translateService: TranslateService
+  ) {
     throwIfAlreadyLoaded(parentModule, 'CoreModule')
+    this.translateService.setDefaultLang('en')
   }
 }

@@ -22,8 +22,8 @@ import { NavbarComponent } from './layout/navbar/navbar.component'
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    NavbarComponent,
-    CustomLayoutComponent
+    CustomLayoutComponent,
+    NavbarComponent
   ],
   imports: [
     // angular

@@ -66,7 +66,6 @@ export class CustomLayoutComponent implements OnInit, OnDestroy {
   }
 
   closeSidenav(sidenav: MatSidenav) {
-    console.log('emit')
     if (this.mobileQuery.matches) {
       sidenav.toggle()
     }
