@@ -7,5 +7,5 @@ import { Publication } from '@app/data/butter/types/publication'
   styleUrls: ['./publication-card.component.scss']
 })
 export class PublicationCardComponent {
-  @Input() publication: Publication | undefined = undefined
+  @Input() publication!: Publication
 }

@@ -8,4 +8,6 @@ import { Component, Input, OnInit } from '@angular/core'
 export class RangeDateComponent {
   @Input() start_date!: string
   @Input() end_date!: string
+  @Input() current: boolean = false
+  @Input() timeDiff: boolean = false
 }
