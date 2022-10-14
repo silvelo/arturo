@@ -1,5 +1,6 @@
-<app-header (toggle)="snav.toggle()"
-            [show]="mobileQuery.matches"></app-header>
+<silvelo-header (toggle)="snav.toggle()"
+                [show]="mobileQuery.matches">
+</silvelo-header>
 
 <mat-sidenav-container>
     <mat-sidenav #snav
@@ -7,8 +8,9 @@
                  [mode]="mobileQuery.matches ? 'over' : 'side'"
                  fxLayout="column"
                  fxLayoutAlign="space-between center">
-        <app-navbar (toggle)="closeSidenav(snav)"
-                    [theme]="theme$ | async"></app-navbar>
+        <silvelo-navbar (toggle)="closeSidenav(snav)"
+                        [theme]="theme$ | async">
+        </silvelo-navbar>
 
     </mat-sidenav>
 

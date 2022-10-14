@@ -5,7 +5,7 @@ import { Sidenav } from '@data/butter/types/sidenav'
 import { firstValueFrom } from 'rxjs'
 import packageJson from '../../../../package.json'
 @Component({
-  selector: 'app-navbar',
+  selector: 'silvelo-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })

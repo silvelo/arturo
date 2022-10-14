@@ -5,7 +5,7 @@ import { Social } from '@data/butter/types/social'
 import { firstValueFrom } from 'rxjs'
 
 @Component({
-  selector: 'app-social',
+  selector: 'silvelo-social',
   templateUrl: './social.component.html',
   styleUrls: ['./social.component.scss']
 })

@@ -2,7 +2,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core'
 import { ThemeService } from '@app/core/services/theme.service'
 
 @Component({
-  selector: 'app-header',
+  selector: 'silvelo-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })

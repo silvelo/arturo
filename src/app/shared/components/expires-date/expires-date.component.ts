@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core'
 
 @Component({
-  selector: 'app-expires-date',
+  selector: 'silvelo-expires-date',
   templateUrl: './expires-date.component.html',
   styleUrls: ['./expires-date.component.scss']
 })

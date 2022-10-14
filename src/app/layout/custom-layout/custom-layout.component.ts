@@ -14,7 +14,7 @@ import { Sidenav } from '@data/butter/types/sidenav'
 import { firstValueFrom, map, Observable } from 'rxjs'
 import packageJson from '../../../../package.json'
 @Component({
-  selector: 'app-custom-layout',
+  selector: 'silvelo-custom-layout',
   templateUrl: './custom-layout.component.html',
   styleUrls: ['./custom-layout.component.scss']
 })

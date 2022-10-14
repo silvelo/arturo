@@ -2,12 +2,12 @@
                headerPosition="below"
                (selectedTabChange)="onChangeTab($event)">
     <mat-tab [label]="'NAVBAR.EXPERIENCE' | translate">
-        <app-experience-card [experience]="experience"
-                             *ngFor="let experience of experienceList"></app-experience-card>
+        <silvelo-experience-card [experience]="experience"
+                                 *ngFor="let experience of experienceList"></silvelo-experience-card>
     </mat-tab>
     <mat-tab [label]="'NAVBAR.PUBLICATIONS' | translate">
-        <app-publication-card [publication]="publication"
-                              *ngFor="let publication of publications"></app-publication-card>
+        <silvelo-publication-card [publication]="publication"
+                                  *ngFor="let publication of publications"></silvelo-publication-card>
 
     </mat-tab>
 </mat-tab-group>

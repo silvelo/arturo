@@ -9,7 +9,7 @@ import { GoogleAnalyticsService } from 'ngx-google-analytics'
 import { firstValueFrom } from 'rxjs'
 
 @Component({
-  selector: 'app-education',
+  selector: 'silvelo-education',
   templateUrl: './education.component.html',
   styleUrls: [
     './education.component.scss',

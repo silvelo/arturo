@@ -4,7 +4,7 @@ import { Portfolio } from '@app/data/butter/types/portfolio'
 import { firstValueFrom } from 'rxjs'
 
 @Component({
-  selector: 'app-portfolio',
+  selector: 'silvelo-portfolio',
   templateUrl: './portfolio.component.html',
   styleUrls: [
     './portfolio.component.scss',

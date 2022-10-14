@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core'
 import { Portfolio } from '@app/data/butter/types/portfolio'
 
 @Component({
-  selector: 'app-portfolio-card',
+  selector: 'silvelo-portfolio-card',
   templateUrl: './portfolio-card.component.html',
   styleUrls: ['./portfolio-card.component.scss']
 })

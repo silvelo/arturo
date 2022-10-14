@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core'
 
 @Component({
-  selector: 'app-range-date',
+  selector: 'silvelo-range-date',
   templateUrl: './range-date.component.html',
   styleUrls: ['./range-date.component.scss']
 })

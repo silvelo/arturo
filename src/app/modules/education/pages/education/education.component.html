@@ -2,17 +2,17 @@
                headerPosition="below"
                (selectedTabChange)="onChangeTab($event)">
     <mat-tab [label]="'NAVBAR.EDUCATION' | translate">
-        <app-education-card *ngFor="let education of educationList"
-                            [education]="education"></app-education-card>
+        <silvelo-education-card *ngFor="let education of educationList"
+                                [education]="education"></silvelo-education-card>
     </mat-tab>
     <mat-tab [label]="'NAVBAR.COURSES' | translate">
 
-        <app-certification-card *ngFor="let certification of certifications"
-                                [certification]="certification"></app-certification-card>
+        <silvelo-certification-card *ngFor="let certification of certifications"
+                                    [certification]="certification"></silvelo-certification-card>
     </mat-tab>
 
     <mat-tab [label]="'NAVBAR.AWARDS' | translate">
-        <app-award-card [award]="award"
-                        *ngFor="let award of awards"></app-award-card>
+        <silvelo-award-card [award]="award"
+                            *ngFor="let award of awards"></silvelo-award-card>
     </mat-tab>
 </mat-tab-group>

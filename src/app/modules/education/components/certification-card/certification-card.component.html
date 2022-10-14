@@ -1,11 +1,12 @@
-<app-card [image]="certification.company_logo"
-          [title]="certification.name"
-          [subtitle]="certification.company"
-          [link]="certification.url"
-          linkText="Show Credential ">
-    <app-expires-date [expiration_date]="certification.expiration_date"
-                      [expedition_date]="certification.expedition_date"
-                      [expires]="certification.expires"
-                      subtitle></app-expires-date>
+<silvelo-card [image]="certification.company_logo"
+              [title]="certification.name"
+              [subtitle]="certification.company"
+              [link]="certification.url"
+              linkText="Show Credential ">
+      <silvelo-expires-date [expiration_date]="certification.expiration_date"
+                            [expedition_date]="certification.expedition_date"
+                            [expires]="certification.expires"
+                            subtitle>
+      </silvelo-expires-date>
 
-</app-card>
+</silvelo-card>

@@ -8,7 +8,7 @@ import { GoogleAnalyticsService } from 'ngx-google-analytics'
 import { firstValueFrom } from 'rxjs'
 
 @Component({
-  selector: 'app-experience',
+  selector: 'silvelo-experience',
   templateUrl: './experience.component.html',
   styleUrls: [
     './experience.component.scss',
