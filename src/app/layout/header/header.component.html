@@ -11,7 +11,9 @@
                      [icon]="['fas','bars']"></fa-icon>
         </button>
 
-        <span>Silvelo Portfolio</span>
+        <img class="logo"
+             src="/assets/images/logo-white.png"
+             alt="Logo">
     </div>
     <mat-slide-toggle (change)="themService.setDarkTheme($event.checked)"
                       [checked]="themService.getDarkTheme() | async">
