@@ -22,9 +22,18 @@ import {
   faBars
 } from '@fortawesome/free-solid-svg-icons'
 import { CardComponent } from './components/card/card.component'
+import { ExpiresDateComponent } from './components/expires-date/expires-date.component'
+import { RangeDateComponent } from './components/range-date/range-date.component'
 
 @NgModule({
-  declarations: [SocialComponent, TimeDiffPipe, LoaderComponent, CardComponent],
+  declarations: [
+    SocialComponent,
+    TimeDiffPipe,
+    LoaderComponent,
+    CardComponent,
+    ExpiresDateComponent,
+    RangeDateComponent
+  ],
   imports: [CommonModule, FontAwesomeModule, MaterialModule, FlexLayoutModule],
   exports: [
     CommonModule,
@@ -34,7 +43,9 @@ import { CardComponent } from './components/card/card.component'
     FontAwesomeModule,
     TimeDiffPipe,
     LoaderComponent,
-    CardComponent
+    CardComponent,
+    ExpiresDateComponent,
+    RangeDateComponent
   ]
 })
 export class SharedModule {

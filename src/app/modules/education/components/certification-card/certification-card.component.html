@@ -1,24 +1,11 @@
-<mat-card class="mat-elevation-z2">
-    <mat-card-header>
-        <img mat-card-avatar
-             [src]="certification.company_logo"
-             alt="Institution Logo">
-        <mat-card-title>{{certification.name}}</mat-card-title>
-        <mat-card-subtitle>{{certification.company}}</mat-card-subtitle>
-        <mat-card-subtitle>{{certification.expiration_date | date:'yyyy'}} ·
-            <span *ngIf="certification.expires; else noExpire">{{certification.expedition_date |
-                date:'yyyy'}}</span>
+<app-card [image]="certification.company_logo"
+          [title]="certification.name"
+          [subtitle]="certification.company"
+          [link]="certification.url"
+          linkText="Show Credential ">
+    <app-expires-date [expiration_date]="certification.expiration_date"
+                      [expedition_date]="certification.expedition_date"
+                      [expires]="certification.expires"
+                      subtitle></app-expires-date>
 
-            <ng-template #noExpire>Sin fecha de vencimiento</ng-template>
-        </mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-actions fxLayoutAlign="center center">
-        <a mat-raised-button
-           color="primary"
-           [href]="certification.url"
-           target="_blank">
-            <span class="margin-right">Mostrar credencial</span>
-            <fa-icon [icon]="['fas','external-link']"></fa-icon>
-        </a>
-    </mat-card-actions>
-</mat-card>
+</app-card>

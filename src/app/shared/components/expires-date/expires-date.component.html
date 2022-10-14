@@ -1,0 +1,5 @@
+{{expiration_date | date:'yyyy'}} ·
+<span *ngIf="expires; else noExpire">{{expedition_date |
+    date:'yyyy'}}</span>
+
+<ng-template #noExpire>Sin fecha de vencimiento</ng-template>
