@@ -7,10 +7,11 @@ import {
   Renderer2
 } from '@angular/core'
 import { MatSidenav } from '@angular/material/sidenav'
+
 import { ThemeService } from '@app/core/services/theme.service'
 import { ButterService } from '@data/butter/service/butter.service'
 import { Sidenav } from '@data/butter/types/sidenav'
-import { firstValueFrom, map, Observable, tap } from 'rxjs'
+import { firstValueFrom, map, Observable } from 'rxjs'
 import packageJson from '../../../../package.json'
 @Component({
   selector: 'app-custom-layout',
@@ -41,11 +42,11 @@ export class CustomLayoutComponent implements OnInit, OnDestroy {
         if (isDarkTheme) {
           this.renderer.addClass(document.body, 'dark-theme')
           this.renderer.removeClass(document.body, 'light-theme')
-          return './assets/images/butter-w.png'
+          return '/assets/images/butter-w.png'
         } else {
           this.renderer.removeClass(document.body, 'dark-theme')
           this.renderer.addClass(document.body, 'light-theme')
-          return './assets/images/butter-b.png'
+          return '/assets/images/butter-b.png'
         }
       })
     )

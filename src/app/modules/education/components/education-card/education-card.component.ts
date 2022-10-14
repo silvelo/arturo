@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core'
+import { Component, Input } from '@angular/core'
 import { Education } from '@app/data/butter/types/education'
 
 @Component({
@@ -7,5 +7,5 @@ import { Education } from '@app/data/butter/types/education'
   styleUrls: ['./education-card.component.scss']
 })
 export class EducationCardComponent {
-  @Input() education: Education | undefined = undefined
+  @Input() education!: Education
 }

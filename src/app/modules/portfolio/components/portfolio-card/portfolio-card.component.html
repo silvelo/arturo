@@ -1,21 +1,5 @@
-<mat-card class="mat-elevation-z4">
-    <mat-card-header>
-        <mat-card-title>{{portfolio?.title}}</mat-card-title>
-    </mat-card-header>
-    <img mat-card-image
-         *ngIf="portfolio?.photo"
-         [src]="portfolio?.photo"
-         alt="Project photo">
-    <mat-card-content>
-        <p>{{portfolio?.description}}</p>
-    </mat-card-content>
-    <mat-card-actions fxLayoutAlign="center center">
-        <a mat-raised-button
-           color="primary"
-           [href]="portfolio?.url"
-           target="_blank">
-            <span class="margin-right">View Project</span>
-            <fa-icon [icon]="['fas','external-link']"></fa-icon>
-        </a>
-    </mat-card-actions>
-</mat-card>
+<app-card [image]="portfolio.photo"
+          [title]="portfolio.title"
+          [description]="portfolio.description"
+          [link]="portfolio.url"
+          linkText="View Project"></app-card>

@@ -7,5 +7,5 @@ import { Award } from '@app/data/butter/types/award'
   styleUrls: ['./award-card.component.scss']
 })
 export class AwardCardComponent {
-  @Input() award: Award | undefined = undefined
+  @Input() award!: Award
 }

@@ -3,19 +3,20 @@
     <img mat-card-image
          class="photo-profile"
          alt="Profile"
-         [src]="me?.header_photo" />
+         [src]="me.header_photo" />
 
 
     <mat-card-header>
         <img mat-card-avatar
-             [src]="me?.profile_photo" />
-        <mat-card-title>{{me?.name}} {{me?.surname}}</mat-card-title>
-        <mat-card-subtitle>{{me?.job}}</mat-card-subtitle>
+             alt="Profile"
+             [src]="me.profile_photo" />
+        <mat-card-title>{{me.name}} {{me.surname}}</mat-card-title>
+        <mat-card-subtitle>{{me.job}}</mat-card-subtitle>
     </mat-card-header>
 
     <mat-card-content>
         <p>
-            {{me?.description}}
+            {{me.description}}
         </p>
     </mat-card-content>
 

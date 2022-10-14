@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core'
+import { Component, Input } from '@angular/core'
 import { Certification } from '@app/data/butter/types/certification'
 
 @Component({
@@ -7,5 +7,5 @@ import { Certification } from '@app/data/butter/types/certification'
   styleUrls: ['./certification-card.component.scss']
 })
 export class CertificationCardComponent {
-  @Input() certification: Certification | undefined = undefined
+  @Input() certification!: Certification
 }

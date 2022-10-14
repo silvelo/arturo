@@ -1,11 +1,11 @@
 <mat-card class="mat-elevation-z2">
     <mat-card-header class="margin-subtitle-remove">
         <img mat-card-avatar
-             [src]="education?.institution_logo"
+             [src]="education.institution_logo"
              alt="Institution Logo">
-        <mat-card-title>{{education?.institution}}</mat-card-title>
-        <mat-card-subtitle fxLayout="column"><span>{{education?.degree}}</span>
-            <span>{{education?.start_date | date:'yyyy'}} - {{education?.end_date | date:'yyyy'}}</span>
+        <mat-card-title>{{education.institution}}</mat-card-title>
+        <mat-card-subtitle fxLayout="column"><span>{{education.degree}}</span>
+            <span>{{education.start_date | date:'yyyy'}} - {{education.end_date | date:'yyyy'}}</span>
         </mat-card-subtitle>
     </mat-card-header>
 </mat-card>

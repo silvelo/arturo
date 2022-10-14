@@ -21,10 +21,11 @@ import {
   faMoon,
   faBars
 } from '@fortawesome/free-solid-svg-icons'
+import { CardComponent } from './components/card/card.component'
 
 @NgModule({
-  declarations: [SocialComponent, TimeDiffPipe, LoaderComponent],
-  imports: [CommonModule, FontAwesomeModule, MaterialModule],
+  declarations: [SocialComponent, TimeDiffPipe, LoaderComponent, CardComponent],
+  imports: [CommonModule, FontAwesomeModule, MaterialModule, FlexLayoutModule],
   exports: [
     CommonModule,
     MaterialModule,
@@ -32,7 +33,8 @@ import {
     SocialComponent,
     FontAwesomeModule,
     TimeDiffPipe,
-    LoaderComponent
+    LoaderComponent,
+    CardComponent
   ]
 })
 export class SharedModule {

@@ -9,7 +9,7 @@ import { firstValueFrom } from 'rxjs'
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  public me: Me | null = null
+  public me: Me | undefined = undefined
   constructor(private butterService: ButterService) {}
 
   async ngOnInit() {

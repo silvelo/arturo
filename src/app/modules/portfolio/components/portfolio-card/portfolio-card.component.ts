@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core'
+import { Component, Input } from '@angular/core'
 import { Portfolio } from '@app/data/butter/types/portfolio'
 
 @Component({
@@ -7,5 +7,5 @@ import { Portfolio } from '@app/data/butter/types/portfolio'
   styleUrls: ['./portfolio-card.component.scss']
 })
 export class PortfolioCardComponent {
-  @Input() portfolio: Portfolio | undefined
+  @Input() portfolio!: Portfolio
 }

@@ -21,5 +21,12 @@ export class PortfolioComponent implements OnInit {
       this.butterService.getPortfolio()
     )
     this.portfolioList = butterPortfolioResponse.data.portfolio
+    this.portfolioList.forEach(
+      (portfolio, index) =>
+        (portfolio.photo = portfolio.photo
+          ? portfolio.photo
+          : `/assets/images/g${(index % 3) + 1}.png`)
+    )
+    console.log(this.portfolioList)
   }
 }

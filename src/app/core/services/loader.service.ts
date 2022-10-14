@@ -8,6 +8,7 @@ import { LoaderComponent } from '../../shared/components/loader/loader.component
   providedIn: 'root'
 })
 export class LoaderService {
+  public isLoading: boolean = false
   private overlayRef: OverlayRef
   private pendingRequest = new BehaviorSubject<number>(0)
 
@@ -42,9 +43,11 @@ export class LoaderService {
 
   private showOverlay() {
     this.overlayRef.attach(new ComponentPortal(LoaderComponent))
+    this.isLoading = true
   }
 
   private hideOverlay() {
     this.overlayRef.detach()
+    this.isLoading = false
   }
 }
