@@ -1,9 +1,14 @@
 import { NgModule, Optional, SkipSelf } from '@angular/core'
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
+import {
+  HttpClient,
+  HttpClientModule,
+  HTTP_INTERCEPTORS
+} from '@angular/common/http'
 import { OverlayModule } from '@angular/cdk/overlay'
 import { LoaderInterceptor } from './interceptors/loader.interceptor'
 import { throwIfAlreadyLoaded } from './guard/module-import.guard'
-import { TranslateModule } from '@ngx-translate/core'
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core'
+import { jsonTranslateLoader } from './common/translate'
 
 @NgModule({
   declarations: [],
@@ -11,7 +16,12 @@ import { TranslateModule } from '@ngx-translate/core'
     HttpClientModule,
     OverlayModule,
     TranslateModule.forRoot({
-      defaultLanguage: 'en'
+      defaultLanguage: 'en',
+      loader: {
+        provide: TranslateLoader,
+        useFactory: jsonTranslateLoader,
+        deps: [HttpClient]
+      }
     })
   ],
   providers: [

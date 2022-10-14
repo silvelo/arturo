@@ -35,7 +35,13 @@ import { TranslateModule } from '@ngx-translate/core'
     ExpiresDateComponent,
     RangeDateComponent
   ],
-  imports: [CommonModule, FontAwesomeModule, MaterialModule, FlexLayoutModule],
+  imports: [
+    CommonModule,
+    FontAwesomeModule,
+    MaterialModule,
+    FlexLayoutModule,
+    TranslateModule
+  ],
   exports: [
     CommonModule,
     MaterialModule,

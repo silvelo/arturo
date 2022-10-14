@@ -1,17 +1,17 @@
 <mat-tab-group mat-align-tabs="center"
                headerPosition="below"
                (selectedTabChange)="onChangeTab($event)">
-    <mat-tab label="Educación">
+    <mat-tab [label]="'NAVBAR.EDUCATION' | translate">
         <app-education-card *ngFor="let education of educationList"
                             [education]="education"></app-education-card>
     </mat-tab>
-    <mat-tab label="Cursos">
+    <mat-tab [label]="'NAVBAR.COURSES' | translate">
 
         <app-certification-card *ngFor="let certification of certifications"
                                 [certification]="certification"></app-certification-card>
     </mat-tab>
 
-    <mat-tab label="Premios">
+    <mat-tab [label]="'NAVBAR.AWARDS' | translate">
         <app-award-card [award]="award"
                         *ngFor="let award of awards"></app-award-card>
     </mat-tab>

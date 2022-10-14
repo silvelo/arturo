@@ -1,6 +1,6 @@
 <span>{{start_date | date:'yyyy'}} -
 
-    <span *ngIf="current; else endJob">actualidad</span>
+    <span *ngIf="current; else endJob">{{'COMMON.CURRENT' | translate }}</span>
     <ng-template #endJob>{{end_date | date:'yyyy'}}</ng-template>
 
     <span *ngIf="timeDiff">

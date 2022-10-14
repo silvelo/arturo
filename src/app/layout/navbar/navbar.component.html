@@ -12,18 +12,37 @@
        *ngFor="let nav of sidenav">
         <fa-icon fxFlex="15"
                  [icon]="['fas', nav.icon]"></fa-icon>
-        <span fxFlex="85">{{nav.name}}</span>
+        <span fxFlex="85">{{nav.name | translate}}</span>
     </a>
 </mat-nav-list>
 
-<div class="version"
-     *ngIf="theme"
-     fxLayout="row"
-     fxLayoutAlign="start center">
-    <small>Powered By</small>
-    <img class="butter_logo"
-         [src]="theme"
-         alt="buttercms logo">
-</div>
-<small class="version"
-       fxLayoutAlign="start ">Current version: {{version}}</small>
+<section class="m-2">
+    <div class="version"
+         *ngIf="theme"
+         fxLayout="row"
+         fxLayoutAlign="space-between center">
+        <span>{{'NAVBAR.POWER_BY' | translate}}</span>
+        <img class="butter_logo"
+             [src]="theme"
+             alt="buttercms logo">
+    </div>
+
+    <small fxLayoutAlign="start ">{{'NAVBAR.VERSION' | translate}} {{version}}</small>
+
+    <div fxLayout="row"
+         fxLayoutAlign="center center">
+        <ng-template ngFor
+                     let-language
+                     [ngForOf]="languages"
+                     let-last="last">
+            <button mat-button
+                    (click)="onSelectLanguage(language.code)">
+                <span>{{language.label}}</span>
+            </button>
+            <span class="mx-1"
+                  *ngIf="!last">|</span>
+        </ng-template>
+    </div>
+
+
+</section>

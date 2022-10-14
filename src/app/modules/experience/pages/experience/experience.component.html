@@ -1,11 +1,11 @@
 <mat-tab-group mat-align-tabs="center"
                headerPosition="below"
                (selectedTabChange)="onChangeTab($event)">
-    <mat-tab label="Experience">
+    <mat-tab [label]="'NAVBAR.EXPERIENCE' | translate">
         <app-experience-card [experience]="experience"
                              *ngFor="let experience of experienceList"></app-experience-card>
     </mat-tab>
-    <mat-tab label="Publicaciones">
+    <mat-tab [label]="'NAVBAR.PUBLICATIONS' | translate">
         <app-publication-card [publication]="publication"
                               *ngFor="let publication of publications"></app-publication-card>
 

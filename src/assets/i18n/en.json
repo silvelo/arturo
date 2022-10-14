@@ -1,0 +1,27 @@
+{
+  "NAVBAR": {
+    "HOME": "Home",
+    "EDUCATION": "Education",
+    "EXPERIENCE": "Experience",
+    "PORTFOLIO": "Portfolio",
+    "ABOUT": "About",
+    "POWER_BY": "Powered by",
+    "VERSION": "Version",
+    "PUBLICATIONS": "Publications",
+    "COURSES": "Courses",
+    "AWARDS": "Awards"
+  },
+  "ABOUT": {
+    "DESCRIPTION": "Hello, I am a graduate in Computer Engineering and I currently live in A Coruña. I am passionate about new technologies and 3D printing."
+  },
+  "PORTFOLIO": {
+    "SILVELO_PORTFOLIO": "This website",
+    "TS_SIMPLE": "A collection of packages for simplifying your life. The most common packages contain simple functions that I used in a lot of my projects. By this way I try to unify that functions in a repository and testing to avoid bugs.",
+    "RASPBOT": "Raspbot is a simple program to listen Telegram bot channel",
+    "NGX_CARDS": "A compilation of components for angular to display profile info for websites"
+  },
+  "COMMON": {
+    "NO_EXPIRE": "No expiration date",
+    "CURRENT": "Current"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "NAVBAR": {
+    "HOME": "Inicio",
+    "EDUCATION": "Educación",
+    "EXPERIENCE": "Experiencia",
+    "PORTFOLIO": "Portafolio",
+    "ABOUT": "Acerca de",
+    "POWER_BY": "Potenciado por",
+    "VERSION": "Versión",
+    "PUBLICATIONS": "Publicaciones",
+    "COURSES": "Cursos",
+    "AWARDS": "Premios"
+  },
+  "ABOUT": {
+    "DESCRIPTION": "Hola, soy graduado en Ingeniería Informática y actualmente resido en A Coruña. Me apasionan las nuevas tecnologías y la impresión 3D."
+  },
+  "PORTFOLIO": {
+    "SILVELO_PORTFOLIO": "Este sitio web",
+    "TS_SIMPLE": "Una colección de paquetes para simplificar tu vida. Los paquetes más comunes contienen funciones simples que he utilizado en muchos de mis proyectos. De esta manera intento unificar esas funciones en un repositorio y probarlas para evitar bugs",
+    "RASPBOT": "Raspbot es un sencillo programa para escuchar el canal bot de Telegram",
+    "NGX_CARDS": "Una compilación de componentes para angular para mostrar la información del perfil de los sitios web"
+  },
+  "COMMON": {
+    "NO_EXPIRE": "Sin fecha de vencimiento",
+    "CURRENT": "Actual"
+  }
+}

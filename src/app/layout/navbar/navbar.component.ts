@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core'
-
+import { TranslateService } from '@ngx-translate/core'
 import { ButterService } from '@data/butter/service/butter.service'
 import { Sidenav } from '@data/butter/types/sidenav'
 import { firstValueFrom } from 'rxjs'
@@ -16,10 +16,22 @@ export class NavbarComponent implements OnInit {
   public sidenav: Sidenav[] = []
   public version: string = packageJson.version
 
-  constructor(private butterService: ButterService) {}
+  public languages = [
+    { code: 'en', label: 'EN' },
+    { code: 'es', label: 'ES' }
+  ]
+
+  constructor(
+    private butterService: ButterService,
+    private translateService: TranslateService
+  ) {}
 
   async ngOnInit() {
     const butterResponse = await firstValueFrom(this.butterService.getSidenav())
     this.sidenav = butterResponse.data.sidenav
+  }
+
+  onSelectLanguage(language: string) {
+    this.translateService.use(language)
   }
 }

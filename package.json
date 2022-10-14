@@ -42,6 +42,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.1.0",
     "@ngx-translate/core": "^14.0.0",
     "@ngx-translate/http-loader": "^7.0.0",
+    "bootstrap": "^5.2.2",
     "luxon": "^2.3.2",
     "luxon-angular": "^5.0.0",
     "ngx-google-analytics": "^13.0.1",
