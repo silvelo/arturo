@@ -13,6 +13,8 @@ import {
   TranslateService
 } from '@ngx-translate/core'
 import { jsonTranslateLoader } from './common/translate'
+import { DEFAULT_LANGUAGE } from './constants/lanuage'
+import { Settings } from 'luxon'
 
 @NgModule({
   declarations: [],
@@ -42,6 +44,8 @@ export class CoreModule {
     private translateService: TranslateService
   ) {
     throwIfAlreadyLoaded(parentModule, 'CoreModule')
-    this.translateService.setDefaultLang('en')
+    const language = this.translateService.getBrowserLang() || DEFAULT_LANGUAGE
+    this.translateService.setDefaultLang(language)
+    Settings.defaultLocale = language
   }
 }

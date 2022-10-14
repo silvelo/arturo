@@ -2,13 +2,14 @@ import { Pipe, PipeTransform } from '@angular/core'
 import { DateTime } from 'luxon'
 
 @Pipe({
-  name: 'timeDiff'
+  name: 'timeDiff',
+  pure: false
 })
 export class TimeDiffPipe implements PipeTransform {
   transform(startDateStr: string, endDateStr: string | undefined): string {
     const startDate = DateTime.fromISO(startDateStr)
     const endDate = endDateStr ? DateTime.fromISO(endDateStr) : DateTime.now()
-    const diff = endDate.diff(startDate, ['years', 'months'], {
+    const diff = endDate.diff(startDate, ['years', 'months', 'days'], {
       conversionAccuracy: 'casual'
     })
 

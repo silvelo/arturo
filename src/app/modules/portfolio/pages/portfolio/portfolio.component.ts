@@ -27,6 +27,5 @@ export class PortfolioComponent implements OnInit {
           ? portfolio.photo
           : `/assets/images/g${(index % 3) + 1}.png`)
     )
-    console.log(this.portfolioList)
   }
 }
