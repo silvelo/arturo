@@ -16,23 +16,3 @@ mat-sidenav-container {
 ::ng-deep .mat-drawer-inner-container {
     flex-direction: column !important;
 }
-
-a:hover,
-.active-route {
-    background: #607d8b !important
-}
-
-.mat-list-item,
-::ng-deep .mat-list-item-content {
-    width: 100% !important;
-}
-
-.version {
-    margin: 5px;
-}
-
-.butter_logo {
-    margin-left: 5px;
-    width      : 125px;
-    height     : auto;
-}

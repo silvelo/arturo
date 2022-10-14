@@ -24,6 +24,7 @@ import {
 import { CardComponent } from './components/card/card.component'
 import { ExpiresDateComponent } from './components/expires-date/expires-date.component'
 import { RangeDateComponent } from './components/range-date/range-date.component'
+import { TranslateModule } from '@ngx-translate/core'
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { RangeDateComponent } from './components/range-date/range-date.component
     LoaderComponent,
     CardComponent,
     ExpiresDateComponent,
-    RangeDateComponent
+    RangeDateComponent,
+    TranslateModule
   ]
 })
 export class SharedModule {

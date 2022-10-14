@@ -15,12 +15,14 @@ import {
   NgxGoogleAnalyticsModule,
   NgxGoogleAnalyticsRouterModule
 } from 'ngx-google-analytics'
+import { NavbarComponent } from './layout/navbar/navbar.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
+    NavbarComponent,
     CustomLayoutComponent
   ],
   imports: [
@@ -38,7 +40,6 @@ import {
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000'
     }),
-
     NgxGoogleAnalyticsModule.forRoot(environment.googleAnalyticsId),
     NgxGoogleAnalyticsRouterModule
   ],

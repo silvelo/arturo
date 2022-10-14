@@ -33,8 +33,8 @@ export class CustomLayoutComponent implements OnInit, OnDestroy {
     private themeService: ThemeService,
     private butterService: ButterService
   ) {
-    this.mobileQuery = media.matchMedia('(max-width: 600px)')
-    this._mobileQueryListener = () => changeDetectorRef.detectChanges()
+    this.mobileQuery = this.media.matchMedia('(max-width: 600px)')
+    this._mobileQueryListener = () => this.changeDetectorRef.detectChanges()
     this.mobileQuery.addListener(this._mobileQueryListener)
 
     this.theme$ = this.themeService.getDarkTheme().pipe(
@@ -66,6 +66,7 @@ export class CustomLayoutComponent implements OnInit, OnDestroy {
   }
 
   closeSidenav(sidenav: MatSidenav) {
+    console.log('emit')
     if (this.mobileQuery.matches) {
       sidenav.toggle()
     }
