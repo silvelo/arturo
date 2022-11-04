@@ -4,7 +4,6 @@ import { Award } from '@app/data/butter/types/award'
 import { Certification } from '@app/data/butter/types/certification'
 import { ButterService } from '@data/butter/service/butter.service'
 import { Education } from '@data/butter/types/education'
-import { GoogleAnalyticsService } from 'ngx-google-analytics'
 
 import { firstValueFrom } from 'rxjs'
 
@@ -22,10 +21,7 @@ export class EducationComponent implements OnInit {
   public awards: Award[] = []
   public certifications: Certification[] = []
 
-  constructor(
-    private gaService: GoogleAnalyticsService,
-    private butterService: ButterService
-  ) {}
+  constructor(private butterService: ButterService) {}
 
   async ngOnInit() {
     const [
@@ -43,7 +39,5 @@ export class EducationComponent implements OnInit {
     this.awards = butterAwardResponse.data.awards
   }
 
-  onChangeTab(event: MatTabChangeEvent) {
-    this.gaService.pageView(window.location.pathname, event.tab.textLabel)
-  }
+  onChangeTab(event: MatTabChangeEvent) {}
 }

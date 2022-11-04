@@ -11,10 +11,7 @@ import { SharedModule } from './shared/shared.module'
 import { CoreModule } from '@core/core.module'
 import { ServiceWorkerModule } from '@angular/service-worker'
 import { environment } from '../environments/environment'
-import {
-  NgxGoogleAnalyticsModule,
-  NgxGoogleAnalyticsRouterModule
-} from 'ngx-google-analytics'
+
 import { NavbarComponent } from './layout/navbar/navbar.component'
 
 @NgModule({
@@ -39,9 +36,7 @@ import { NavbarComponent } from './layout/navbar/navbar.component'
       // Register the ServiceWorker as soon as the application is stable
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000'
-    }),
-    NgxGoogleAnalyticsModule.forRoot(environment.googleAnalyticsId),
-    NgxGoogleAnalyticsRouterModule
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

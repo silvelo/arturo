@@ -3,7 +3,6 @@ import { MatTabChangeEvent } from '@angular/material/tabs'
 import { Publication } from '@app/data/butter/types/publication'
 import { ButterService } from '@data/butter/service/butter.service'
 import { Experience } from '@data/butter/types/experience'
-import { GoogleAnalyticsService } from 'ngx-google-analytics'
 
 import { firstValueFrom } from 'rxjs'
 
@@ -20,10 +19,7 @@ export class ExperienceComponent implements OnInit {
   public experienceList: Experience[] = []
   public publications: Publication[] = []
 
-  constructor(
-    private gaService: GoogleAnalyticsService,
-    private butterService: ButterService
-  ) {}
+  constructor(private butterService: ButterService) {}
 
   async ngOnInit() {
     const [butterExperienceResponse, butterPublicationResponse] =
@@ -36,7 +32,5 @@ export class ExperienceComponent implements OnInit {
     this.publications = butterPublicationResponse.data.publications
   }
 
-  onChangeTab(event: MatTabChangeEvent) {
-    this.gaService.pageView(window.location.pathname, event.tab.textLabel)
-  }
+  onChangeTab(event: MatTabChangeEvent) {}
 }
