@@ -15,6 +15,11 @@
   "ABOUT": {
     "DESCRIPTION": "Hello, I am a graduate in Computer Engineering and I currently live in A Coruña. I am passionate about new technologies and 3D printing."
   },
+  "BUTTONS": {
+    "SHOW_PUBLICATION": "Show Publication",
+    "VIEW_PROJECT": "View Project",
+    "SHOW_CREDENTIAL": "Show Credential"
+  },
   "PORTFOLIO": {
     "SILVELO_PORTFOLIO": "This website",
     "TS_SIMPLE": "A collection of packages for simplifying your life. The most common packages contain simple functions that I used in a lot of my projects. By this way I try to unify that functions in a repository and testing to avoid bugs.",

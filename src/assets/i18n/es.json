@@ -15,6 +15,11 @@
   "ABOUT": {
     "DESCRIPTION": "Hola, soy graduado en Ingeniería Informática y actualmente resido en A Coruña. Me apasionan las nuevas tecnologías y la impresión 3D."
   },
+  "BUTTONS": {
+    "SHOW_PUBLICATION": "Mostrar publicación",
+    "VIEW_PROJECT": "Mostrar proyecto",
+    "SHOW_CREDENTIAL": "Mostrar certificado"
+  },
   "PORTFOLIO": {
     "SILVELO_PORTFOLIO": "Este sitio web",
     "TS_SIMPLE": "Una colección de paquetes para simplificar tu vida. Los paquetes más comunes contienen funciones simples que he utilizado en muchos de mis proyectos. De esta manera intento unificar esas funciones en un repositorio y probarlas para evitar bugs",
@@ -24,6 +29,6 @@
   "COMMON": {
     "NO_EXPIRE": "Sin fecha de vencimiento",
     "CURRENT": "Actual",
-    "LOAD_MESSAGE": "Obtiendo información..."
+    "WAIT_MESSAGE": "Obtiendo información..."
   }
 }
