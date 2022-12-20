@@ -11,11 +11,7 @@ import { firstValueFrom } from 'rxjs'
 @Component({
   selector: 'silvelo-education',
   templateUrl: './education.component.html',
-  styleUrls: [
-    './education.component.scss',
-    '../../../../../styles/shared/material-card.scss',
-    '../../../../../styles/shared/material-tab.scss'
-  ]
+  styleUrls: ['./education.component.scss']
 })
 export class EducationComponent implements OnInit {
   public educationList: Education[] = []

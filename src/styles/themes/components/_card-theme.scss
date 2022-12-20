@@ -1,0 +1,18 @@
+@use 'sass:map';
+@use '@angular/material'as mat;
+
+
+@mixin color($theme) {
+    .mat-card {
+        margin: 15px;
+    }
+}
+
+@mixin theme($theme) {
+    $color-config: mat.get-color-config($theme);
+
+    @if $color-config !=null {
+        @include color($theme);
+    }
+
+}

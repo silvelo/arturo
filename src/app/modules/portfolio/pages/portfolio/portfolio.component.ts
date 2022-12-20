@@ -6,10 +6,7 @@ import { firstValueFrom } from 'rxjs'
 @Component({
   selector: 'silvelo-portfolio',
   templateUrl: './portfolio.component.html',
-  styleUrls: [
-    './portfolio.component.scss',
-    '../../../../../styles/shared/material-card.scss'
-  ]
+  styleUrls: ['./portfolio.component.scss']
 })
 export class PortfolioComponent implements OnInit {
   public portfolioList: Portfolio[] = []
