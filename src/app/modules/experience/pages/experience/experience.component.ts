@@ -9,11 +9,7 @@ import { firstValueFrom } from 'rxjs'
 @Component({
   selector: 'silvelo-experience',
   templateUrl: './experience.component.html',
-  styleUrls: [
-    './experience.component.scss',
-    '../../../../../styles/shared/material-card.scss',
-    '../../../../../styles/shared/material-tab.scss'
-  ]
+  styleUrls: ['./experience.component.scss']
 })
 export class ExperienceComponent implements OnInit {
   public experienceList: Experience[] = []

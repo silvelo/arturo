@@ -1,15 +1,16 @@
+@use '@angular/material'as mat;
+
 @import './styles/themes/light-theme.scss';
 @import './styles/themes/black-theme.scss';
 
 .light-theme {
-  @include angular-material-theme($light-theme);
+  @include mat.all-component-colors($light-theme);
 }
 
 .dark-theme {
-  @include angular-material-theme($dark-theme);
+  @include mat.all-component-colors($dark-theme);
 }
 
-/* You can add global styles to this file, and also import other style files */
 
 
 html,

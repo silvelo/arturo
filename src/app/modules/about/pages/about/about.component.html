@@ -16,9 +16,7 @@
     </mat-card-header>
 
     <mat-card-content>
-        <p>
-            {{me.description | translate}}
-        </p>
+        <p [innerHTML]="me.description | translate"></p>
     </mat-card-content>
 
     <mat-card-footer fxLayout="row"
