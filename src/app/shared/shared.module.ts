@@ -29,6 +29,7 @@ import { LanguagesComponent } from './components/languages/languages.component'
 import { VersionComponent } from './components/version/version.component'
 import { ToggleThemeComponent } from './components/toggle-theme/toggle-theme.component'
 import { LogoComponent } from './components/logo/logo.component'
+import { SkillsComponent } from './components/skills/skills.component'
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { LogoComponent } from './components/logo/logo.component'
     LanguagesComponent,
     VersionComponent,
     ToggleThemeComponent,
-    LogoComponent
+    LogoComponent,
+    SkillsComponent
   ],
   imports: [
     CommonModule,
@@ -65,7 +67,8 @@ import { LogoComponent } from './components/logo/logo.component'
     LanguagesComponent,
     VersionComponent,
     ToggleThemeComponent,
-    LogoComponent
+    LogoComponent,
+    SkillsComponent
   ]
 })
 export class SharedModule {

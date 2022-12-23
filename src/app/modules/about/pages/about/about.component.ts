@@ -15,6 +15,7 @@ export class AboutComponent implements OnInit {
 
   async ngOnInit() {
     const butterResponse = await firstValueFrom(this.butterService.getMe())
+
     this.me = butterResponse.data.me[0]
   }
 }

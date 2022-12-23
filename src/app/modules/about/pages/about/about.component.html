@@ -15,10 +15,17 @@
         <mat-card-subtitle>{{me.job}}</mat-card-subtitle>
     </mat-card-header>
 
+    <mat-divider></mat-divider>
+
     <mat-card-content>
         <p [innerHTML]="me.description | translate"></p>
     </mat-card-content>
 
+    <mat-card-content>
+        Skills
+
+        <silvelo-skills></silvelo-skills>
+    </mat-card-content>
     <mat-card-footer fxLayout="row"
                      fxLayoutAlign="center center">
         <silvelo-social>
