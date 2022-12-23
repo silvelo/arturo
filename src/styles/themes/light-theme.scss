@@ -1,18 +1,26 @@
-@use '@angular/material'as mat;
-@use './components/card-theme'as card;
-@use './components/tabs-theme'as tabs;
+@use '@angular/material' as mat;
+
+
+@use './components/cards-theme' as cards;
+@use './components/tabs-theme' as tabs;
 
 @include mat.core();
 
-$light-theme-primary: mat.define-palette(mat.$indigo-palette, 700, 300, 900);
-$light-theme-accent : mat.define-palette(mat.$light-blue-palette);
-$light-theme-warn   : mat.define-palette(mat.$deep-orange-palette, A200);
+
+ .light-theme {
+    $light-theme-primary: mat.define-palette(mat.$indigo-palette, 700, 300, 900);
+    $light-theme-accent : mat.define-palette(mat.$indigo-palette);
+    $light-theme-warn   : mat.define-palette(mat.$indigo-palette, A200);
 
 
 
-$light-theme: mat.define-light-theme((color: (primary: $light-theme-primary,
-            accent: $light-theme-accent,
-            warn: $light-theme-warn)));
+    $light-theme: mat.define-light-theme((color: (primary: $light-theme-primary,
+                    accent: $light-theme-accent,
+                    warn: $light-theme-warn)));
 
-@include card.theme($light-theme);
-@include tabs.theme($light-theme);
+    @include mat.all-component-themes($light-theme);
+
+    @include cards.theme($light-theme);
+    @include tabs.theme($light-theme);
+    
+} 

@@ -1,17 +1,5 @@
-@use '@angular/material'as mat;
-
 @import './styles/themes/light-theme.scss';
 @import './styles/themes/black-theme.scss';
-
-.light-theme {
-  @include mat.all-component-colors($light-theme);
-}
-
-.dark-theme {
-  @include mat.all-component-colors($dark-theme);
-}
-
-
 
 html,
 body {
