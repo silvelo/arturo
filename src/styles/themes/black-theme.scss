@@ -3,6 +3,8 @@
 
 @use './components/cards-theme' as cards;
 @use './components/tabs-theme' as tabs;
+@use './components/drawer-theme' as drawer;
+
 
 @include mat.core();
 
@@ -24,7 +26,8 @@
     
     @include cards.theme($dark-theme);
     @include tabs.theme($dark-theme); 
-
+    @include drawer.theme($dark-theme); 
+    
 
 
 }

@@ -6,7 +6,7 @@ import {
   OnInit,
   Renderer2
 } from '@angular/core'
-import { MatSidenav } from '@angular/material/sidenav'
+import { MatDrawer, MatSidenav } from '@angular/material/sidenav'
 
 import { ThemeService } from '@app/core/services/theme.service'
 import { ButterService } from '@data/butter/service/butter.service'
@@ -33,7 +33,7 @@ export class CustomLayoutComponent implements OnInit, OnDestroy {
     private themeService: ThemeService,
     private butterService: ButterService
   ) {
-    this.mobileQuery = this.media.matchMedia('(max-width: 600px)')
+    this.mobileQuery = this.media.matchMedia('(min-width: 1280px)')
     this._mobileQueryListener = () => this.changeDetectorRef.detectChanges()
     this.mobileQuery.addListener(this._mobileQueryListener)
 
@@ -65,7 +65,7 @@ export class CustomLayoutComponent implements OnInit, OnDestroy {
     this.themeService.setDarkTheme(checked)
   }
 
-  closeSidenav(sidenav: MatSidenav) {
+  closeSidenav(sidenav: MatDrawer) {
     if (this.mobileQuery.matches) {
       sidenav.toggle()
     }

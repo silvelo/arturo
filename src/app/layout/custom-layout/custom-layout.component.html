@@ -1,20 +1,18 @@
 <silvelo-header (toggle)="snav.toggle()"
-                [show]="mobileQuery.matches">
+                fxShow.gt-md="false">
 </silvelo-header>
 
-<mat-sidenav-container>
-    <mat-sidenav #snav
-                 [opened]="!mobileQuery.matches"
-                 [mode]="mobileQuery.matches ? 'over' : 'side'"
-                 fxLayout="column"
-                 fxLayoutAlign="space-between center">
+<mat-drawer-container>
+    <mat-drawer #snav
+                [mode]="mobileQuery.matches ? 'side' : 'over'"
+                [opened]="mobileQuery.matches">
         <silvelo-navbar (toggle)="closeSidenav(snav)"
                         [theme]="theme$ | async">
         </silvelo-navbar>
+    </mat-drawer>
 
-    </mat-sidenav>
 
-    <mat-sidenav-content class="container">
+    <mat-drawer-content class="container">
         <router-outlet></router-outlet>
-    </mat-sidenav-content>
-</mat-sidenav-container>
+    </mat-drawer-content>
+</mat-drawer-container>

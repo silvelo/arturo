@@ -3,6 +3,7 @@
 
 @use './components/cards-theme' as cards;
 @use './components/tabs-theme' as tabs;
+@use './components/drawer-theme' as drawer;
 
 @include mat.core();
 
@@ -22,5 +23,5 @@
 
     @include cards.theme($light-theme);
     @include tabs.theme($light-theme);
-    
+    @include drawer.theme($light-theme); 
 } 
