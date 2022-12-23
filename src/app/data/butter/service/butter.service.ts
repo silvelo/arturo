@@ -9,6 +9,7 @@ import { MeObject } from '../types/me'
 import { PortfolioObject } from '../types/portfolio'
 import { PublicationObject } from '../types/publication'
 import { SidenavObject } from '../types/sidenav'
+import { SkillObject } from '../types/skills'
 import { SocialObject } from '../types/social'
 
 @Injectable({
@@ -42,6 +43,10 @@ export class ButterService {
       'certification',
       {}
     )
+  }
+
+  getSkills() {
+    return this.butterContent<IButterData<SkillObject>>('skills', {})
   }
 
   getPublications() {
