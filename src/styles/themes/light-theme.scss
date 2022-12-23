@@ -14,9 +14,5 @@ $light-theme: mat.define-light-theme((color: (primary: $light-theme-primary,
             accent: $light-theme-accent,
             warn: $light-theme-warn)));
 
-
-
-@include mat.all-component-themes($light-theme);
-
 @include card.theme($light-theme);
 @include tabs.theme($light-theme);

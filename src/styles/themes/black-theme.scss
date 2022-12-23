@@ -12,8 +12,5 @@ $dark-theme: mat.define-light-theme((color: (primary: $dark-theme-primary,
             accent: $dark-theme-accent,
             warn: $dark-theme-warn)));
 
-
-@include mat.all-component-themes($dark-theme);
-
 @include card.theme($dark-theme);
 @include tabs.theme($dark-theme);
