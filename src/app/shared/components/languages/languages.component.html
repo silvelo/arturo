@@ -1,0 +1,11 @@
+<ng-template ngFor
+             let-language
+             [ngForOf]="languages"
+             let-last="last">
+    <button mat-button
+            (click)="onSelectLanguage(language.code)">
+        <span>{{language.label}}</span>
+    </button>
+    <span class="mx-1"
+          *ngIf="!last">|</span>
+</ng-template>

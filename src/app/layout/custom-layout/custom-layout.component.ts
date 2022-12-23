@@ -33,7 +33,7 @@ export class CustomLayoutComponent implements OnInit, OnDestroy {
     private themeService: ThemeService,
     private butterService: ButterService
   ) {
-    this.mobileQuery = this.media.matchMedia('(min-width: 1280px)')
+    this.mobileQuery = this.media.matchMedia('(min-width: 960px)')
     this._mobileQueryListener = () => this.changeDetectorRef.detectChanges()
     this.mobileQuery.addListener(this._mobileQueryListener)
 

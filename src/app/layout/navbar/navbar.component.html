@@ -1,7 +1,11 @@
+<silvelo-logo class="mt-4"></silvelo-logo>
+
 <mat-nav-list *ngIf="sidenav"
               fxFlex
               fxLayout="column"
               fxLayoutAlign="center center">
+
+
     <a mat-list-item
        [routerLinkActiveOptions]="{exact: true}"
        routerLinkActive="active-route"
@@ -29,22 +33,11 @@
         </a>
     </div>
 
-    <small fxLayoutAlign="start ">{{'NAVBAR.VERSION' | translate}} {{version}}</small>
-
-    <div fxLayout="row"
-         fxLayoutAlign="center center">
-        <ng-template ngFor
-                     let-language
-                     [ngForOf]="languages"
-                     let-last="last">
-            <button mat-button
-                    (click)="onSelectLanguage(language.code)">
-                <span>{{language.label}}</span>
-            </button>
-            <span class="mx-1"
-                  *ngIf="!last">|</span>
-        </ng-template>
-    </div>
 
 
+    <silvelo-languages fxLayoutAlign="center center"></silvelo-languages>
+
+    <silvelo-version fxLayoutAlign="center center"></silvelo-version>
+
+    <silvelo-toggle-theme fxLayoutAlign="center center"></silvelo-toggle-theme>
 </section>

@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core'
-import { MaterialModule } from './material.module'
+import { MaterialModule } from './material/material.module'
 import { FlexLayoutModule } from '@angular/flex-layout'
 import { SocialComponent } from './components/social/social.component'
 import { CommonModule } from '@angular/common'
@@ -25,6 +25,10 @@ import { CardComponent } from './components/card/card.component'
 import { ExpiresDateComponent } from './components/expires-date/expires-date.component'
 import { RangeDateComponent } from './components/range-date/range-date.component'
 import { TranslateModule } from '@ngx-translate/core'
+import { LanguagesComponent } from './components/languages/languages.component'
+import { VersionComponent } from './components/version/version.component'
+import { ToggleThemeComponent } from './components/toggle-theme/toggle-theme.component'
+import { LogoComponent } from './components/logo/logo.component'
 
 @NgModule({
   declarations: [
@@ -33,7 +37,11 @@ import { TranslateModule } from '@ngx-translate/core'
     LoaderComponent,
     CardComponent,
     ExpiresDateComponent,
-    RangeDateComponent
+    RangeDateComponent,
+    LanguagesComponent,
+    VersionComponent,
+    ToggleThemeComponent,
+    LogoComponent
   ],
   imports: [
     CommonModule,
@@ -53,7 +61,11 @@ import { TranslateModule } from '@ngx-translate/core'
     LoaderComponent,
     CardComponent,
     ExpiresDateComponent,
-    RangeDateComponent
+    RangeDateComponent,
+    LanguagesComponent,
+    VersionComponent,
+    ToggleThemeComponent,
+    LogoComponent
   ]
 })
 export class SharedModule {

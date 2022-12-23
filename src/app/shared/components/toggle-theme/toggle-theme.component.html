@@ -1,0 +1,5 @@
+<mat-slide-toggle (change)="themService.setDarkTheme($event.checked)"
+                  [checked]="themService.getDarkTheme() | async">
+    <fa-icon class="m-2"
+             [icon]="['fas','moon']"></fa-icon>
+</mat-slide-toggle>
