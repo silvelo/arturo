@@ -33,5 +33,9 @@
     "NO_EXPIRE": "No expiration date",
     "CURRENT": "Current",
     "WAIT_MESSAGE": "Fetching Data..."
+  },
+  "EXPERIENCE": {
+    "AGORA": "I developed single page web applications using the MEAN stack (MongoDB, Express.js, Angular, and Node.js).<br>I used MongoDB to manage large, schema-free databases and Express.js to build APIs and web applications.<br><br>I worked with Angular to implement business logic and user interface for the applications and used Node.js to run server-side code.<br>I was involved in the development of scalable, modern web applications using the MEAN stack.",
+    "UDC": "I participated in research projects at the university, utilizing a range of technologies to develop prototypes and demos.<br>    I collaborated with other researchers to develop and test concepts and theories using a variety of tools and languages.<br>    I gained deep skills and knowledge in cutting-edge technologies through my work in university research.<br>    I contributed to the development of innovative ideas and approaches in my research projects at the university."
   }
 }

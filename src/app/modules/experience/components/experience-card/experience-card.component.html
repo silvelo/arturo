@@ -1,11 +1,11 @@
 <silvelo-card [image]="experience.company_logo"
               [title]="experience.company_name"
-              [description]="experience.description"
+              [description]="experience.description | translate"
               [descriptionHide]="true"
               [subtitle]="experience.job">
-      <silvelo-range-date [start_date]="experience.start_date"
-                          [end_date]="experience.end_date"
-                          [current]="experience.current"
-                          [timeDiff]="true"
-                          subtitle></silvelo-range-date>
+        <silvelo-range-date [start_date]="experience.start_date"
+                            [end_date]="experience.end_date"
+                            [current]="experience.current"
+                            [timeDiff]="true"
+                            subtitle></silvelo-range-date>
 </silvelo-card>
