@@ -7,4 +7,5 @@ import { Component, Input, OnInit } from '@angular/core'
 })
 export class CommonHeaderComponent {
   @Input() title!: string
+  @Input() subtitle: string | undefined
 }

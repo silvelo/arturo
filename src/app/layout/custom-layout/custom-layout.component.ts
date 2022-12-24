@@ -65,7 +65,6 @@ export class CustomLayoutComponent implements OnDestroy {
   }
 
   closeSidenav(sidenav: MatDrawer) {
-    console.log(this.mobileQuery.matches)
     if (!this.mobileQuery.matches) {
       sidenav.toggle()
     }

@@ -20,9 +20,10 @@
         <mat-divider class="pb-4"></mat-divider>
 
         <p [innerHTML]="me.description | translate"></p>
-
-        <mat-divider class="pb-4"></mat-divider>
-
+    </mat-card-content>
+</silvelo-common-card>
+<silvelo-common-card [title]="'ABOUT.SKILLS' | translate">
+    <mat-card-content>
         <silvelo-skills></silvelo-skills>
     </mat-card-content>
 </silvelo-common-card>
