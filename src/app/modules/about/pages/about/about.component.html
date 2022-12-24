@@ -1,12 +1,10 @@
-<silvelo-title-header></silvelo-title-header>
-<mat-card class="mat-elevation-z8"
-          *ngIf="me">
+<silvelo-common-card [title]="routeNames.ABOUT | translate"
+                     *ngIf="me">
 
     <img mat-card-image
          class="photo-profile"
          alt="Profile"
          [src]="me.header_photo" />
-
 
     <mat-card-header>
         <img mat-card-avatar
@@ -16,17 +14,15 @@
         <mat-card-subtitle>{{me.job}}</mat-card-subtitle>
     </mat-card-header>
 
-    <mat-divider></mat-divider>
+
 
     <mat-card-content>
+        <mat-divider class="pb-4"></mat-divider>
+
         <p [innerHTML]="me.description | translate"></p>
-    </mat-card-content>
 
-    <mat-card-content>
-        Skills
+        <mat-divider class="pb-4"></mat-divider>
 
         <silvelo-skills></silvelo-skills>
     </mat-card-content>
-
-
-</mat-card>
+</silvelo-common-card>

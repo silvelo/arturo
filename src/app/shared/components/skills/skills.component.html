@@ -1,15 +1,20 @@
 <ng-template ngFor
              [ngForOf]="skills"
              let-skill>
-    <div fxFlex
-         fxLayout="row"
-         fxLayoutAlign="space-between">
-        <span>{{skill.language}}</span>
-        <span>
-            {{skill.level | percent}}
-        </span>
+    <div fxFlex="100"
+         fxFlex.gt-xs="45"
+         fxLayout="column">
+        <div fxFlex
+             fxLayout="row"
+             fxLayoutAlign="space-between">
+            <span>{{skill.language}}</span>
+            <span>
+                {{skill.level | percent}}
+            </span>
+        </div>
+        <mat-progress-bar mode="determinate"
+                          color="accent"
+                          class="mt-2 mb-2"
+                          [value]="skill.level * 100"></mat-progress-bar>
     </div>
-    <mat-progress-bar mode="determinate"
-                      class="mt-2 mb-2"
-                      [value]="skill.level * 100"></mat-progress-bar>
 </ng-template>

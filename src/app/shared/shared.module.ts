@@ -30,7 +30,8 @@ import { VersionComponent } from './components/version/version.component'
 import { ToggleThemeComponent } from './components/toggle-theme/toggle-theme.component'
 import { LogoComponent } from './components/logo/logo.component'
 import { SkillsComponent } from './components/skills/skills.component'
-import { TitleHeaderComponent } from './components/title-header/title-header.component'
+import { CommonHeaderComponent } from './components/common-header/common-header.component'
+import { CommonCardComponent } from './components/common-card/common-card.component'
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { TitleHeaderComponent } from './components/title-header/title-header.com
     ToggleThemeComponent,
     LogoComponent,
     SkillsComponent,
-    TitleHeaderComponent
+    CommonHeaderComponent,
+    CommonCardComponent
   ],
   imports: [
     CommonModule,
@@ -71,7 +73,8 @@ import { TitleHeaderComponent } from './components/title-header/title-header.com
     ToggleThemeComponent,
     LogoComponent,
     SkillsComponent,
-    TitleHeaderComponent
+    CommonHeaderComponent,
+    CommonCardComponent
   ]
 })
 export class SharedModule {
