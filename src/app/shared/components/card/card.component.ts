@@ -11,5 +11,8 @@ export class CardComponent {
   @Input() subtitle!: string
   @Input() description!: string
   @Input() link!: string
+  @Input() descriptionHide: boolean = false
   @Input() linkText!: string
+
+  public panelOpenState = false
 }

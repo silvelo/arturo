@@ -28,6 +28,8 @@
     "NGX_CARDS": "A compilation of components for angular to display profile info for websites"
   },
   "COMMON": {
+    "READ_MORE": "Read more",
+    "READ_LESS": "Read less",
     "NO_EXPIRE": "No expiration date",
     "CURRENT": "Current",
     "WAIT_MESSAGE": "Fetching Data..."

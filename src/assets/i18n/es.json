@@ -28,6 +28,8 @@
     "NGX_CARDS": "Una compilación de componentes para angular para mostrar la información del perfil de los sitios web"
   },
   "COMMON": {
+    "READ_MORE": "Leer más",
+    "READ_LESS": "Leer menos",
     "NO_EXPIRE": "Sin fecha de vencimiento",
     "CURRENT": "Actual",
     "WAIT_MESSAGE": "Obtiendo información..."
