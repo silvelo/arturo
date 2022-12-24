@@ -6,6 +6,6 @@ import { Component, Input, OnInit } from '@angular/core'
   styleUrls: ['./rate.component.scss']
 })
 export class RateComponent {
-  @Input() rate!: number
+  @Input() rate!: number | string
   @Input() showIcon: boolean = false
 }
