@@ -8,7 +8,6 @@ import { ExperienceObject } from '../types/experience'
 import { MeObject } from '../types/me'
 import { PortfolioObject } from '../types/portfolio'
 import { PublicationObject } from '../types/publication'
-import { SidenavObject } from '../types/sidenav'
 import { SkillObject } from '../types/skills'
 import { SocialObject } from '../types/social'
 
@@ -17,10 +16,6 @@ import { SocialObject } from '../types/social'
 })
 export class ButterService {
   constructor(private http: HttpClient) {}
-
-  getSidenav() {
-    return this.butterContent<IButterData<SidenavObject>>('sidenav', {})
-  }
 
   getMe() {
     return this.butterContent<IButterData<MeObject>>('me', {})

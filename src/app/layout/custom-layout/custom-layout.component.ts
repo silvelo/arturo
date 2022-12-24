@@ -10,16 +10,15 @@ import { MatDrawer, MatSidenav } from '@angular/material/sidenav'
 
 import { ThemeService } from '@app/core/services/theme.service'
 import { ButterService } from '@data/butter/service/butter.service'
-import { Sidenav } from '@data/butter/types/sidenav'
-import { firstValueFrom, map, Observable } from 'rxjs'
+
+import { map, Observable } from 'rxjs'
 import packageJson from '../../../../package.json'
 @Component({
   selector: 'silvelo-custom-layout',
   templateUrl: './custom-layout.component.html',
   styleUrls: ['./custom-layout.component.scss']
 })
-export class CustomLayoutComponent implements OnInit, OnDestroy {
-  public sidenav: Sidenav[] = []
+export class CustomLayoutComponent implements OnDestroy {
   public version: string = packageJson.version
   public theme$: Observable<string> | undefined
   public mobileQuery: MediaQueryList
@@ -50,11 +49,6 @@ export class CustomLayoutComponent implements OnInit, OnDestroy {
         }
       })
     )
-  }
-
-  async ngOnInit() {
-    const butterResponse = await firstValueFrom(this.butterService.getSidenav())
-    this.sidenav = butterResponse.data.sidenav
   }
 
   ngOnDestroy(): void {
