@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core'
 import { MatTabChangeEvent } from '@angular/material/tabs'
+import { RouteNames } from '@app/core/common/routes'
 import { Publication } from '@app/data/butter/types/publication'
 import { ButterService } from '@data/butter/service/butter.service'
 import { Experience } from '@data/butter/types/experience'
@@ -14,6 +15,7 @@ import { firstValueFrom } from 'rxjs'
 export class ExperienceComponent implements OnInit {
   public experienceList: Experience[] = []
   public publications: Publication[] = []
+  public routeNames = RouteNames
 
   constructor(private butterService: ButterService) {}
 

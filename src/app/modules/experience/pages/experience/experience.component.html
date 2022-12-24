@@ -2,12 +2,24 @@
                headerPosition="below"
                (selectedTabChange)="onChangeTab($event)">
     <mat-tab [label]="'NAVBAR.EXPERIENCE' | translate">
-        <silvelo-experience-card [experience]="experience"
-                                 *ngFor="let experience of experienceList"></silvelo-experience-card>
+        <silvelo-common-card [title]="routeNames.EXPERIENCE | translate">
+            <mat-card-content>
+                <silvelo-experience-card [experience]="experience"
+                                         *ngFor="let experience of experienceList"></silvelo-experience-card>
+            </mat-card-content>
+        </silvelo-common-card>
     </mat-tab>
-    <mat-tab [label]="'NAVBAR.PUBLICATIONS' | translate">
-        <silvelo-publication-card [publication]="publication"
-                                  *ngFor="let publication of publications"></silvelo-publication-card>
+    <mat-tab [label]="routeNames.PUBLICATIONS | translate">
+        <silvelo-common-card [title]="routeNames.PUBLICATIONS | translate">
+            <mat-card-content fxLayout="row wrap"
+                              fxLayoutAlign="space-between">
+                <silvelo-publication-card [publication]="publication"
+                                          fxFlex.gt-sm="50"
+                                          fxFlex="100"
+                                          *ngFor="let publication of publications"></silvelo-publication-card>
+            </mat-card-content>
+        </silvelo-common-card>
+
 
     </mat-tab>
 </mat-tab-group>
