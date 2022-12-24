@@ -1,18 +1,43 @@
 <mat-tab-group mat-align-tabs="center"
                headerPosition="below"
                (selectedTabChange)="onChangeTab($event)">
-    <mat-tab [label]="'NAVBAR.EDUCATION' | translate">
-        <silvelo-education-card *ngFor="let education of educationList"
-                                [education]="education"></silvelo-education-card>
-    </mat-tab>
-    <mat-tab [label]="'NAVBAR.COURSES' | translate">
+    <mat-tab [label]="routeNames.EDUCATION | translate">
 
-        <silvelo-certification-card *ngFor="let certification of certifications"
-                                    [certification]="certification"></silvelo-certification-card>
+        <silvelo-common-card [title]="routeNames.EDUCATION | translate">
+            <mat-card-content>
+                <silvelo-education-card *ngFor="let education of educationList"
+                                        [education]="education"></silvelo-education-card>
+            </mat-card-content>
+        </silvelo-common-card>
+
     </mat-tab>
 
-    <mat-tab [label]="'NAVBAR.AWARDS' | translate">
-        <silvelo-award-card [award]="award"
-                            *ngFor="let award of awards"></silvelo-award-card>
+    <mat-tab [label]="routeNames.COURSES | translate">
+
+
+        <silvelo-common-card [title]="routeNames.COURSES | translate">
+            <mat-card-content fxLayout="row wrap"
+                              fxLayoutAlign="space-between">
+                <silvelo-certification-card *ngFor="let certification of certifications"
+                                            fxFlex.gt-sm="50"
+                                            fxFlex="100"
+                                            [certification]="certification"></silvelo-certification-card>
+
+            </mat-card-content>
+        </silvelo-common-card>
+    </mat-tab>
+
+    <mat-tab [label]="routeNames.AWARDS | translate">
+
+        <silvelo-common-card [title]="routeNames.AWARDS | translate">
+            <mat-card-content fxLayout="row wrap"
+                              fxLayoutAlign="space-between">
+                <silvelo-award-card [award]="award"
+                                    fxFlex.gt-sm="50"
+                                    fxFlex="100"
+                                    *ngFor="let award of awards"></silvelo-award-card>
+
+            </mat-card-content>
+        </silvelo-common-card>
     </mat-tab>
 </mat-tab-group>
