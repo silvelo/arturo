@@ -7,7 +7,7 @@ import { Sidenav, sidenav } from '@app/core/common/navbar'
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
-  @Input() theme: string | null = null
+  @Input() theme: any | null = null
   @Output() toggle = new EventEmitter()
 
   public sidenav: Sidenav[] = sidenav

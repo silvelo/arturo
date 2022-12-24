@@ -20,7 +20,7 @@ import packageJson from '../../../../package.json'
 })
 export class CustomLayoutComponent implements OnDestroy {
   public version: string = packageJson.version
-  public theme$: Observable<string> | undefined
+  public theme$: Observable<any> | undefined
   public mobileQuery: MediaQueryList
 
   private _mobileQueryListener: () => void
@@ -29,8 +29,7 @@ export class CustomLayoutComponent implements OnDestroy {
     private changeDetectorRef: ChangeDetectorRef,
     private media: MediaMatcher,
     private renderer: Renderer2,
-    private themeService: ThemeService,
-    private butterService: ButterService
+    private themeService: ThemeService
   ) {
     this.mobileQuery = this.media.matchMedia('(min-width: 960px)')
     this._mobileQueryListener = () => this.changeDetectorRef.detectChanges()
@@ -41,11 +40,17 @@ export class CustomLayoutComponent implements OnDestroy {
         if (isDarkTheme) {
           this.renderer.addClass(document.body, 'dark-theme')
           this.renderer.removeClass(document.body, 'light-theme')
-          return '/assets/images/butter-w.png'
+          return {
+            butter: '/assets/images/butter-w.png',
+            logo: '/assets/images/logo-white.png'
+          }
         } else {
           this.renderer.removeClass(document.body, 'dark-theme')
           this.renderer.addClass(document.body, 'light-theme')
-          return '/assets/images/butter-b.png'
+          return {
+            butter: '/assets/images/butter-b.png',
+            logo: '/assets/images/logo-black.png'
+          }
         }
       })
     )

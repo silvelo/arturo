@@ -1,4 +1,5 @@
-<silvelo-logo class="mt-4"></silvelo-logo>
+<silvelo-logo [logo]="theme.logo"
+              class="mt-4"></silvelo-logo>
 
 <mat-nav-list *ngIf="sidenav"
               fxFlex
@@ -28,7 +29,7 @@
         <span>{{'NAVBAR.POWER_BY' | translate}}</span>
         <a target="_blank"
            href="https://buttercms.com"><img class="butter_logo"
-                 [src]="theme"
+                 [src]="theme.butter"
                  alt="buttercms logo">
         </a>
     </div>
