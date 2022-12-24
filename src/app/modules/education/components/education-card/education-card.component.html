@@ -1,9 +1,14 @@
 <silvelo-card [image]="education.institution_logo"
               [title]="education.institution"
               [subtitle]="education.degree">
-      <silvelo-range-date [start_date]="education.start_date"
-                          [end_date]="education.end_date"
-                          subtitle>
-      </silvelo-range-date>
+      <div subtitle
+           fxLayoutAlign="space-between">
+            <silvelo-range-date [showIcon]="true"
+                                [start_date]="education.start_date"
+                                [end_date]="education.end_date">
+            </silvelo-range-date>
+            <silvelo-rate [rate]="education.grade"
+                          [showIcon]="true"></silvelo-rate>
+      </div>
 
 </silvelo-card>

@@ -1,3 +1,9 @@
+<fa-icon *ngIf="showIcon"
+         [icon]="['fas','calendar']"
+         size="lg"
+         class="m-2">
+
+</fa-icon>
 <span>{{start_date | date:'yyyy'}} -
 
     <span *ngIf="current; else endJob">{{'COMMON.CURRENT' | translate }}</span>

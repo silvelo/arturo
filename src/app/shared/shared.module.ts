@@ -19,7 +19,9 @@ import {
   faClipboardList,
   faUser,
   faMoon,
-  faBars
+  faBars,
+  faStar,
+  faCalendar
 } from '@fortawesome/free-solid-svg-icons'
 import { CardComponent } from './components/card/card.component'
 import { ExpiresDateComponent } from './components/expires-date/expires-date.component'
@@ -32,6 +34,7 @@ import { LogoComponent } from './components/logo/logo.component'
 import { SkillsComponent } from './components/skills/skills.component'
 import { CommonHeaderComponent } from './components/common-header/common-header.component'
 import { CommonCardComponent } from './components/common-card/common-card.component'
+import { RateComponent } from './components/rate/rate.component'
 
 @NgModule({
   declarations: [
@@ -47,7 +50,8 @@ import { CommonCardComponent } from './components/common-card/common-card.compon
     LogoComponent,
     SkillsComponent,
     CommonHeaderComponent,
-    CommonCardComponent
+    CommonCardComponent,
+    RateComponent
   ],
   imports: [
     CommonModule,
@@ -74,7 +78,8 @@ import { CommonCardComponent } from './components/common-card/common-card.compon
     LogoComponent,
     SkillsComponent,
     CommonHeaderComponent,
-    CommonCardComponent
+    CommonCardComponent,
+    RateComponent
   ]
 })
 export class SharedModule {
@@ -90,7 +95,9 @@ export class SharedModule {
       faMoon,
       faClipboardList,
       faUser,
-      faBars
+      faBars,
+      faStar,
+      faCalendar
     )
   }
 }

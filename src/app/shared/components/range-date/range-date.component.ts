@@ -10,4 +10,5 @@ export class RangeDateComponent {
   @Input() end_date!: string
   @Input() current: boolean = false
   @Input() timeDiff: boolean = false
+  @Input() showIcon: boolean = false
 }
