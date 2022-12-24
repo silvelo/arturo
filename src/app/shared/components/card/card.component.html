@@ -14,9 +14,9 @@
     <mat-card-subtitle>
         <ng-content select="[subtitle]"></ng-content>
     </mat-card-subtitle>
-    <mat-card-content *ngIf="description"
-                      class="description">
-        <p class="my-2">{{description}}</p>
+    <mat-card-content class="description">
+        <p class="my-2"
+           *ngIf="description">{{description}}</p>
     </mat-card-content>
     <mat-card-actions *ngIf="link">
         <a mat-stroked-button
