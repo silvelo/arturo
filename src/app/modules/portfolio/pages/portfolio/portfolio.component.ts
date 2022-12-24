@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core'
+import { RouteNames } from '@app/core/common/routes'
 import { ButterService } from '@app/data/butter/service/butter.service'
 import { Portfolio } from '@app/data/butter/types/portfolio'
 import { firstValueFrom } from 'rxjs'
@@ -10,7 +11,7 @@ import { firstValueFrom } from 'rxjs'
 })
 export class PortfolioComponent implements OnInit {
   public portfolioList: Portfolio[] = []
-
+  public routeNames = RouteNames
   constructor(private butterService: ButterService) {}
 
   async ngOnInit() {

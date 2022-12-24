@@ -1,2 +1,9 @@
-<silvelo-portfolio-card [portfolio]="portfolio"
-                        *ngFor="let portfolio of portfolioList"></silvelo-portfolio-card>
+<silvelo-common-card [title]="routeNames.PORTFOLIO | translate">
+    <mat-card-content fxLayout="row wrap"
+                      fxLayoutAlign="space-between">
+        <silvelo-portfolio-card [portfolio]="portfolio"
+                                fxFlex.gt-sm="45"
+                                fxFlex="100"
+                                *ngFor="let portfolio of portfolioList"></silvelo-portfolio-card>
+    </mat-card-content>
+</silvelo-common-card>

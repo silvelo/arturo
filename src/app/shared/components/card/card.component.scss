@@ -1,7 +1,24 @@
+:host {
+    display: flex; 
+    height: 100%; 
+    flex-direction: column; 
+    min-height: 100%;    
+}
+
+mat-card{
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
 .my-2 {
     margin: 8px auto;
 }
 
 .ml-2 {
     margin-left: 8px;
+}
+
+.description {
+    flex: 1 0 auto;
 }
