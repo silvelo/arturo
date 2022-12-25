@@ -4,5 +4,5 @@ export interface Social {
 }
 
 export interface SocialObject {
-  social: Social[]
+  socials: Social[]
 }

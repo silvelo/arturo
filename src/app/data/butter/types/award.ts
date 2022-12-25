@@ -7,4 +7,6 @@ export interface Award {
   expedition_date: string
   description: string
   issued: string
+  testimonials: string
+  issued_logo: string
 }

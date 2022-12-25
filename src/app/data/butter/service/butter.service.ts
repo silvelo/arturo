@@ -10,6 +10,8 @@ import { PortfolioObject } from '../types/portfolio'
 import { PublicationObject } from '../types/publication'
 import { SkillObject } from '../types/skills'
 import { SocialObject } from '../types/social'
+import { map, tap } from 'rxjs'
+import { environment } from '@env'
 
 @Injectable({
   providedIn: 'root'
@@ -18,61 +20,72 @@ export class ButterService {
   constructor(private http: HttpClient) {}
 
   getMe() {
-    return this.butterContent<IButterData<MeObject>>('me', {})
+    return this.butterContent<MeObject>('me', {}).pipe(
+      map((data) => data.me[0])
+    )
   }
 
   getSocial() {
-    return this.butterContent<IButterData<SocialObject>>('social', {})
+    return this.butterContent<SocialObject>('socials', {}).pipe(
+      map((data) => data.socials)
+    )
   }
 
   getEducation() {
-    return this.butterContent<IButterData<EducationObject>>('education', {})
+    return this.butterContent<EducationObject>('educations', {}).pipe(
+      map((data) => data.educations)
+    )
   }
 
   getExperience() {
-    return this.butterContent<IButterData<ExperienceObject>>('experience', {})
+    return this.butterContent<ExperienceObject>('experiences', {}).pipe(
+      map((data) => data.experiences)
+    )
   }
 
   getCertifications() {
-    return this.butterContent<IButterData<CertificationObject>>(
-      'certification',
-      {}
+    return this.butterContent<CertificationObject>('certifications', {}).pipe(
+      map((data) => data.certifications)
     )
   }
 
   getSkills() {
-    return this.butterContent<IButterData<SkillObject>>('skills', {})
+    return this.butterContent<SkillObject>('skills', {}).pipe(
+      map((data) => data.skills)
+    )
   }
 
   getPublications() {
-    return this.butterContent<IButterData<PublicationObject>>(
-      'publications',
-      {}
+    return this.butterContent<PublicationObject>('publications', {}).pipe(
+      map((data) => data.publications)
     )
   }
 
   getAwards() {
-    return this.butterContent<IButterData<AwardObject>>('awards', {})
+    return this.butterContent<AwardObject>('awards', {}).pipe(
+      map((data) => data.awards)
+    )
   }
 
   getPortfolio() {
-    return this.butterContent<IButterData<PortfolioObject>>('portfolio', {})
+    return this.butterContent<PortfolioObject>('portfolios', {}).pipe(
+      map((data) => data.portfolios)
+    )
   }
 
   private butterContent<T>(
     key: string,
     params: { [key: string]: string | number | boolean }
   ) {
-    let httpParams = new HttpParams().set(
-      'auth_token',
-      'fed7d717ce0e71dd943cba17237589d3eaafb275'
-    )
+    let httpParams = new HttpParams().set('auth_token', environment.token)
     Object.entries(params).forEach(
       ([key, value]) => (httpParams = httpParams.set(key, value))
     )
 
-    return this.http.get<T>(`https://api.buttercms.com/v2/content/${key}`, {
-      params: httpParams
-    })
+    return this.http
+      .get<IButterData<T>>(`${environment.apiUrl}${key}`, {
+        params: httpParams
+      })
+      .pipe(map((response) => response.data))
   }
 }

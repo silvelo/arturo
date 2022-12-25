@@ -22,19 +22,13 @@ export class EducationComponent implements OnInit {
   constructor(private butterService: ButterService) {}
 
   async ngOnInit() {
-    const [
-      butterEducationResponse,
-      butterCertificationResponse,
-      butterAwardResponse
-    ] = await Promise.all([
-      firstValueFrom(this.butterService.getEducation()),
-      firstValueFrom(this.butterService.getCertifications()),
-      firstValueFrom(this.butterService.getAwards())
-    ])
-
-    this.educationList = butterEducationResponse.data.education
-    this.certifications = butterCertificationResponse.data.certification
-    this.awards = butterAwardResponse.data.awards
+    ;[this.educationList, this.certifications, this.awards] = await Promise.all(
+      [
+        firstValueFrom(this.butterService.getEducation()),
+        firstValueFrom(this.butterService.getCertifications()),
+        firstValueFrom(this.butterService.getAwards())
+      ]
+    )
   }
 
   onChangeTab(event: MatTabChangeEvent) {}

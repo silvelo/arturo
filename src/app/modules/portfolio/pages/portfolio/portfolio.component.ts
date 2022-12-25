@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core'
 import { RouteNames } from '@app/core/common/routes'
 import { ButterService } from '@app/data/butter/service/butter.service'
 import { Portfolio } from '@app/data/butter/types/portfolio'
-import { firstValueFrom } from 'rxjs'
+import { firstValueFrom, map } from 'rxjs'
 
 @Component({
   selector: 'silvelo-portfolio',
@@ -15,15 +15,14 @@ export class PortfolioComponent implements OnInit {
   constructor(private butterService: ButterService) {}
 
   async ngOnInit() {
-    const butterPortfolioResponse = await firstValueFrom(
-      this.butterService.getPortfolio()
-    )
-    this.portfolioList = butterPortfolioResponse.data.portfolio
-    this.portfolioList.forEach(
-      (portfolio, index) =>
-        (portfolio.photo = portfolio.photo
-          ? portfolio.photo
-          : `/assets/images/g${(index % 3) + 1}.png`)
-    )
+    this.portfolioList = await firstValueFrom(this.butterService.getPortfolio())
+
+    this.portfolioList.forEach(this.getImage.bind(this))
+  }
+
+  private getImage(portfolio: Portfolio, index: number) {
+    return portfolio.photo
+      ? portfolio.photo
+      : `/assets/images/g${(index % 3) + 1}.png`
   }
 }

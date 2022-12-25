@@ -1,5 +1,5 @@
 export interface CertificationObject {
-  certification: Certification[]
+  certifications: Certification[]
 }
 
 export interface Certification {

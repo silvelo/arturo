@@ -14,7 +14,6 @@ export class SkillsComponent implements OnInit {
   constructor(private butterService: ButterService) {}
 
   async ngOnInit() {
-    const skillsResponse = await firstValueFrom(this.butterService.getSkills())
-    this.skills = skillsResponse.data.skills
+    this.skills = await firstValueFrom(this.butterService.getSkills())
   }
 }

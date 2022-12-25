@@ -1,5 +1,5 @@
 export interface EducationObject {
-  education: Education[]
+  educations: Education[]
 }
 
 export interface Education {

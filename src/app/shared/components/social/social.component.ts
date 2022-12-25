@@ -15,7 +15,6 @@ export class SocialComponent implements OnInit {
   constructor(private butterService: ButterService) {}
 
   async ngOnInit() {
-    const butterResponse = await firstValueFrom(this.butterService.getSocial())
-    this.socialList = butterResponse.data.social
+    this.socialList = await firstValueFrom(this.butterService.getSocial())
   }
 }

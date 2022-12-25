@@ -1,5 +1,5 @@
 export interface PortfolioObject {
-  portfolio: Portfolio[]
+  portfolios: Portfolio[]
 }
 
 export interface Portfolio {

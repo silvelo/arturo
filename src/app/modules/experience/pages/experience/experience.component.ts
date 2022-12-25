@@ -20,14 +20,10 @@ export class ExperienceComponent implements OnInit {
   constructor(private butterService: ButterService) {}
 
   async ngOnInit() {
-    const [butterExperienceResponse, butterPublicationResponse] =
-      await Promise.all([
-        firstValueFrom(this.butterService.getExperience()),
-        firstValueFrom(this.butterService.getPublications())
-      ])
-
-    this.experienceList = butterExperienceResponse.data.experience
-    this.publications = butterPublicationResponse.data.publications
+    ;[this.experienceList, this.publications] = await Promise.all([
+      firstValueFrom(this.butterService.getExperience()),
+      firstValueFrom(this.butterService.getPublications())
+    ])
   }
 
   onChangeTab(event: MatTabChangeEvent) {}

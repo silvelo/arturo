@@ -4,7 +4,9 @@
 
 export const environment = {
   production: false,
-  googleAnalyticsId: 'G-SR2NM7NN8N'
+  googleAnalyticsId: 'G-SR2NM7NN8N',
+  token: 'fed7d717ce0e71dd943cba17237589d3eaafb275',
+  apiUrl: 'https://api.buttercms.com/v2/content/'
 }
 
 /*

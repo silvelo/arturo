@@ -1,5 +1,5 @@
 export interface ExperienceObject {
-  experience: Experience[]
+  experiences: Experience[]
 }
 
 export interface Experience {
