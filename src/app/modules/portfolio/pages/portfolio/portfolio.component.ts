@@ -21,7 +21,7 @@ export class PortfolioComponent implements OnInit {
   }
 
   private getImage(portfolio: Portfolio, index: number) {
-    return portfolio.photo
+    portfolio.photo = portfolio.photo
       ? portfolio.photo
       : `/assets/images/g${(index % 3) + 1}.png`
   }
