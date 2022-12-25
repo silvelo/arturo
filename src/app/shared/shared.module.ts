@@ -33,7 +33,7 @@ import { ToggleThemeComponent } from './components/toggle-theme/toggle-theme.com
 import { LogoComponent } from './components/logo/logo.component'
 import { SkillsComponent } from './components/skills/skills.component'
 import { CommonHeaderComponent } from './components/common-header/common-header.component'
-import { CommonCardComponent } from './components/common-card/common-card.component'
+import { ContentCardComponent } from './components/content-card/content-card.component'
 import { RateComponent } from './components/rate/rate.component'
 import { ListLinksComponent } from './components/list-links/list-links.component'
 
@@ -51,7 +51,7 @@ import { ListLinksComponent } from './components/list-links/list-links.component
     LogoComponent,
     SkillsComponent,
     CommonHeaderComponent,
-    CommonCardComponent,
+    ContentCardComponent,
     RateComponent,
     ListLinksComponent
   ],
@@ -80,7 +80,7 @@ import { ListLinksComponent } from './components/list-links/list-links.component
     LogoComponent,
     SkillsComponent,
     CommonHeaderComponent,
-    CommonCardComponent,
+    ContentCardComponent,
     RateComponent,
     ListLinksComponent
   ]

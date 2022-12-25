@@ -1,5 +1,5 @@
-<silvelo-common-card [title]="routeNames.ABOUT | translate"
-                     *ngIf="me">
+<silvelo-content-card [title]="routeNames.ABOUT | translate"
+                      *ngIf="me">
 
     <img mat-card-image
          class="photo-profile"
@@ -21,9 +21,9 @@
 
         <p [innerHTML]="me.description | translate"></p>
     </mat-card-content>
-</silvelo-common-card>
-<silvelo-common-card [title]="'ABOUT.SKILLS' | translate">
+</silvelo-content-card>
+<silvelo-content-card [title]="'ABOUT.SKILLS' | translate">
     <mat-card-content>
         <silvelo-skills></silvelo-skills>
     </mat-card-content>
-</silvelo-common-card>
+</silvelo-content-card>

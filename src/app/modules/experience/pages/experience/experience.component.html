@@ -2,15 +2,15 @@
                headerPosition="below"
                (selectedTabChange)="onChangeTab($event)">
     <mat-tab [label]="'NAVBAR.EXPERIENCE' | translate">
-        <silvelo-common-card [title]="routeNames.EXPERIENCE | translate">
+        <silvelo-content-card [title]="routeNames.EXPERIENCE | translate">
             <mat-card-content>
                 <silvelo-experience-card [experience]="experience"
                                          *ngFor="let experience of experienceList"></silvelo-experience-card>
             </mat-card-content>
-        </silvelo-common-card>
+        </silvelo-content-card>
     </mat-tab>
     <mat-tab [label]="routeNames.PUBLICATIONS | translate">
-        <silvelo-common-card [title]="routeNames.PUBLICATIONS | translate">
+        <silvelo-content-card [title]="routeNames.PUBLICATIONS | translate">
             <mat-card-content fxLayout="row wrap"
                               fxLayoutAlign="space-between">
                 <silvelo-publication-card [publication]="publication"
@@ -18,7 +18,7 @@
                                           fxFlex="100"
                                           *ngFor="let publication of publications"></silvelo-publication-card>
             </mat-card-content>
-        </silvelo-common-card>
+        </silvelo-content-card>
 
 
     </mat-tab>
