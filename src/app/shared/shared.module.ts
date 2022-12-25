@@ -35,6 +35,7 @@ import { SkillsComponent } from './components/skills/skills.component'
 import { CommonHeaderComponent } from './components/common-header/common-header.component'
 import { CommonCardComponent } from './components/common-card/common-card.component'
 import { RateComponent } from './components/rate/rate.component'
+import { ListLinksComponent } from './components/list-links/list-links.component'
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { RateComponent } from './components/rate/rate.component'
     SkillsComponent,
     CommonHeaderComponent,
     CommonCardComponent,
-    RateComponent
+    RateComponent,
+    ListLinksComponent
   ],
   imports: [
     CommonModule,
@@ -79,7 +81,8 @@ import { RateComponent } from './components/rate/rate.component'
     SkillsComponent,
     CommonHeaderComponent,
     CommonCardComponent,
-    RateComponent
+    RateComponent,
+    ListLinksComponent
   ]
 })
 export class SharedModule {

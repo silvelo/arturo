@@ -44,14 +44,16 @@
             </ng-template>
         </ng-container>
     </mat-card-content>
-    <mat-card-actions *ngIf="link">
+    <mat-card-actions>
         <a mat-stroked-button
            fxFill
+           *ngIf="link"
            color="primary"
            [href]="link"
            target="_blank">
             <fa-icon [icon]="['fas','external-link']"></fa-icon>
             <span class="ml-2">{{linkText}}</span>
         </a>
+        <ng-content select="[actions]"></ng-content>
     </mat-card-actions>
 </mat-card>

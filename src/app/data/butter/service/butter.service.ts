@@ -1,6 +1,6 @@
 import { HttpClient, HttpParams } from '@angular/common/http'
 import { Injectable } from '@angular/core'
-import { AwardObject } from '../types/award'
+import { Award, AwardObject, AwardResponse } from '../types/award'
 import { IButterData } from '../types/butter'
 import { CertificationObject } from '../types/certification'
 import { EducationObject } from '../types/education'
@@ -63,7 +63,8 @@ export class ButterService {
 
   getAwards() {
     return this.butterContent<AwardObject>('awards', {}).pipe(
-      map((data) => data.awards)
+      map((data) => data.awards),
+      map((awards) => awards.map((award) => new Award(award)))
     )
   }
 

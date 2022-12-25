@@ -1,4 +1,7 @@
 <silvelo-card [title]="award.title"
               subtitle="{{award.issued}} · {{award.expedition_date | date:'yyyy'}}"
               [description]=" award.description">
+
+    <silvelo-list-links [links]="award.testimonials"
+                        actions></silvelo-list-links>
 </silvelo-card>
