@@ -1,11 +1,11 @@
 import { Component, Input } from '@angular/core'
 
 @Component({
-  selector: 'silvelo-card',
-  templateUrl: './card.component.html',
-  styleUrls: ['./card.component.scss']
+  selector: 'silvelo-common-card',
+  templateUrl: './common-card.component.html',
+  styleUrls: ['./common-card.component.scss']
 })
-export class CardComponent {
+export class CommonCardComponent {
   @Input() image!: string
   @Input() title!: string
   @Input() subtitle!: string

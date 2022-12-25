@@ -23,7 +23,7 @@ import {
   faStar,
   faCalendar
 } from '@fortawesome/free-solid-svg-icons'
-import { CardComponent } from './components/card/card.component'
+import { CommonCardComponent } from './components/common-card/common-card.component'
 import { ExpiresDateComponent } from './components/expires-date/expires-date.component'
 import { RangeDateComponent } from './components/range-date/range-date.component'
 import { TranslateModule } from '@ngx-translate/core'
@@ -42,7 +42,7 @@ import { ListLinksComponent } from './components/list-links/list-links.component
     SocialComponent,
     TimeDiffPipe,
     LoaderComponent,
-    CardComponent,
+    CommonCardComponent,
     ExpiresDateComponent,
     RangeDateComponent,
     LanguagesComponent,
@@ -71,7 +71,7 @@ import { ListLinksComponent } from './components/list-links/list-links.component
     FontAwesomeModule,
     TimeDiffPipe,
     LoaderComponent,
-    CardComponent,
+    CommonCardComponent,
     ExpiresDateComponent,
     RangeDateComponent,
     LanguagesComponent,
