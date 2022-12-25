@@ -35,8 +35,7 @@ import { SkillsComponent } from './components/skills/skills.component'
 import { CommonHeaderComponent } from './components/common-header/common-header.component'
 import { ContentCardComponent } from './components/content-card/content-card.component'
 import { RateComponent } from './components/rate/rate.component'
-import { ListLinksComponent } from './components/list-links/list-links.component';
-import { CardImageHeaderComponent } from './components/card-image-header/card-image-header.component'
+import { ListLinksComponent } from './components/list-links/list-links.component'
 
 @NgModule({
   declarations: [
@@ -54,8 +53,7 @@ import { CardImageHeaderComponent } from './components/card-image-header/card-im
     CommonHeaderComponent,
     ContentCardComponent,
     RateComponent,
-    ListLinksComponent,
-    CardImageHeaderComponent
+    ListLinksComponent
   ],
   imports: [
     CommonModule,
