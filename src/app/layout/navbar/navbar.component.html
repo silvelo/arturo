@@ -1,33 +1,28 @@
-<div fxLayout="column"
-     fxLayoutAlign="center center">
-    <silvelo-logo [logo]="theme.logo"
-                  class="mt-4"></silvelo-logo>
-</div>
+<silvelo-logo class="my-2 self-center"
+              [logo]="theme.logo"></silvelo-logo>
+
 
 <mat-nav-list fxFlex
-              fxLayout="column"
-              fxLayoutAlign="center center">
+              class="flex flex-auto flex-col justify-center content-center">
 
 
     <a mat-list-item
+       class="flex-row justify-start items-center"
        [routerLinkActiveOptions]="{exact: true}"
        routerLinkActive="active-route"
        (click)="toggle.emit()"
        [routerLink]="nav.link"
-       fxLayout="row"
-       fxLayoutAlign="start center"
        *ngFor="let nav of sidenav">
-        <fa-icon fxFlex="15"
+        <fa-icon class="basis-1/4"
                  [icon]="['fas', nav.icon]"></fa-icon>
-        <span fxFlex="85">{{nav.name | translate}}</span>
+        <span class="basis-3/4">{{nav.name | translate}}</span>
     </a>
 </mat-nav-list>
 
-<section class="m-2">
+<section class="m-2 flex flex-col">
     <div class="version"
          *ngIf="theme"
-         fxLayout="row"
-         fxLayoutAlign="space-between center">
+         class="flex flex-row justify-between items-center">
         <span>{{'NAVBAR.POWER_BY' | translate}}</span>
         <a target="_blank"
            href="https://buttercms.com"><img class="butter_logo"
@@ -38,9 +33,11 @@
 
 
 
-    <silvelo-languages fxLayoutAlign="center center"></silvelo-languages>
+    <silvelo-languages class="flex items-center self-center"></silvelo-languages>
 
-    <silvelo-version fxLayoutAlign="center center"></silvelo-version>
+    <div class="flex flex-row justify-around">
+        <silvelo-version></silvelo-version>
 
-    <silvelo-toggle-theme fxLayoutAlign="center center"></silvelo-toggle-theme>
+        <silvelo-toggle-theme></silvelo-toggle-theme>
+    </div>
 </section>

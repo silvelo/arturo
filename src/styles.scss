@@ -1,5 +1,8 @@
 @import './styles/themes/light-theme.scss';
 @import './styles/themes/black-theme.scss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 html,
 body {
