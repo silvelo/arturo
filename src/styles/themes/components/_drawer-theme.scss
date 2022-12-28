@@ -2,7 +2,7 @@
 @use '@angular/material' as mat;
 
 @mixin color($theme) {
-    .mat-drawer {
+/*     .mat-drawer {
         width: 250px;
     }
     
@@ -12,7 +12,7 @@
     
    .mat-drawer-inner-container {
         flex-direction: column !important;
-    }
+    } */
 }
 
 @mixin theme($theme) {

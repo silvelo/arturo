@@ -3,13 +3,11 @@ import {
   ChangeDetectorRef,
   Component,
   OnDestroy,
-  OnInit,
   Renderer2
 } from '@angular/core'
-import { MatDrawer, MatSidenav } from '@angular/material/sidenav'
+import { MatDrawer } from '@angular/material/sidenav'
 
 import { ThemeService } from '@app/core/services/theme.service'
-import { ButterService } from '@data/butter/service/butter.service'
 
 import { map, Observable } from 'rxjs'
 import packageJson from '../../../../package.json'
@@ -31,7 +29,7 @@ export class CustomLayoutComponent implements OnDestroy {
     private renderer: Renderer2,
     private themeService: ThemeService
   ) {
-    this.mobileQuery = this.media.matchMedia('(min-width: 960px)')
+    this.mobileQuery = this.media.matchMedia('(min-width: 768px)')
     this._mobileQueryListener = () => this.changeDetectorRef.detectChanges()
     this.mobileQuery.addListener(this._mobileQueryListener)
 
