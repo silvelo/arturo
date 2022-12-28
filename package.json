@@ -69,8 +69,8 @@
   },
   "copyFiles": [
     {
-      "from": "dist/silvelo.github.io/index.html",
-      "to": "dist/silvelo.github.io/404.html"
+      "from": "dist/silvelo-github-io/index.html",
+      "to": "dist/silvelo-github-io/404.html"
     }
   ]
 }
