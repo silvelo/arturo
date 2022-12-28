@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core'
 import { MaterialModule } from './material/material.module'
-import { FlexLayoutModule } from '@angular/flex-layout'
 import { SocialComponent } from './components/social/social.component'
 import { CommonModule } from '@angular/common'
 import {
@@ -55,17 +54,11 @@ import { ListLinksComponent } from './components/list-links/list-links.component
     RateComponent,
     ListLinksComponent
   ],
-  imports: [
-    CommonModule,
-    FontAwesomeModule,
-    MaterialModule,
-    FlexLayoutModule,
-    TranslateModule
-  ],
+  imports: [CommonModule, FontAwesomeModule, MaterialModule, TranslateModule],
   exports: [
     CommonModule,
     MaterialModule,
-    FlexLayoutModule,
+
     TranslateModule,
     SocialComponent,
     FontAwesomeModule,
