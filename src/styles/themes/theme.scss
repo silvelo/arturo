@@ -1,0 +1,43 @@
+@use './components/cards-theme' as cards;
+@use './components/tabs-theme' as tabs;
+@use '@angular/material' as mat;
+
+
+@import './light-theme.scss';
+@import './dark-theme.scss';
+
+
+@include mat.core();
+
+
+@include mat.progress-spinner-theme($light-theme);
+@include mat.progress-bar-theme($light-theme);
+@include mat.button-theme($light-theme);
+@include mat.toolbar-theme($light-theme);
+@include mat.sidenav-theme($light-theme);
+@include mat.card-theme($light-theme);
+@include mat.list-theme($light-theme);
+@include mat.slide-toggle-theme($light-theme);
+@include mat.expansion-theme($light-theme);
+@include mat.tabs-theme($light-theme);
+
+@include cards.theme($light-theme);
+@include tabs.theme($light-theme);
+
+
+
+.dark-theme {    
+    @include mat.progress-spinner-color($dark-theme);
+    @include mat.progress-bar-color($dark-theme);
+    @include mat.button-color($dark-theme);
+    @include mat.toolbar-color($dark-theme);
+    @include mat.sidenav-color($dark-theme);
+    @include mat.card-color($dark-theme);
+    @include mat.list-color($dark-theme);
+    @include mat.slide-toggle-color($dark-theme);
+    @include mat.expansion-color($dark-theme);
+    @include mat.tabs-color($dark-theme);
+
+    @include cards.color($dark-theme);
+    @include tabs.color($dark-theme); 
+}

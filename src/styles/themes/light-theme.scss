@@ -1,37 +1,15 @@
 @use '@angular/material' as mat;
 
-
-@use './components/cards-theme' as cards;
-@use './components/tabs-theme' as tabs;
-
-
 @include mat.core();
 
 
- .light-theme {
-    $light-theme-primary: mat.define-palette(mat.$indigo-palette, 700, 300, 900);
-    $light-theme-accent : mat.define-palette(mat.$indigo-palette);
-    $light-theme-warn   : mat.define-palette(mat.$indigo-palette, A200);
 
+$light-theme-primary: mat.define-palette(mat.$indigo-palette, 700, 300, 900);
+$light-theme-accent : mat.define-palette(mat.$indigo-palette);
+$light-theme-warn   : mat.define-palette(mat.$indigo-palette, A200);
 
-
-    $light-theme: mat.define-light-theme((color: (primary: $light-theme-primary,
-                    accent: $light-theme-accent,
-                    warn: $light-theme-warn)));
-
-    @include mat.progress-spinner-theme($light-theme);
-    @include mat.progress-bar-theme($light-theme);
-    @include mat.button-theme($light-theme);
-    @include mat.toolbar-theme($light-theme);
-    @include mat.sidenav-theme($light-theme);
-    @include mat.card-theme($light-theme);
-    @include mat.list-theme($light-theme);
-    @include mat.slide-toggle-theme($light-theme);
-    @include mat.expansion-theme($light-theme);
-    @include mat.tabs-theme($light-theme);
-    
-    @include cards.theme($light-theme);
-    @include tabs.theme($light-theme);
+$light-theme: mat.define-light-theme((color: (primary: $light-theme-primary,
+                accent: $light-theme-accent,
+                warn: $light-theme-warn)));
 
     
-} 
