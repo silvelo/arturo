@@ -3,7 +3,7 @@
 
 @use './components/cards-theme' as cards;
 @use './components/tabs-theme' as tabs;
-@use './components/drawer-theme' as drawer;
+
 
 
 @include mat.core();
@@ -22,12 +22,18 @@
 
 
 
-    @include mat.all-component-themes($dark-theme);
     
+    @include mat.progress-spinner-theme($dark-theme);
+    @include mat.progress-bar-theme($dark-theme);
+    @include mat.button-theme($dark-theme);
+    @include mat.toolbar-theme($dark-theme);
+    @include mat.sidenav-theme($dark-theme);
+    @include mat.card-theme($dark-theme);
+    @include mat.list-theme($dark-theme);
+    @include mat.slide-toggle-theme($dark-theme);
+    @include mat.expansion-theme($dark-theme);
+    @include mat.tabs-theme($dark-theme);
+
     @include cards.theme($dark-theme);
     @include tabs.theme($dark-theme); 
-    @include drawer.theme($dark-theme); 
-    
-
-
 }

@@ -3,7 +3,7 @@
 
 @use './components/cards-theme' as cards;
 @use './components/tabs-theme' as tabs;
-@use './components/drawer-theme' as drawer;
+
 
 @include mat.core();
 
@@ -19,9 +19,19 @@
                     accent: $light-theme-accent,
                     warn: $light-theme-warn)));
 
-    @include mat.all-component-themes($light-theme);
-
+    @include mat.progress-spinner-theme($light-theme);
+    @include mat.progress-bar-theme($light-theme);
+    @include mat.button-theme($light-theme);
+    @include mat.toolbar-theme($light-theme);
+    @include mat.sidenav-theme($light-theme);
+    @include mat.card-theme($light-theme);
+    @include mat.list-theme($light-theme);
+    @include mat.slide-toggle-theme($light-theme);
+    @include mat.expansion-theme($light-theme);
+    @include mat.tabs-theme($light-theme);
+    
     @include cards.theme($light-theme);
     @include tabs.theme($light-theme);
-    @include drawer.theme($light-theme); 
+
+    
 } 

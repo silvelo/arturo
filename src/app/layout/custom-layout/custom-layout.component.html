@@ -2,7 +2,7 @@
                 class="md:hidden">
 </silvelo-header>
 
-<mat-drawer-container>
+<mat-drawer-container class="flex flex-auto">
     <mat-drawer #snav
                 [mode]="mobileQuery.matches ? 'side' : 'over'"
                 [opened]="mobileQuery.matches">
@@ -12,7 +12,7 @@
     </mat-drawer>
 
 
-    <mat-drawer-content class="container">
+    <mat-drawer-content class="w-full">
         <router-outlet></router-outlet>
     </mat-drawer-content>
 </mat-drawer-container>
