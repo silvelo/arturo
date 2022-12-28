@@ -10,7 +10,7 @@
     "build": "ng build",
     "build:prod": "ng build --configuration production",
     "build:stats": "ng build --stats-json",
-    "analyze": "webpack-bundle-analyzer dist/silvelo.github.io/stats.json",
+    "analyze": "webpack-bundle-analyzer dist/silvelo-github-io/stats.json",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "tag:patch": "npm version patch",
