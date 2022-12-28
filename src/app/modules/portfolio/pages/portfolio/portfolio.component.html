@@ -1,9 +1,7 @@
 <silvelo-content-card [title]="routeNames.PORTFOLIO | translate">
-    <mat-card-content fxLayout="row wrap"
-                      fxLayoutAlign="space-between">
+    <mat-card-content class="flex flex-row flex-wrap justify-between">
         <silvelo-portfolio-card [portfolio]="portfolio"
-                                fxFlex.gt-sm="50"
-                                fxFlex="100"
+                                class="md:basis-1/2 basis-full"
                                 *ngFor="let portfolio of portfolioList"></silvelo-portfolio-card>
     </mat-card-content>
 </silvelo-content-card>

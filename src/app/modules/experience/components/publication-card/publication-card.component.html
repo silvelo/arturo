@@ -3,8 +3,7 @@
                      [link]="publication.url"
                      [linkText]="'BUTTONS.SHOW_PUBLICATION' | translate">
     <div subtitle
-         *ngIf="publication.grade"
-         fxLayoutAlign="space-between">
+         *ngIf="publication.grade">
 
         <silvelo-rate [rate]="publication.grade"
                       [showIcon]="true"></silvelo-rate>

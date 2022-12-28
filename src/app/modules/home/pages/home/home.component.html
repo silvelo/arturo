@@ -1,6 +1,5 @@
 <section *ngIf="me"
-         fxLayout="column"
-         fxLayoutAlign="center center">
+         class="flex-col flex justify-center items-center">
      <img class="avatar"
           alt="Profile"
           [src]="me.profile_photo" />
@@ -9,5 +8,5 @@
      <h3 class="name">{{me.name}} <span>{{me.surname}}</span></h3>
      <p class="job">{{me.job}}</p>
 
-     <silvelo-social></silvelo-social>
+     <silvelo-social class="mt-4"></silvelo-social>
 </section>

@@ -16,11 +16,9 @@
 
 
         <silvelo-content-card [title]="routeNames.COURSES | translate">
-            <mat-card-content fxLayout="row wrap"
-                              fxLayoutAlign="space-between">
+            <mat-card-content class="flex flex-row flex-wrap justify-between">
                 <silvelo-certification-card *ngFor="let certification of certifications"
-                                            fxFlex.gt-sm="50"
-                                            fxFlex="100"
+                                            class="w-full md:w-1/2"
                                             [certification]="certification"></silvelo-certification-card>
 
             </mat-card-content>
@@ -30,11 +28,9 @@
     <mat-tab [label]="routeNames.AWARDS | translate">
 
         <silvelo-content-card [title]="routeNames.AWARDS | translate">
-            <mat-card-content fxLayout="row wrap"
-                              fxLayoutAlign="space-between">
+            <mat-card-content class="flex flex-row flex-wrap justify-between">
                 <silvelo-award-card [award]="award"
-                                    fxFlex.gt-sm="50"
-                                    fxFlex="100"
+                                    class="w-full md:w-1/2"
                                     *ngFor="let award of awards"></silvelo-award-card>
 
             </mat-card-content>

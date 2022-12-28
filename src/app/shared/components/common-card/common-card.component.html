@@ -18,8 +18,7 @@
         </mat-card-subtitle>
     </ng-template>
 
-    <mat-card-content class="description"
-                      *ngIf="!!description">
+    <mat-card-content *ngIf="!!description">
         <ng-container *ngIf="!!description">
             <mat-accordion *ngIf="descriptionHide; else simpleDescription">
                 <mat-expansion-panel hideToggle
