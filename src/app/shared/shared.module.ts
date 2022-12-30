@@ -1,81 +1,99 @@
-import { NgModule } from '@angular/core'
-import { MaterialModule } from './material/material.module'
-import { SocialComponent } from './components/social/social.component'
-import { CommonModule } from '@angular/common'
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatListModule } from '@angular/material/list';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import {
   FaIconLibrary,
   FontAwesomeModule
-} from '@fortawesome/angular-fontawesome'
-import { TimeDiffPipe } from './pipes/time-diff.pipe'
-import { LoaderComponent } from './components/loader/loader.component'
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+} from '@fortawesome/angular-fontawesome';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+
 import {
-  faExternalLink,
+  faBars,
   faBriefcase,
+  faCalendar,
+  faClipboardList,
+  faEnvelope,
+  faExternalLink,
   faGraduationCap,
   faHome,
-  faEnvelope,
-  faClipboardList,
-  faUser,
   faMoon,
-  faBars,
   faStar,
-  faCalendar
-} from '@fortawesome/free-solid-svg-icons'
-import { CommonCardComponent } from './components/common-card/common-card.component'
-import { ExpiresDateComponent } from './components/expires-date/expires-date.component'
-import { RangeDateComponent } from './components/range-date/range-date.component'
-import { TranslateModule } from '@ngx-translate/core'
-import { LanguagesComponent } from './components/languages/languages.component'
-import { VersionComponent } from './components/version/version.component'
-import { ToggleThemeComponent } from './components/toggle-theme/toggle-theme.component'
-import { LogoComponent } from './components/logo/logo.component'
-import { SkillsComponent } from './components/skills/skills.component'
-import { CommonHeaderComponent } from './components/common-header/common-header.component'
-import { ContentCardComponent } from './components/content-card/content-card.component'
-import { RateComponent } from './components/rate/rate.component'
-import { ListLinksComponent } from './components/list-links/list-links.component'
+  faUser
+} from '@fortawesome/free-solid-svg-icons';
+
+import { TranslateModule } from '@ngx-translate/core';
+import { CommonCardComponent } from './components/common-card/common-card.component';
+import { CommonHeaderComponent } from './components/common-header/common-header.component';
+import { ContentCardComponent } from './components/content-card/content-card.component';
+import { ExpiresDateComponent } from './components/expires-date/expires-date.component';
+import { ListLinksComponent } from './components/list-links/list-links.component';
+import { RangeDateComponent } from './components/range-date/range-date.component';
+import { RateComponent } from './components/rate/rate.component';
+import { SkillsComponent } from './components/skills/skills.component';
+import { SocialComponent } from './components/social/social.component';
+import { TimeDiffPipe } from './pipes/time-diff.pipe';
 
 @NgModule({
   declarations: [
     SocialComponent,
     TimeDiffPipe,
-    LoaderComponent,
     CommonCardComponent,
     ExpiresDateComponent,
     RangeDateComponent,
-    LanguagesComponent,
-    VersionComponent,
-    ToggleThemeComponent,
-    LogoComponent,
     SkillsComponent,
     CommonHeaderComponent,
     ContentCardComponent,
     RateComponent,
     ListLinksComponent
   ],
-  imports: [CommonModule, FontAwesomeModule, MaterialModule, TranslateModule],
-  exports: [
+  imports: [
     CommonModule,
-    MaterialModule,
-
-    TranslateModule,
-    SocialComponent,
     FontAwesomeModule,
-    TimeDiffPipe,
-    LoaderComponent,
+    MatExpansionModule,
+    MatTabsModule,
+    MatProgressBarModule,
+    MatSlideToggleModule,
+    MatButtonModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatCardModule,
+    MatListModule,
+    TranslateModule
+  ],
+  exports: [
+    /* COMPONENTS */
+    SocialComponent,
     CommonCardComponent,
     ExpiresDateComponent,
     RangeDateComponent,
-    LanguagesComponent,
-    VersionComponent,
-    ToggleThemeComponent,
-    LogoComponent,
     SkillsComponent,
     CommonHeaderComponent,
     ContentCardComponent,
     RateComponent,
-    ListLinksComponent
+    ListLinksComponent,
+    /* PIPES */
+    TimeDiffPipe,
+    /* MODULES */
+    CommonModule,
+    TranslateModule,
+    FontAwesomeModule,
+    MatExpansionModule,
+    MatTabsModule,
+    MatProgressBarModule,
+    MatSlideToggleModule,
+    MatButtonModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatCardModule,
+    MatListModule
   ]
 })
 export class SharedModule {
@@ -94,6 +112,6 @@ export class SharedModule {
       faBars,
       faStar,
       faCalendar
-    )
+    );
   }
 }

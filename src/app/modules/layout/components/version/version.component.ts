@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core'
-import packageJson from '../../../../../package.json'
+import { Component } from '@angular/core';
+import packageJson from '../../../../../../package.json';
 
 @Component({
   selector: 'silvelo-version',
@@ -7,5 +7,5 @@ import packageJson from '../../../../../package.json'
   styleUrls: ['./version.component.scss']
 })
 export class VersionComponent {
-  public version: string = packageJson.version
+  public version: string = packageJson.version;
 }
