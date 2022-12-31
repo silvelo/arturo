@@ -8,6 +8,7 @@ import {
 import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { DataModule } from '@data/data.module';
 import {
   TranslateLoader,
   TranslateModule,
@@ -26,6 +27,7 @@ import { LoaderInterceptor } from './interceptors/loader.interceptor';
     CommonModule,
     HttpClientModule,
     OverlayModule,
+    DataModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

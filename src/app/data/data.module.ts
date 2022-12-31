@@ -1,8 +1,8 @@
-import { NgModule } from '@angular/core'
-import { CommonModule } from '@angular/common'
+import { NgModule } from '@angular/core';
+import { ButterService } from '@data/butter/service/butter.service';
 
 @NgModule({
-  declarations: [],
-  imports: [CommonModule]
+  imports: [],
+  providers: [ButterService]
 })
 export class DataModule {}
