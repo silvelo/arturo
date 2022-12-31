@@ -1,5 +1,5 @@
-import { Component, Output, Input, EventEmitter } from '@angular/core'
-import { Sidenav, sidenav } from '@app/core/common/navbar'
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Sidenav, sidenav } from '@app/core/common/navbar';
 
 @Component({
   selector: 'silvelo-navbar',
@@ -7,8 +7,8 @@ import { Sidenav, sidenav } from '@app/core/common/navbar'
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
-  @Input() theme: any | null = null
-  @Output() toggle = new EventEmitter()
+  @Input() theme: any | null = null;
+  @Output() toggle = new EventEmitter();
 
-  public sidenav: Sidenav[] = sidenav
+  public sidenav: Sidenav[] = sidenav;
 }

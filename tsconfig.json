@@ -22,11 +22,19 @@
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
     "paths": {
+      "@root/*": ["*"],
+      "@src/*": ["src/*"],
       "@app/*": ["src/app/*"],
       "@core/*": ["src/app/core/*"],
       "@shared/*": ["src/app/shared/*"],
       "@env": ["src/environments/environment"],
       "@modules/*": ["src/app/modules/*"],
+      "@experience/*": ["src/app/modules/experience/*"],
+      "@education/*": ["src/app/modules/education/*"],
+      "@about/*": ["src/app/modules/about/*"],
+      "@layout/*": ["src/app/modules/layout/*"],
+      "@portfolio/*": ["src/app/modules/portfolio/*"],
+      "@home/*": ["src/app/modules/home/*"],
       "@data/*": ["src/app/data/*"]
     }
   },

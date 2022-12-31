@@ -60,8 +60,31 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
+              "optimization": true,
               "outputHashing": "all"
             },
+            "analyze": {
+              "budgets": [],
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "none",
+              "sourceMap": {
+                "scripts": true,
+                "styles": true,
+                "hidden": true,
+                "vendor": true
+              },
+              "namedChunks": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true
+            },
+
             "development": {
               "buildOptimizer": false,
               "optimization": false,
@@ -78,6 +101,9 @@
           "configurations": {
             "production": {
               "browserTarget": "silvelo-github-io:build:production"
+            },
+            "analyze": {
+              "browserTarget": "silvelo-github-io:build:analyze"
             },
             "development": {
               "browserTarget": "silvelo-github-io:build:development"

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core'
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'silvelo-logo',
@@ -6,5 +6,5 @@ import { Component, Input } from '@angular/core'
   styleUrls: ['./logo.component.scss']
 })
 export class LogoComponent {
-  @Input() logo!: string
+  @Input() logo!: string;
 }

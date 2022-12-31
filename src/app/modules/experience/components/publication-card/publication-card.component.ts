@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core'
-import { Publication } from '@app/data/butter/types/publication'
+import { Component, Input } from '@angular/core';
+import { Publication } from '@data/butter/types/publication';
 
 @Component({
   selector: 'silvelo-publication-card',
@@ -7,5 +7,5 @@ import { Publication } from '@app/data/butter/types/publication'
   styleUrls: ['./publication-card.component.scss']
 })
 export class PublicationCardComponent {
-  @Input() publication!: Publication
+  @Input() publication!: Publication;
 }

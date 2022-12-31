@@ -7,17 +7,15 @@ import {
 } from '@angular/core';
 import { MatDrawer } from '@angular/material/sidenav';
 
-import { ThemeService } from '@app/core/services/theme.service';
+import { ThemeService } from '@core/services/theme.service';
 
 import { map, Observable } from 'rxjs';
-import packageJson from '../../../../../../package.json';
 @Component({
   selector: 'silvelo-layout',
   templateUrl: './layout.component.html',
   styleUrls: ['./layout.component.scss']
 })
 export class LayoutComponent implements OnDestroy {
-  public version: string = packageJson.version;
   public theme$: Observable<any> | undefined;
   public mobileQuery: MediaQueryList;
 

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import packageJson from '../../../../../../package.json';
+import packageJson from '@root/package.json';
 
 @Component({
   selector: 'silvelo-version',

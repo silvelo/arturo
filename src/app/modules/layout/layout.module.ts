@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
-import { SharedModule } from '@app/shared/shared.module';
-import { HeaderComponent } from './components/header/header.component';
-import { LanguagesComponent } from './components/languages/languages.component';
-import { LogoComponent } from './components/logo/logo.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
-import { ToggleThemeComponent } from './components/toggle-theme/toggle-theme.component';
-import { VersionComponent } from './components/version/version.component';
-import { LayoutRoutingModule } from './layout-routing.module';
-import { LayoutComponent } from './pages/layout/layout.component';
+import { LayoutComponent } from '@layout//pages/layout/layout.component';
+import { HeaderComponent } from '@layout/components/header/header.component';
+import { LanguagesComponent } from '@layout/components/languages/languages.component';
+import { LogoComponent } from '@layout/components/logo/logo.component';
+import { NavbarComponent } from '@layout/components/navbar/navbar.component';
+import { ToggleThemeComponent } from '@layout/components/toggle-theme/toggle-theme.component';
+import { VersionComponent } from '@layout/components/version/version.component';
+import { LayoutRoutingModule } from '@layout/layout-routing.module';
+import { SharedModule } from '@shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,6 @@ import { LayoutComponent } from './pages/layout/layout.component';
     ToggleThemeComponent,
     VersionComponent
   ],
-  imports: [LayoutRoutingModule, SharedModule],
-  exports: []
+  imports: [LayoutRoutingModule, SharedModule]
 })
 export class LayoutModule {}

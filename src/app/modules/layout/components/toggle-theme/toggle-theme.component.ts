@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core'
-import { ThemeService } from '@app/core/services/theme.service'
+import { Component } from '@angular/core';
+import { ThemeService } from '@app/core/services/theme.service';
 
 @Component({
   selector: 'silvelo-toggle-theme',

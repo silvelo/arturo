@@ -5,7 +5,10 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () =>
-      import('./modules/layout/layout.module').then((m) => m.LayoutModule)
+      import(
+        /* webpackChunkName: "layout.module" */
+        '@modules/layout/layout.module'
+      ).then((m) => m.LayoutModule)
   },
   { path: '**', redirectTo: '', pathMatch: 'full' }
 ];

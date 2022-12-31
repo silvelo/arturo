@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core'
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'silvelo-header',
@@ -6,5 +6,5 @@ import { Component, EventEmitter, Input, Output } from '@angular/core'
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  @Output() toggle = new EventEmitter()
+  @Output() toggle = new EventEmitter();
 }

@@ -1,5 +1,5 @@
-import { Component, Input } from '@angular/core'
-import { Portfolio } from '@app/data/butter/types/portfolio'
+import { Component, Input } from '@angular/core';
+import { Portfolio } from '@data/butter/types/portfolio';
 
 @Component({
   selector: 'silvelo-portfolio-card',
@@ -7,5 +7,5 @@ import { Portfolio } from '@app/data/butter/types/portfolio'
   styleUrls: ['./portfolio-card.component.scss']
 })
 export class PortfolioCardComponent {
-  @Input() portfolio!: Portfolio
+  @Input() portfolio!: Portfolio;
 }
