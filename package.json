@@ -2,7 +2,7 @@
   "name": "silvelo.github.io",
   "version": "3.8.0",
   "engines": {
-    "node": ">= 14.15.0"
+    "node": ">= 18"
   },
   "scripts": {
     "ng": "ng",
