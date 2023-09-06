@@ -1,3 +1,10 @@
+## [3.9.1](https://github.com/silvelo/silvelo.github.io/compare/v3.9.0...v3.9.1) (2023-09-06)
+
+
+### Bug Fixes
+
+* remove github pages ([69c24c2](https://github.com/silvelo/silvelo.github.io/commit/69c24c281522f835ab77611196eeb29ffb48fd9e))
+
 # [3.9.0](https://github.com/silvelo/silvelo.github.io/compare/v3.8.0...v3.9.0) (2023-09-06)
 
 
