@@ -7,7 +7,8 @@ import { Sidenav, sidenav } from '@core/common/navbar';
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent {
-  @Input() theme: unknown | null = null;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  @Input() theme?: any;
   @Output() toggle = new EventEmitter();
 
   public sidenav: Sidenav[] = sidenav;
