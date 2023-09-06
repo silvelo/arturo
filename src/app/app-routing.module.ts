@@ -1,54 +1,24 @@
-import { NgModule } from '@angular/core'
-import { RouterModule, Routes } from '@angular/router'
-import { CustomLayoutComponent } from './layout/custom-layout/custom-layout.component'
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
     path: '',
-    component: CustomLayoutComponent,
-    children: [
-      {
-        path: '',
-        loadChildren: () =>
-          import('./modules/home/home.module').then((m) => m.HomeModule)
-      },
-      {
-        path: 'education',
-        loadChildren: () =>
-          import('./modules/education/education.module').then(
-            (m) => m.EducationModule
-          )
-      },
-      {
-        path: 'experience',
-        loadChildren: () =>
-          import('./modules/experience/experience.module').then(
-            (m) => m.ExperienceModule
-          )
-      },
-      {
-        path: 'portfolio',
-        loadChildren: () =>
-          import('./modules/portfolio/portfolio.module').then(
-            (m) => m.PortfolioModule
-          )
-      },
-      {
-        path: 'about',
-        loadChildren: () =>
-          import('./modules/about/about.module').then((m) => m.AboutModule)
-      }
-    ]
+    loadChildren: () =>
+      import(
+        /* webpackChunkName: "layout.module" */
+        '@modules/layout/layout.module'
+      ).then(m => m.LayoutModule),
   },
-  { path: '**', redirectTo: '', pathMatch: 'full' }
-]
+  { path: '**', redirectTo: '', pathMatch: 'full' },
+];
 
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, {
-      enableTracing: false
-    })
+      enableTracing: false,
+    }),
   ],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule {}

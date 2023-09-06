@@ -1,5 +1,4 @@
-{{expiration_date | date:'yyyy'}} ·
-<span *ngIf="expires; else noExpire">{{expedition_date |
-    date:'yyyy'}}</span>
+{{ expiration_date | date: 'yyyy' }} ·
+<span *ngIf="expires; else noExpire">{{ expedition_date | date: 'yyyy' }}</span>
 
-<ng-template #noExpire>{{'COMMON.NO_EXPIRE' | translate}}</ng-template>
+<ng-template #noExpire>{{ 'COMMON.NO_EXPIRE' | translate }}</ng-template>

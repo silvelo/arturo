@@ -1,49 +1,29 @@
-import { NgModule } from '@angular/core'
-import { BrowserModule } from '@angular/platform-browser'
-
-import { AppRoutingModule } from './app-routing.module'
-import { AppComponent } from './app.component'
-import { HeaderComponent } from './layout/header/header.component'
-import { FooterComponent } from './layout/footer/footer.component'
-import { CustomLayoutComponent } from './layout/custom-layout/custom-layout.component'
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
-import { SharedModule } from './shared/shared.module'
-import { CoreModule } from '@core/core.module'
-import { ServiceWorkerModule } from '@angular/service-worker'
-import { environment } from '../environments/environment'
-import {
-  NgxGoogleAnalyticsModule,
-  NgxGoogleAnalyticsRouterModule
-} from 'ngx-google-analytics'
-import { NavbarComponent } from './layout/navbar/navbar.component'
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { CoreModule } from '@core/core.module';
+import { environment } from '../environments/environment';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    CustomLayoutComponent,
-    NavbarComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     // angular
     BrowserModule,
     // app
     AppRoutingModule,
     BrowserAnimationsModule,
-    // core & shared
+    // core
     CoreModule,
-    SharedModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the application is stable
       // or after 30 seconds (whichever comes first).
-      registrationStrategy: 'registerWhenStable:30000'
+      registrationStrategy: 'registerWhenStable:30000',
     }),
-    NgxGoogleAnalyticsModule.forRoot(environment.googleAnalyticsId),
-    NgxGoogleAnalyticsRouterModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {}

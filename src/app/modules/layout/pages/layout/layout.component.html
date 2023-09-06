@@ -1,0 +1,21 @@
+<silvelo-header
+  (toggle)="snav.toggle()"
+  class="md:hidden">
+</silvelo-header>
+
+<mat-sidenav-container class="h-screen">
+  <mat-sidenav
+    #snav
+    [mode]="mobileQuery.matches ? 'side' : 'over'"
+    [opened]="mobileQuery.matches">
+    <silvelo-navbar
+      (toggle)="closeSidenav(snav)"
+      [theme]="theme$ | async" />
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <section class="h-full p-4">
+      <router-outlet />
+    </section>
+  </mat-sidenav-content>
+</mat-sidenav-container>

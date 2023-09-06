@@ -1,38 +1,29 @@
-import { Component, OnInit } from '@angular/core'
-import { MatTabChangeEvent } from '@angular/material/tabs'
-import { Publication } from '@app/data/butter/types/publication'
-import { ButterService } from '@data/butter/service/butter.service'
-import { Experience } from '@data/butter/types/experience'
-import { GoogleAnalyticsService } from 'ngx-google-analytics'
+import { Component, OnInit } from '@angular/core';
+import { RouteNames } from '@core/common/routes';
+import { ButterService } from '@data/butter/service/butter.service';
+import { Experience } from '@data/butter/types/experience';
+import { Publication } from '@data/butter/types/publication';
 
-import { firstValueFrom } from 'rxjs'
+import { firstValueFrom } from 'rxjs';
 
 @Component({
   selector: 'silvelo-experience',
   templateUrl: './experience.component.html',
-  styleUrls: ['./experience.component.scss']
+  styleUrls: ['./experience.component.scss'],
 })
 export class ExperienceComponent implements OnInit {
-  public experienceList: Experience[] = []
-  public publications: Publication[] = []
+  public experienceList: Experience[] = [];
+  public publications: Publication[] = [];
+  public routeNames = RouteNames;
 
-  constructor(
-    private gaService: GoogleAnalyticsService,
-    private butterService: ButterService
-  ) {}
+  constructor(private butterService: ButterService) {}
 
   async ngOnInit() {
-    const [butterExperienceResponse, butterPublicationResponse] =
-      await Promise.all([
-        firstValueFrom(this.butterService.getExperience()),
-        firstValueFrom(this.butterService.getPublications())
-      ])
-
-    this.experienceList = butterExperienceResponse.data.experience
-    this.publications = butterPublicationResponse.data.publications
+    [this.experienceList, this.publications] = await Promise.all([
+      firstValueFrom(this.butterService.getExperience()),
+      firstValueFrom(this.butterService.getPublications()),
+    ]);
   }
 
-  onChangeTab(event: MatTabChangeEvent) {
-    this.gaService.pageView(window.location.pathname, event.tab.textLabel)
-  }
+  onChangeTab() {}
 }

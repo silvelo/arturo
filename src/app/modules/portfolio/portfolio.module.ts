@@ -1,13 +1,11 @@
-import { NgModule } from '@angular/core'
-import { CommonModule } from '@angular/common'
-
-import { PortfolioRoutingModule } from './portfolio-routing.module'
-import { PortfolioComponent } from './pages/portfolio/portfolio.component'
-import { SharedModule } from '@app/shared/shared.module';
-import { PortfolioCardComponent } from './components/portfolio-card/portfolio-card.component'
+import { NgModule } from '@angular/core';
+import { PortfolioRoutingModule } from '@portfolio//portfolio-routing.module';
+import { PortfolioCardComponent } from '@portfolio/components/portfolio-card/portfolio-card.component';
+import { PortfolioComponent } from '@portfolio/pages/portfolio/portfolio.component';
+import { SharedModule } from '@shared/shared.module';
 
 @NgModule({
   declarations: [PortfolioComponent, PortfolioCardComponent],
-  imports: [PortfolioRoutingModule, SharedModule]
+  imports: [PortfolioRoutingModule, SharedModule],
 })
 export class PortfolioModule {}

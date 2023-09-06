@@ -1,4 +1,10 @@
-<silvelo-card [title]="award.title"
-              subtitle="{{award.issued}} · {{award.expedition_date | date:'yyyy'}}"
-              [description]=" award.description">
-</silvelo-card>
+<silvelo-common-card
+  [title]="award.title"
+  subtitle="{{ award.issued }} · {{ award.expedition_date | date: 'yyyy' }}"
+  [description]="award.description">
+  <ng-container actions>
+    <silvelo-list-links
+      [links]="award.testimonials"
+      class="flex justify-between" />
+  </ng-container>
+</silvelo-common-card>

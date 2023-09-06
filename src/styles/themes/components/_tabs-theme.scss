@@ -1,35 +1,19 @@
 @use 'sass:map';
-@use '@angular/material'as mat;
-
+@use '@angular/material' as mat;
 
 @mixin color($theme) {
-    .mat-tab-group {
-        height: 100%;
-    }
-
-    .mat-tab-body-wrapper {
-        flex-grow: 1;
-    }
-
-    .mat-tab-body {
-        display       : flex !important;
-        flex-direction: column;
-    }
-
-    .mat-tab-body-content {
-        display       : flex;
-        flex-direction: column;
-        flex-grow     : 1;
-
-    }
-
+  .mat-mdc-tab-group {
+    height: 100%;
+  }
+  .mat-mdc-tab-body-wrapper {
+    height: 100%;
+  }
 }
 
 @mixin theme($theme) {
-    $color-config: mat.get-color-config($theme);
+  $color-config: mat.get-color-config($theme);
 
-    @if $color-config !=null {
-        @include color($theme);
-    }
-
+  @if $color-config !=null {
+    @include color($theme);
+  }
 }

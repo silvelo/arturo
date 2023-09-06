@@ -1,12 +1,16 @@
-<silvelo-card [image]="certification.company_logo"
-              [title]="certification.name"
-              [subtitle]="certification.company"
-              [link]="certification.url"
-              [linkText]="'BUTTONS.SHOW_CREDENTIAL' | translate">
-      <silvelo-expires-date [expiration_date]="certification.expiration_date"
-                            [expedition_date]="certification.expedition_date"
-                            [expires]="certification.expires"
-                            subtitle>
-      </silvelo-expires-date>
-
-</silvelo-card>
+<silvelo-common-card
+  [image]="certification.company_logo"
+  [title]="certification.name"
+  [subtitle]="certification.company"
+  [link]="certification.url"
+  [linkText]="'BUTTONS.SHOW_CREDENTIAL' | translate">
+  <section
+    footer
+    class="flex flex-row justify-between mx-2">
+    <silvelo-expires-date
+      [expiration_date]="certification.expiration_date"
+      [expedition_date]="certification.expedition_date"
+      [expires]="certification.expires"
+      subtitle />
+  </section>
+</silvelo-common-card>

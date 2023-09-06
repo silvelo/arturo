@@ -1,0 +1,20 @@
+<ng-template
+  ngFor
+  [ngForOf]="skills"
+  let-skill>
+  <div class="flex md:basis-full basis-1/2 flex-col">
+    <div
+      fxFlex
+      class="flex flex-row justify-between">
+      <span>{{ skill.language }}</span>
+      <span>
+        {{ skill.level | percent }}
+      </span>
+    </div>
+    <mat-progress-bar
+      mode="determinate"
+      color="accent"
+      class="my-2"
+      [value]="skill.level * 100" />
+  </div>
+</ng-template>

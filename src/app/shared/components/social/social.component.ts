@@ -1,21 +1,20 @@
-import { Component, OnInit } from '@angular/core'
+import { Component, OnInit } from '@angular/core';
 
-import { ButterService } from '@data/butter/service/butter.service'
-import { Social } from '@data/butter/types/social'
-import { firstValueFrom } from 'rxjs'
+import { ButterService } from '@data/butter/service/butter.service';
+import { Social } from '@data/butter/types/social';
+import { firstValueFrom } from 'rxjs';
 
 @Component({
   selector: 'silvelo-social',
   templateUrl: './social.component.html',
-  styleUrls: ['./social.component.scss']
+  styleUrls: ['./social.component.scss'],
 })
 export class SocialComponent implements OnInit {
-  public socialList: Social[] = []
+  public socialList: Social[] = [];
 
   constructor(private butterService: ButterService) {}
 
   async ngOnInit() {
-    const butterResponse = await firstValueFrom(this.butterService.getSocial())
-    this.socialList = butterResponse.data.social
+    this.socialList = await firstValueFrom(this.butterService.getSocial());
   }
 }

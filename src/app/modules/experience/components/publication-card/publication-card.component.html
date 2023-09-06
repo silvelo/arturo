@@ -1,4 +1,13 @@
-<silvelo-card [title]="publication.title"
-              [subtitle]="publication.editorial"
-              [link]="publication.url"
-              [linkText]="'BUTTONS.SHOW_PUBLICATION' | translate"></silvelo-card>
+<silvelo-common-card
+  [title]="publication.title"
+  [subtitle]="publication.editorial"
+  [link]="publication.url"
+  [linkText]="'BUTTONS.SHOW_PUBLICATION' | translate">
+  <ng-container
+    subtitle
+    *ngIf="publication.grade">
+    <silvelo-rate
+      [rate]="publication.grade"
+      [showIcon]="true" />
+  </ng-container>
+</silvelo-common-card>

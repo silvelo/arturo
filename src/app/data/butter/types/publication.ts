@@ -1,11 +1,11 @@
 export interface PublicationObject {
-  publications: Publication[]
+  publications: Publication[];
 }
 
 export interface Publication {
-  title: string
-  editorial: string
-  publication_date: string
-  url: string
-  grade: string
+  title: string;
+  editorial: string;
+  publication_date: string;
+  url: string;
+  grade: string;
 }

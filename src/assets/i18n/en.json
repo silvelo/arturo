@@ -13,6 +13,7 @@
     "TITLE": "SILVELO"
   },
   "ABOUT": {
+    "SKILLS": "Tech stack",
     "DESCRIPTION": "As a graduate in computer science, I am an expert in technology and software development. I have a strong foundation in computer science theory and programming languages, and I am trained to work on a wide range of technology-related projects. I specialize in web and mobile app development, and I have a great ability to solve complex technical problems. I enjoy working in teams and collaborating with other developers to create innovative and high-quality solutions. In addition to my academic background, I also have experience in the workforce and have worked at various companies as a software developer. This has given me practical skills and the opportunity to work on real, challenging projects."
   },
   "BUTTONS": {
@@ -27,8 +28,14 @@
     "NGX_CARDS": "A compilation of components for angular to display profile info for websites"
   },
   "COMMON": {
+    "READ_MORE": "Read more",
+    "READ_LESS": "Read less",
     "NO_EXPIRE": "No expiration date",
     "CURRENT": "Current",
     "WAIT_MESSAGE": "Fetching Data..."
+  },
+  "EXPERIENCE": {
+    "AGORA": "I developed single page web applications using the MEAN stack (MongoDB, Express.js, Angular, and Node.js).<br>I used MongoDB to manage large, schema-free databases and Express.js to build APIs and web applications.<br><br>I worked with Angular to implement business logic and user interface for the applications and used Node.js to run server-side code.<br>I was involved in the development of scalable, modern web applications using the MEAN stack.",
+    "UDC": "I participated in research projects at the university, utilizing a range of technologies to develop prototypes and demos.<br>    I collaborated with other researchers to develop and test concepts and theories using a variety of tools and languages.<br>    I gained deep skills and knowledge in cutting-edge technologies through my work in university research.<br>    I contributed to the development of innovative ideas and approaches in my research projects at the university."
   }
 }

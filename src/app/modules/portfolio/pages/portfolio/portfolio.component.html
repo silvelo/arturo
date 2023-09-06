@@ -1,2 +1,5 @@
-<silvelo-portfolio-card [portfolio]="portfolio"
-                        *ngFor="let portfolio of portfolioList"></silvelo-portfolio-card>
+<section class="flex gap-4 flex-col">
+  <silvelo-portfolio-card
+    *ngFor="let portfolio of portfolioList"
+    [portfolio]="portfolio" />
+</section>

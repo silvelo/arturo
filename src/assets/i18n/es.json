@@ -13,6 +13,7 @@
     "TITLE": "SILVELO"
   },
   "ABOUT": {
+    "SKILLS": "Stack tecnológico",
     "DESCRIPTION": "Como graduado en informática, soy un experto en tecnología y en el desarrollo de software. Tengo una sólida formación en teoría de la informática y en lenguajes de programación, y estoy capacitado para trabajar en una amplia variedad de proyectos relacionados con la tecnología. <br> Me especializo en el desarrollo de aplicaciones web y móviles, y tengo una gran habilidad para resolver problemas técnicos complejos. Me gusta trabajar en equipo y colaborar con otros desarrolladores para crear soluciones innovadoras y de alta calidad. <br> Además de mi formación académica, también tengo experiencia en el campo laboral, y he trabajado en diferentes empresas como desarrollador de software. Esto me ha permitido adquirir habilidades prácticas y me ha dado la oportunidad de trabajar en proyectos reales y desafiantes."
   },
   "BUTTONS": {
@@ -27,8 +28,14 @@
     "NGX_CARDS": "Una compilación de componentes para angular para mostrar la información del perfil de los sitios web"
   },
   "COMMON": {
+    "READ_MORE": "Leer más",
+    "READ_LESS": "Leer menos",
     "NO_EXPIRE": "Sin fecha de vencimiento",
     "CURRENT": "Actual",
     "WAIT_MESSAGE": "Obtiendo información..."
+  },
+  "EXPERIENCE": {
+    "AGORA": "Desarrollé aplicaciones web de una sola página utilizando el stack MEAN (MongoDB, Express.js, Angular y Node.js). <br> Utilicé MongoDB para gestionar grandes bases de datos sin esquema fijo y Express.js para construir APIs y aplicaciones web. <br> Trabajé con Angular para implementar la lógica del negocio y la interfaz de usuario de las aplicaciones y utilicé Node.js para ejecutar código de servidor. <br> Participé en el desarrollo de aplicaciones web escalables y modernas utilizando el stack MEAN.",
+    "UDC": "Participé en proyectos de investigación en la universidad, utilizando una amplia gama de tecnologías para desarrollar prototipos y demos. <br>    Colaboré con otros investigadores para desarrollar y probar conceptos y teorías utilizando una variedad de herramientas y lenguajes.<br>    Adquirí habilidades y conocimientos profundos en tecnologías de vanguardia a través de mi trabajo en la investigación universitaria.<br>    Contribuí al desarrollo de ideas y enfoques innovadores en mis proyectos de investigación en la universidad."
   }
 }

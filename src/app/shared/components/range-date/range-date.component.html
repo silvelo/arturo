@@ -1,11 +1,16 @@
-<span>{{start_date | date:'yyyy'}} -
+<fa-icon
+  *ngIf="showIcon"
+  [icon]="['fas', 'calendar']"
+  size="lg"
+  class="mr-2">
+</fa-icon>
+<span
+  >{{ start_date | date: 'yyyy' }} -
 
-    <span *ngIf="current; else endJob">{{'COMMON.CURRENT' | translate }}</span>
-    <ng-template #endJob>{{end_date | date:'yyyy'}}</ng-template>
+  <span *ngIf="current; else endJob">{{ 'COMMON.CURRENT' | translate }}</span>
+  <ng-template #endJob>{{ end_date | date: 'yyyy' }}</ng-template>
 
-    <span *ngIf="timeDiff">
-        · <span>{{start_date | timeDiff: end_date}}
-        </span>
-
-    </span>
+  <span *ngIf="timeDiff">
+    · <span>{{ start_date | timeDiff: end_date }} </span>
+  </span>
 </span>

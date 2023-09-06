@@ -1,10 +1,10 @@
 export interface PortfolioObject {
-  portfolio: Portfolio[]
+  portfolios: Portfolio[];
 }
 
 export interface Portfolio {
-  title: string
-  description: string
-  url: string
-  photo: string
+  title: string;
+  description: string;
+  url: string;
+  photo: string;
 }

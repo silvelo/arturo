@@ -1,9 +1,17 @@
-<silvelo-card [image]="education.institution_logo"
-              [title]="education.institution"
-              [subtitle]="education.degree">
-      <silvelo-range-date [start_date]="education.start_date"
-                          [end_date]="education.end_date"
-                          subtitle>
-      </silvelo-range-date>
+<silvelo-common-card
+  [image]="education.institution_logo"
+  [title]="education.institution"
+  [subtitle]="education.degree">
+  <section
+    footer
+    class="flex flex-row justify-between mx-2">
+    <silvelo-range-date
+      [showIcon]="true"
+      [start_date]="education.start_date"
+      [end_date]="education.end_date" />
 
-</silvelo-card>
+    <silvelo-rate
+      [rate]="education.grade"
+      [showIcon]="true" />
+  </section>
+</silvelo-common-card>

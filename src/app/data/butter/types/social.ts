@@ -1,8 +1,8 @@
 export interface Social {
-  id: string
-  link: string
+  id: string;
+  link: string;
 }
 
 export interface SocialObject {
-  social: Social[]
+  socials: Social[];
 }

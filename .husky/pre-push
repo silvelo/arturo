@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+npx enforce-branch-name '(chore|feat|perf|docs|style|refactor|fix|)/(-[a-z]+)*' --ignore '(develop|main)'
