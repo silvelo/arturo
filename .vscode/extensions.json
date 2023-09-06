@@ -1,0 +1,22 @@
+{
+  "recommendations": [
+    // ESLint
+    "dbaeumer.vscode-eslint",
+    // Prettier
+    "esbenp.prettier-vscode",
+    // Angular
+    "angular-schule.angular-schule-extension-pack",
+    // SVG Viewer
+    "vitaliymaz.vscode-svg-previewer",
+    // Stylelint
+    "stylelint.vscode-stylelint",
+    //YAML Editor,
+    "redhat.vscode-yaml",
+    // JSON to TS
+    "MariusAlchimavicius.json-to-ts",
+    // Path intellisense
+    "christian-kohler.path-intellisense",
+    // TODO
+    "Gruntfuggly.todo-tree"
+  ]
+}

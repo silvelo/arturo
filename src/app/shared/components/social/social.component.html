@@ -1,0 +1,39 @@
+<div
+  *ngFor="let social of socialList"
+  [ngSwitch]="social.id">
+  <a
+    *ngSwitchCase="'github'"
+    mat-icon-button
+    gaAction="github"
+    [href]="social.link"
+    target="_blank"
+    role="link"
+    aria-label="Github">
+    <fa-icon
+      size="2x"
+      [icon]="['fab', 'github']"></fa-icon>
+  </a>
+
+  <a
+    *ngSwitchCase="'linkedin'"
+    mat-icon-button
+    [href]="social.link"
+    target="_blank"
+    role="link"
+    aria-label="Linkedin">
+    <fa-icon
+      size="2x"
+      [icon]="['fab', 'linkedin']"></fa-icon>
+  </a>
+
+  <a
+    *ngSwitchCase="'email'"
+    mat-icon-button
+    href="mailto:{{ social.link }}"
+    role="link"
+    aria-label="Email">
+    <fa-icon
+      size="2x"
+      [icon]="['fas', 'envelope']"></fa-icon>
+  </a>
+</div>

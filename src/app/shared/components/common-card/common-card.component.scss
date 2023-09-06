@@ -1,0 +1,10 @@
+:host {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.mat-expansion-panel {
+  box-shadow: none !important;
+}

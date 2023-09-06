@@ -1,0 +1,20 @@
+<silvelo-header
+  (toggle)="snav.toggle()"
+  class="md:hidden">
+</silvelo-header>
+
+<mat-drawer-container class="flex flex-auto">
+  <mat-drawer
+    #snav
+    [mode]="mobileQuery.matches ? 'side' : 'over'"
+    [opened]="mobileQuery.matches">
+    <silvelo-navbar
+      (toggle)="closeSidenav(snav)"
+      [theme]="theme$ | async">
+    </silvelo-navbar>
+  </mat-drawer>
+
+  <mat-drawer-content class="w-full">
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>
