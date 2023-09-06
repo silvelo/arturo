@@ -1,5 +1,5 @@
 <silvelo-content-card
-  [title]="routeNames.ABOUT | translate"
+  title=""
   *ngIf="me">
   <img
     mat-card-image
@@ -17,13 +17,11 @@
   </mat-card-header>
 
   <mat-card-content>
-    <mat-divider class="pb-4"></mat-divider>
+    <mat-divider class="pb-4" />
 
     <p [innerHTML]="me.description | translate"></p>
   </mat-card-content>
 </silvelo-content-card>
 <silvelo-content-card [title]="'ABOUT.SKILLS' | translate">
-  <mat-card-content>
-    <silvelo-skills></silvelo-skills>
-  </mat-card-content>
+  <silvelo-skills />
 </silvelo-content-card>
