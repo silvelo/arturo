@@ -10,9 +10,11 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
+          "skipTests": true,
           "style": "scss"
         },
         "@schematics/angular:application": {
+          "skipTests": true,
           "strict": true
         }
       },
@@ -26,7 +28,7 @@
             "outputPath": "dist/silvelo-github-io",
             "index": "src/index.html",
             "main": "src/main.ts",
-            "polyfills": "src/polyfills.ts",
+            "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": ["src/favicon.ico", "src/assets", "src/manifest.webmanifest"],
@@ -117,7 +119,7 @@
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
             "main": "src/test.ts",
-            "polyfills": "src/polyfills.ts",
+            "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "inlineStyleLanguage": "scss",

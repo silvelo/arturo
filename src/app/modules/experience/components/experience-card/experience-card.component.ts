@@ -7,5 +7,5 @@ import { Experience } from '@data/butter/types/experience';
   styleUrls: ['./experience-card.component.scss'],
 })
 export class ExperienceCardComponent {
-  @Input() experience!: Experience;
+  @Input({ required: true }) experience!: Experience;
 }

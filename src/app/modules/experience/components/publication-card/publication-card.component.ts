@@ -7,5 +7,5 @@ import { Publication } from '@data/butter/types/publication';
   styleUrls: ['./publication-card.component.scss'],
 })
 export class PublicationCardComponent {
-  @Input() publication!: Publication;
+  @Input({ required: true }) publication!: Publication;
 }

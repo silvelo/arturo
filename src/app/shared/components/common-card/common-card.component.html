@@ -19,6 +19,10 @@
     </mat-card-subtitle>
   </ng-template>
 
+  <ng-template #subtitleContent>
+    <ng-content select="[subtitle]"></ng-content>
+  </ng-template>
+
   <mat-card-content *ngIf="!!description">
     <ng-container *ngIf="!!description">
       <mat-accordion *ngIf="descriptionHide; else simpleDescription">
@@ -59,8 +63,8 @@
     </a>
   </mat-card-actions>
   <ng-content select="[actions]"></ng-content>
-</mat-card>
 
-<ng-template #subtitleContent>
-  <ng-content select="[subtitle]"></ng-content>
-</ng-template>
+  <mat-card-footer>
+    <ng-content select="[footer]"></ng-content>
+  </mat-card-footer>
+</mat-card>

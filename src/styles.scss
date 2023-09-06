@@ -1,10 +1,20 @@
 @import './styles/themes/theme.scss';
-@tailwind base;
-@tailwind utilities;
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
 
 html,
 body {
-  height: 100%;
+  height: 100vh;
 }
 
 body {

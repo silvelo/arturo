@@ -27,6 +27,4 @@ export class EducationComponent implements OnInit {
       firstValueFrom(this.butterService.getAwards()),
     ]);
   }
-
-  onChangeTab() {}
 }

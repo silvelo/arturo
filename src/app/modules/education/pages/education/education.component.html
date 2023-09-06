@@ -1,36 +1,33 @@
 <mat-tab-group
   mat-stretch-tabs
-  headerPosition="below"
-  (selectedTabChange)="onChangeTab()">
+  headerPosition="below">
   <mat-tab [label]="routeNames.EDUCATION | translate">
-    <silvelo-content-card [title]="routeNames.EDUCATION | translate">
-      <mat-card-content>
+    <silvelo-content-card title="">
+      <section class="flex gap-4 flex-col">
         <silvelo-education-card
           *ngFor="let education of educationList"
           [education]="education"></silvelo-education-card>
-      </mat-card-content>
+      </section>
     </silvelo-content-card>
   </mat-tab>
 
   <mat-tab [label]="routeNames.COURSES | translate">
-    <silvelo-content-card [title]="routeNames.COURSES | translate">
-      <mat-card-content class="flex flex-row flex-wrap justify-between">
+    <silvelo-content-card title="">
+      <section class="flex gap-4 flex-col">
         <silvelo-certification-card
           *ngFor="let certification of certifications"
-          class="w-full md:w-1/2"
-          [certification]="certification"></silvelo-certification-card>
-      </mat-card-content>
+          [certification]="certification" />
+      </section>
     </silvelo-content-card>
   </mat-tab>
 
   <mat-tab [label]="routeNames.AWARDS | translate">
-    <silvelo-content-card [title]="routeNames.AWARDS | translate">
-      <mat-card-content class="flex flex-row flex-wrap justify-between">
+    <silvelo-content-card title="">
+      <section class="flex gap-4 flex-col">
         <silvelo-award-card
           [award]="award"
-          class="w-full md:w-1/2"
-          *ngFor="let award of awards"></silvelo-award-card>
-      </mat-card-content>
+          *ngFor="let award of awards" />
+      </section>
     </silvelo-content-card>
   </mat-tab>
 </mat-tab-group>

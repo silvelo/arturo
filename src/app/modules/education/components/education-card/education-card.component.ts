@@ -7,5 +7,5 @@ import { Education } from '@data/butter/types/education';
   styleUrls: ['./education-card.component.scss'],
 })
 export class EducationCardComponent {
-  @Input() education!: Education;
+  @Input({ required: true }) education!: Education;
 }

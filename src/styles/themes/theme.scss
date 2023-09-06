@@ -1,5 +1,5 @@
-@use './components/cards-theme' as cards;
 @use './components/tabs-theme' as tabs;
+@use './components/sidenav-theme' as sidenav;
 @use '@angular/material' as mat;
 
 @import './light-theme.scss';
@@ -17,8 +17,8 @@
 @include mat.expansion-theme($light-theme);
 @include mat.tabs-theme($light-theme);
 
-@include cards.theme($light-theme);
 @include tabs.theme($light-theme);
+@include sidenav.theme($light-theme);
 
 .dark-theme {
   @include mat.progress-bar-color($dark-theme);
@@ -31,6 +31,6 @@
   @include mat.expansion-color($dark-theme);
   @include mat.tabs-color($dark-theme);
 
-  @include cards.color($dark-theme);
   @include tabs.color($dark-theme);
+  @include sidenav.theme($dark-theme);
 }

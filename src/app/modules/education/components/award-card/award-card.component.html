@@ -2,7 +2,9 @@
   [title]="award.title"
   subtitle="{{ award.issued }} · {{ award.expedition_date | date: 'yyyy' }}"
   [description]="award.description">
-  <mat-card-actions actions>
-    <silvelo-list-links [links]="award.testimonials"></silvelo-list-links>
-  </mat-card-actions>
+  <ng-container actions>
+    <silvelo-list-links
+      [links]="award.testimonials"
+      class="flex justify-between" />
+  </ng-container>
 </silvelo-common-card>

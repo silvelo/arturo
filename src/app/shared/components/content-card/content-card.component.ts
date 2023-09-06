@@ -6,5 +6,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./content-card.component.scss'],
 })
 export class ContentCardComponent {
-  @Input() title!: string;
+  @Input({ required: true }) title!: string;
 }

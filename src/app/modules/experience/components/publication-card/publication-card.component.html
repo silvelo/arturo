@@ -3,11 +3,11 @@
   [subtitle]="publication.editorial"
   [link]="publication.url"
   [linkText]="'BUTTONS.SHOW_PUBLICATION' | translate">
-  <div
+  <ng-container
     subtitle
     *ngIf="publication.grade">
     <silvelo-rate
       [rate]="publication.grade"
-      [showIcon]="true"></silvelo-rate>
-  </div>
+      [showIcon]="true" />
+  </ng-container>
 </silvelo-common-card>

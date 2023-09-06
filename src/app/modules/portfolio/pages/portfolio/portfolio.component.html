@@ -1,8 +1,5 @@
-<silvelo-content-card [title]="routeNames.PORTFOLIO | translate">
-  <mat-card-content class="flex flex-row flex-wrap justify-between">
-    <silvelo-portfolio-card
-      [portfolio]="portfolio"
-      class="md:basis-1/2 basis-full"
-      *ngFor="let portfolio of portfolioList"></silvelo-portfolio-card>
-  </mat-card-content>
-</silvelo-content-card>
+<section class="flex gap-4 flex-col">
+  <silvelo-portfolio-card
+    *ngFor="let portfolio of portfolioList"
+    [portfolio]="portfolio" />
+</section>

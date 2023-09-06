@@ -2,12 +2,11 @@
 @use '@angular/material' as mat;
 
 @mixin color($theme) {
-  .mat-card {
-    margin: 20px;
-  }
-
-  .mat-card-header-text {
-    width: 100%;
+  .mat-drawer.mat-drawer-side {
+    width: 250px;
+    min-width: 200px;
+    max-width: 250px;
+    border-radius: 0 16px 16px 0;
   }
 }
 

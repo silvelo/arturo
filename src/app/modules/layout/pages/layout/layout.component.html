@@ -3,18 +3,19 @@
   class="md:hidden">
 </silvelo-header>
 
-<mat-drawer-container class="flex flex-auto">
-  <mat-drawer
+<mat-sidenav-container class="h-screen">
+  <mat-sidenav
     #snav
     [mode]="mobileQuery.matches ? 'side' : 'over'"
     [opened]="mobileQuery.matches">
     <silvelo-navbar
       (toggle)="closeSidenav(snav)"
-      [theme]="theme$ | async">
-    </silvelo-navbar>
-  </mat-drawer>
+      [theme]="theme$ | async" />
+  </mat-sidenav>
 
-  <mat-drawer-content class="w-full">
-    <router-outlet></router-outlet>
-  </mat-drawer-content>
-</mat-drawer-container>
+  <mat-sidenav-content>
+    <section class="h-full p-4">
+      <router-outlet />
+    </section>
+  </mat-sidenav-content>
+</mat-sidenav-container>

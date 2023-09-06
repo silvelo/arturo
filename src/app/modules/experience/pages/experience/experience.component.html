@@ -3,22 +3,21 @@
   headerPosition="below"
   (selectedTabChange)="onChangeTab()">
   <mat-tab [label]="'NAVBAR.EXPERIENCE' | translate">
-    <silvelo-content-card [title]="routeNames.EXPERIENCE | translate">
-      <mat-card-content>
+    <silvelo-content-card title="">
+      <section class="flex gap-4 flex-col">
         <silvelo-experience-card
           [experience]="experience"
-          *ngFor="let experience of experienceList"></silvelo-experience-card>
-      </mat-card-content>
+          *ngFor="let experience of experienceList" />
+      </section>
     </silvelo-content-card>
   </mat-tab>
   <mat-tab [label]="routeNames.PUBLICATIONS | translate">
-    <silvelo-content-card [title]="routeNames.PUBLICATIONS | translate">
-      <mat-card-content class="flex flex-row flex-wrap justify-between">
+    <silvelo-content-card title="">
+      <section class="flex gap-4 flex-col">
         <silvelo-publication-card
           [publication]="publication"
-          class="w-full md:w-1/2"
-          *ngFor="let publication of publications"></silvelo-publication-card>
-      </mat-card-content>
+          *ngFor="let publication of publications" />
+      </section>
     </silvelo-content-card>
   </mat-tab>
 </mat-tab-group>
