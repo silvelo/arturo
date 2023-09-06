@@ -2,15 +2,104 @@ name: Build and Deploy
 
 on:
   push:
-    tags:
-      - '**'
+    branches: [main]
+  pull_request:
+    branches: [main, develop]
 jobs:
-  build-and-deploy:
+  avoid_reduncy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cancel Previous Workflows
+        uses: styfle/cancel-workflow-action@0.11.0
+  test:
+    if: ${{  github.event_name == 'pull_request' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v3
 
+      - name: Install and Build 🔧
+        run: |
+          yarn install
+          yarn build
+      - name: Run test
+        run: yarn test
+  build:
+    needs: [test]
+    if: ${{ github.base_ref == 'develop' &&  github.event_name == 'pull_request' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+
+      - name: Install and Build 🔧
+        run: |
+          yarn install
+          yarn build
+      
+
+  build_prod:
+    needs: [test]
+    if: ${{ github.base_ref == 'main' &&  github.event_name == 'pull_request' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+
+      - name: Install and Build 🔧
+        run: |
+          yarn install
+          yarn build:prod
+
+  release:
+    runs-on: ubuntu-latest
+    if: ${{ github.ref == 'refs/heads/main' && github.event_name == 'push' }}
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+
+      - name: Install and Build 🔧
+        run: |
+          yarn install
+      - name: Release
+        run: yarn run semantic-release
+  merge_release:
+    needs: [release]
+    runs-on: ubuntu-latest
+    if: ${{ github.ref == 'refs/heads/main' && github.event_name == 'push' }}
+    env:
+      FROM_BRANCH: main
+      TO_BRANCH: develop
+      USER_NAME: Github Actions
+      USER_MAIL: actions@github.com
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          ref: main
+      - name: Set git config
+        run: |
+          git config --local user.email ${{env.USER_MAIL}}
+          git config --local user.name ${{env.USER_NAME}}
+      - name: Merge ${{env.FROM_BRANCH}} and push to ${{env.TO_BRANCH}}
+        run: |
+          git fetch
+          git checkout ${{env.TO_BRANCH}}
+          git pull
+          git merge ${{env.FROM_BRANCH}} -m "Auto-merge ${{env.FROM_BRANCH}} to ${{env.TO_BRANCH}}"
+          git push
+          
+  build-and-deploy:
+    needs: [release]
+    runs-on: ubuntu-latest
+    if: ${{ github.ref == 'refs/heads/main' && github.event_name == 'push' }}
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          ref: main
       - name: Install and Build 🔧
         run: |
           yarn install
@@ -21,3 +110,5 @@ jobs:
         with:
           BRANCH: gh-pages
           FOLDER: dist/silvelo-github-io
+
+
