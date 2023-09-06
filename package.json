@@ -99,5 +99,6 @@
       "from": "dist/silvelo-github-io/index.html",
       "to": "dist/silvelo-github-io/404.html"
     }
-  ]
+  ],
+  "packageManager": "yarn@3.6.3"
 }
