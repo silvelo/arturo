@@ -17,8 +17,7 @@
     "build:stats": "ng build --configuration analyze",
     "analyze": "source-map-explorer dist/**/*.js",
     "watch": "ng build --watch --configuration development",
-    "test": "echo \"Error: no test specified\" && exit 0",
-    "postbuild": "copy-files-from-to"
+    "test": "echo \"Error: no test specified\" && exit 0"
   },
   "private": true,
   "dependencies": {
@@ -72,7 +71,6 @@
     "@typescript-eslint/eslint-plugin": "^6.6.0",
     "@typescript-eslint/parser": "^6.6.0",
     "commitlint-plugin-function-rules": "^2.0.2",
-    "copy-files-from-to": "^3.2.2",
     "enforce-branch-name": "^1.1.2",
     "error": "^10.4.0",
     "eslint": "^8.48.0",
@@ -92,11 +90,5 @@
     "semantic-release": "^21.1.1",
     "source-map-explorer": "^2.5.3",
     "typescript": "~4.9.5"
-  },
-  "copyFiles": [
-    {
-      "from": "dist/silvelo-github-io/index.html",
-      "to": "dist/silvelo-github-io/404.html"
-    }
-  ]
+  }
 }
