@@ -2,9 +2,8 @@
   "name": "silvelo.github.io",
   "version": "3.8.0",
   "engines": {
-    "npm": "please-use-yarn",
-    "node": ">= 18",
-    "yarn": ">=1.22"
+    "npm": ">= 9",
+    "node": ">= 18"
   },
   "scripts": {
     "ng": "ng",
@@ -99,6 +98,5 @@
       "from": "dist/silvelo-github-io/index.html",
       "to": "dist/silvelo-github-io/404.html"
     }
-  ],
-  "packageManager": "yarn@3.6.3"
+  ]
 }
