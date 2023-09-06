@@ -10,7 +10,7 @@
     "ng": "ng",
     "prepare": "husky install",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --configuration development",
     "lint": "gts lint",
     "release": "semantic-release",
     "fix": "gts fix",
