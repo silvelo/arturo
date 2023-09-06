@@ -5,6 +5,10 @@ on:
     branches: [master]
   pull_request:
     branches: [master, develop]
+
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 jobs:
   test:
     if: ${{  github.event_name == 'pull_request' }}
