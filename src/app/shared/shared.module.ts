@@ -22,6 +22,7 @@ import {
   faClipboardList,
   faEnvelope,
   faExternalLink,
+  faFileLines,
   faGraduationCap,
   faHome,
   faMoon,
@@ -32,6 +33,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 import { TranslateModule } from '@ngx-translate/core';
+import { ShortenPipe } from '@root/src/app/shared/pipes/shorten.pipe';
 import { CommonCardComponent } from './components/common-card/common-card.component';
 import { CommonHeaderComponent } from './components/common-header/common-header.component';
 import { ContentCardComponent } from './components/content-card/content-card.component';
@@ -55,6 +57,7 @@ import { TimeDiffPipe } from './pipes/time-diff.pipe';
     ContentCardComponent,
     RateComponent,
     ListLinksComponent,
+    ShortenPipe,
   ],
   imports: [
     CommonModule,
@@ -96,6 +99,7 @@ import { TimeDiffPipe } from './pipes/time-diff.pipe';
     MatSidenavModule,
     MatCardModule,
     MatListModule,
+    ShortenPipe,
   ],
 })
 export class SharedModule {
@@ -118,7 +122,8 @@ export class SharedModule {
       faArrowUpFromBracket,
       faCertificate,
       faShareFromSquare,
-      faBookmark
+      faBookmark,
+      faFileLines
     );
   }
 }
