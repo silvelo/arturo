@@ -1,6 +1,32 @@
-<silvelo-common-card
-  [image]="portfolio.photo"
-  [title]="portfolio.title"
-  [description]="portfolio.description | translate"
-  [link]="portfolio.url"
-  [linkText]="'BUTTONS.VIEW_PROJECT' | translate"></silvelo-common-card>
+<div class="bg-white shadow-lg rounded-xl p-4">
+  <div class="flex">
+    <img
+      class="w-16 h-16 object-scale-down rounded-full"
+      [src]="portfolio.photo"
+      [alt]="portfolio.title" />
+    <div class="flex flex-col flex-auto ml-5">
+      <div class="flex">
+        <div class="flex-1 text-lg text-gray-800 font-bold leading-none">{{ portfolio.title }}</div>
+        <a
+          class="!p-0"
+          mat-icon-button
+          [href]="portfolio.url"
+          target="_blank">
+          <fa-icon [icon]="['fab', 'github']" />
+        </a>
+      </div>
+      <div class="flex gap-4 flex-wrap">
+        <div
+          *ngFor="let lang of portfolio.languages"
+          class="inline-block font-bold rounded p-1 text-xs"
+          [ngStyle]="{ 'background-color': lang.color }">
+          {{ lang.language }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <p
+    *ngIf="portfolio.description"
+    class="text-gray-500 text-sm mt-3"
+    [innerHtml]="portfolio.description | translate"></p>
+</div>

@@ -20,7 +20,7 @@ export class PortfolioComponent implements OnInit {
     this.portfolioList.forEach(this.getImage.bind(this));
   }
 
-  private getImage(portfolio: Portfolio, index: number) {
+  private async getImage(portfolio: Portfolio, index: number) {
     portfolio.photo = portfolio.photo ? portfolio.photo : `/assets/images/g${(index % 3) + 1}.png`;
   }
 }

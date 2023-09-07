@@ -5,4 +5,5 @@ export interface SkillObject {
 export interface Skill {
   language: string;
   level: number;
+  color: string;
 }
