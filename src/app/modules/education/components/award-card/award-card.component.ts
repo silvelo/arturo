@@ -7,5 +7,5 @@ import { Award } from '@data/butter/types/award';
   styleUrls: ['./award-card.component.scss'],
 })
 export class AwardCardComponent {
-  @Input() award!: Award;
+  @Input({ required: true }) award!: Award;
 }

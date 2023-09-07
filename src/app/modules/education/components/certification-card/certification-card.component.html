@@ -1,16 +1,31 @@
-<silvelo-common-card
-  [image]="certification.company_logo"
-  [title]="certification.name"
-  [subtitle]="certification.company"
-  [link]="certification.url"
-  [linkText]="'BUTTONS.SHOW_CREDENTIAL' | translate">
-  <section
-    footer
-    class="flex flex-row justify-between mx-2">
-    <silvelo-expires-date
-      [expiration_date]="certification.expiration_date"
-      [expedition_date]="certification.expedition_date"
-      [expires]="certification.expires"
-      subtitle />
-  </section>
-</silvelo-common-card>
+<div class="bg-white shadow-lg rounded-xl p-4">
+  <div class="flex">
+    <img
+      class="w-16 h-16 object-scale-down"
+      [src]="certification.company_logo"
+      [alt]="certification.company" />
+    <div class="flex flex-col flex-auto ml-5">
+      <div class="flex">
+        <div class="flex-1 text-lg text-gray-800 font-bold leading-none">{{ certification.name }}</div>
+        <div class="text-sm text-gray-500">
+          <fa-icon
+            class="mr-2"
+            [icon]="['fas', 'calendar']" />
+          <span>
+            {{ certification.expedition_date | date: 'yyyy' }}<ng-container *ngIf="certification.expires">- {{ certification.expiration_date }}</ng-container>
+          </span>
+        </div>
+      </div>
+      <div class="flex">
+        <div class="flex-1 text-gray-500 my-1">{{ certification.company }}</div>
+        <a
+          mat-icon-button
+          color="primary"
+          [href]="certification.url"
+          target="_blank">
+          <fa-icon [icon]="['fas', 'share-from-square']" />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

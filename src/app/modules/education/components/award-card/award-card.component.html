@@ -1,10 +1,38 @@
-<silvelo-common-card
-  [title]="award.title"
-  subtitle="{{ award.issued }} · {{ award.expedition_date | date: 'yyyy' }}"
-  [description]="award.description">
-  <ng-container actions>
-    <silvelo-list-links
-      [links]="award.testimonials"
-      class="flex justify-between" />
-  </ng-container>
-</silvelo-common-card>
+<div class="bg-white shadow-lg rounded-xl p-4">
+  <div class="flex">
+    <img
+      *ngIf="award.issued_logo"
+      class="w-16 h-16 object-scale-down"
+      [src]="award.issued_logo"
+      [alt]="award.issued" />
+    <div class="flex flex-col flex-auto ml-5">
+      <div class="flex">
+        <div class="flex-1 text-lg text-gray-800 font-bold leading-none">{{ award.title }}</div>
+        <div class="text-sm text-gray-500">
+          <fa-icon
+            class="mr-2"
+            [icon]="['fas', 'calendar']" />
+          <span> {{ award.expedition_date | date: 'yyyy' }} </span>
+        </div>
+      </div>
+      <div class="flex-1 text-gray-500 my-1">{{ award.issued }}</div>
+    </div>
+  </div>
+  <p
+    *ngIf="award.description"
+    class="text-gray-500 text-sm mt-3">
+    {{ award.description }}
+  </p>
+  <div class="flex justify-center gap-4 flex-wrap mt-4">
+    <a
+      class="flex-auto"
+      color="primary"
+      mat-stroked-button
+      *ngFor="let testimonial of award.testimonials"
+      target="_blank"
+      [href]="testimonial">
+      <fa-icon [icon]="['fas', 'share-from-square']" />
+      <span class="ml-2">Publicación</span>
+    </a>
+  </div>
+</div>

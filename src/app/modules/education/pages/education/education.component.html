@@ -1,33 +1,46 @@
 <mat-tab-group
   mat-stretch-tabs
-  headerPosition="below">
-  <mat-tab [label]="routeNames.EDUCATION | translate">
-    <silvelo-content-card title="">
-      <section class="flex gap-4 flex-col">
-        <silvelo-education-card
-          *ngFor="let education of educationList"
-          [education]="education" />
-      </section>
-    </silvelo-content-card>
+  headerPosition="below"
+  backgroundColor="primary">
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <fa-icon
+        class="mr-2"
+        [icon]="['fas', 'graduation-cap']" />
+      {{ routeNames.EDUCATION | translate }}
+    </ng-template>
+    <section class="flex flex-1 flex-col gap-4 p-4">
+      <silvelo-education-card
+        *ngFor="let education of educationList"
+        [education]="education" />
+    </section>
   </mat-tab>
 
-  <mat-tab [label]="routeNames.COURSES | translate">
-    <silvelo-content-card title="">
-      <section class="flex gap-4 flex-col">
-        <silvelo-certification-card
-          *ngFor="let certification of certifications"
-          [certification]="certification" />
-      </section>
-    </silvelo-content-card>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <fa-icon
+        class="mr-2"
+        [icon]="['fas', 'bookmark']" />
+      {{ routeNames.COURSES | translate }}
+    </ng-template>
+    <section class="flex flex-1 flex-col gap-4 p-4">
+      <silvelo-certification-card
+        *ngFor="let certification of certifications"
+        [certification]="certification" />
+    </section>
   </mat-tab>
 
-  <mat-tab [label]="routeNames.AWARDS | translate">
-    <silvelo-content-card title="">
-      <section class="flex gap-4 flex-col">
-        <silvelo-award-card
-          [award]="award"
-          *ngFor="let award of awards" />
-      </section>
-    </silvelo-content-card>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <fa-icon
+        class="mr-2"
+        [icon]="['fas', 'trophy']" />
+      {{ routeNames.AWARDS | translate }}
+    </ng-template>
+    <section class="flex flex-1 flex-col gap-4 p-4">
+      <silvelo-award-card
+        [award]="award"
+        *ngFor="let award of awards" />
+    </section>
   </mat-tab>
 </mat-tab-group>

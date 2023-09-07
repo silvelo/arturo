@@ -13,16 +13,21 @@ import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontaweso
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 import {
+  faArrowUpFromBracket,
   faBars,
+  faBookmark,
   faBriefcase,
   faCalendar,
+  faCertificate,
   faClipboardList,
   faEnvelope,
   faExternalLink,
   faGraduationCap,
   faHome,
   faMoon,
+  faShareFromSquare,
   faStar,
+  faTrophy,
   faUser,
 } from '@fortawesome/free-solid-svg-icons';
 
@@ -100,6 +105,7 @@ export class SharedModule {
       faGithub,
       faLinkedin,
       faExternalLink,
+      faTrophy,
       faHome,
       faGraduationCap,
       faBriefcase,
@@ -108,7 +114,11 @@ export class SharedModule {
       faUser,
       faBars,
       faStar,
-      faCalendar
+      faCalendar,
+      faArrowUpFromBracket,
+      faCertificate,
+      faShareFromSquare,
+      faBookmark
     );
   }
 }

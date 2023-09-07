@@ -1,17 +1,27 @@
-<silvelo-common-card
-  [image]="education.institution_logo"
-  [title]="education.institution"
-  [subtitle]="education.degree">
-  <section
-    footer
-    class="flex flex-row justify-between mx-2">
-    <silvelo-range-date
-      [showIcon]="true"
-      [start_date]="education.start_date"
-      [end_date]="education.end_date" />
+<div class="bg-white shadow-lg rounded-xl p-4">
+  <div class="flex">
+    <img
+      [src]="education.institution_logo"
+      [alt]="education.institution"
+      class="w-24 h-24 object-scale-down" />
+    <div class="flex flex-col flex-auto ml-5 mt-2">
+      <div class="text-lg text-gray-800 font-bold leading-none">{{ education.degree }}</div>
+      <div class="text-gray-500 my-1">{{ education.institution }}</div>
 
-    <silvelo-rate
-      [rate]="education.grade"
-      [showIcon]="true" />
-  </section>
-</silvelo-common-card>
+      <div class="flex justify-between text-sm text-gray-500">
+        <div class="flex-1">
+          <fa-icon
+            class="mr-2"
+            [icon]="['fas', 'calendar']" />
+          <span>{{ education.start_date | date: 'yyyy' }} - {{ education.end_date | date: 'yyyy' }}</span>
+        </div>
+        <div>
+          <fa-icon
+            class="mr-2"
+            [icon]="['fas', 'star']" />
+          <span>{{ education.grade }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
