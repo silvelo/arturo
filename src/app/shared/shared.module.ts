@@ -28,37 +28,18 @@ import {
   faMoon,
   faShareFromSquare,
   faStar,
+  faStarHalf,
   faTrophy,
   faUser,
 } from '@fortawesome/free-solid-svg-icons';
 
 import { TranslateModule } from '@ngx-translate/core';
 import { ShortenPipe } from '@root/src/app/shared/pipes/shorten.pipe';
-import { CommonCardComponent } from './components/common-card/common-card.component';
-import { CommonHeaderComponent } from './components/common-header/common-header.component';
-import { ContentCardComponent } from './components/content-card/content-card.component';
-import { ExpiresDateComponent } from './components/expires-date/expires-date.component';
-import { ListLinksComponent } from './components/list-links/list-links.component';
-import { RangeDateComponent } from './components/range-date/range-date.component';
-import { RateComponent } from './components/rate/rate.component';
-import { SkillsComponent } from './components/skills/skills.component';
 import { SocialComponent } from './components/social/social.component';
 import { TimeDiffPipe } from './pipes/time-diff.pipe';
 
 @NgModule({
-  declarations: [
-    SocialComponent,
-    TimeDiffPipe,
-    CommonCardComponent,
-    ExpiresDateComponent,
-    RangeDateComponent,
-    SkillsComponent,
-    CommonHeaderComponent,
-    ContentCardComponent,
-    RateComponent,
-    ListLinksComponent,
-    ShortenPipe,
-  ],
+  declarations: [SocialComponent, TimeDiffPipe, ShortenPipe],
   imports: [
     CommonModule,
     FontAwesomeModule,
@@ -76,28 +57,19 @@ import { TimeDiffPipe } from './pipes/time-diff.pipe';
   exports: [
     /* COMPONENTS */
     SocialComponent,
-    CommonCardComponent,
-    ExpiresDateComponent,
-    RangeDateComponent,
-    SkillsComponent,
-    CommonHeaderComponent,
-    ContentCardComponent,
-    RateComponent,
-    ListLinksComponent,
+
     /* PIPES */
     TimeDiffPipe,
     /* MODULES */
     CommonModule,
     TranslateModule,
     FontAwesomeModule,
-    MatExpansionModule,
     MatTabsModule,
     MatProgressBarModule,
     MatSlideToggleModule,
     MatButtonModule,
     MatToolbarModule,
     MatSidenavModule,
-    MatCardModule,
     MatListModule,
     ShortenPipe,
   ],
@@ -118,6 +90,7 @@ export class SharedModule {
       faUser,
       faBars,
       faStar,
+      faStarHalf,
       faCalendar,
       faArrowUpFromBracket,
       faCertificate,

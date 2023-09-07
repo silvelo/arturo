@@ -1,27 +1,38 @@
-<silvelo-content-card
-  title=""
-  *ngIf="me">
-  <img
-    mat-card-image
-    class="photo-profile"
-    alt="Profile"
-    [src]="me.header_photo" />
+<ng-container *ngIf="me">
+  <section class="p-4">
+    <div class="rounded-3xl overflow-hidden shadow-xl bg-white">
+      <img
+        [src]="me.header_photo"
+        alt="Profile"
+        class="w-full" />
+      <div class="flex justify-center md:-mt-20 lg:-mt-24 sm:-mt-16 -mt-8">
+        <img
+          [src]="me.profile_photo"
+          alt="Profile"
+          class="md:w-32 lg:w-44 sm:w-28 w-16 object-scale-down rounded-full border-solid border-black border-2" />
+      </div>
+      <div class="text-center mt-4 px-2">
+        <h3 class="text-2xl text-gray-800 font-bold leading-none">{{ me.name }} {{ me.surname }}</h3>
+        <h3 class="text-xl mt-2 text-gray-500">{{ me.job }}</h3>
+        <div class="inline-flex">
+          <silvelo-social />
+        </div>
+      </div>
 
-  <mat-card-header>
-    <img
-      mat-card-avatar
-      alt="Profile"
-      [src]="me.profile_photo" />
-    <mat-card-title>{{ me.name }} {{ me.surname }}</mat-card-title>
-    <mat-card-subtitle>{{ me.job }}</mat-card-subtitle>
-  </mat-card-header>
-
-  <mat-card-content>
-    <mat-divider class="pb-4" />
-
-    <p [innerHTML]="me.description | translate"></p>
-  </mat-card-content>
-</silvelo-content-card>
-<silvelo-content-card [title]="'ABOUT.SKILLS' | translate">
-  <silvelo-skills />
-</silvelo-content-card>
+      <p
+        class="text-gray-500 text-sm py-6 mx-6 border-t border-gray-200"
+        [innerHTML]="me.description | translate"></p>
+      <section class="flex gap-y-1 flex-wrap text-gray-500 text-sm py-6 mx-6 border-t border-gray-200">
+        <section
+          class="md:basis-1/3 lg:basis-1/4 basis-1/2"
+          *ngFor="let skill of skills">
+          <span class="mr-2">{{ skill.language }}</span>
+          <fa-icon
+            *ngFor="let star of getStarts(skill)"
+            class="text-yellow-500"
+            [icon]="['fas', star]" />
+        </section>
+      </section>
+    </div>
+  </section>
+</ng-container>
