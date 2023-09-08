@@ -2,6 +2,9 @@
   <mat-button-toggle
     *ngFor="let language of languages"
     [value]="language.code">
-    <span [class]="language.label"></span>
+    <img
+      class="w-6 h-6"
+      [src]="language.icon"
+      [alt]="language.code" />
   </mat-button-toggle>
 </mat-button-toggle-group>

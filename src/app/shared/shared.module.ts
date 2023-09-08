@@ -10,38 +10,16 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-
-import {
-  faArrowUpFromBracket,
-  faBars,
-  faBookmark,
-  faBriefcase,
-  faCalendar,
-  faCertificate,
-  faClipboardList,
-  faEnvelope,
-  faExternalLink,
-  faFileLines,
-  faGraduationCap,
-  faHome,
-  faMoon,
-  faShareFromSquare,
-  faStar,
-  faStarHalf,
-  faTrophy,
-  faUser,
-} from '@fortawesome/free-solid-svg-icons';
 
 import { TranslateModule } from '@ngx-translate/core';
+import { IconsModule } from '@root/src/app/shared/icons/icons.module';
 import { SocialComponent } from './components/social/social.component';
 
 @NgModule({
   declarations: [SocialComponent],
   imports: [
     CommonModule,
-    FontAwesomeModule,
+    IconsModule,
     MatExpansionModule,
     MatTabsModule,
     MatProgressBarModule,
@@ -59,8 +37,8 @@ import { SocialComponent } from './components/social/social.component';
 
     /* MODULES */
     CommonModule,
+    IconsModule,
     TranslateModule,
-    FontAwesomeModule,
     MatTabsModule,
     MatProgressBarModule,
     MatSlideToggleModule,
@@ -71,29 +49,4 @@ import { SocialComponent } from './components/social/social.component';
     MatButtonToggleModule,
   ],
 })
-export class SharedModule {
-  constructor(faIconLibrary: FaIconLibrary) {
-    faIconLibrary.addIcons(
-      faEnvelope,
-      faGithub,
-      faLinkedin,
-      faExternalLink,
-      faTrophy,
-      faHome,
-      faGraduationCap,
-      faBriefcase,
-      faMoon,
-      faClipboardList,
-      faUser,
-      faBars,
-      faStar,
-      faStarHalf,
-      faCalendar,
-      faArrowUpFromBracket,
-      faCertificate,
-      faShareFromSquare,
-      faBookmark,
-      faFileLines
-    );
-  }
-}
+export class SharedModule {}

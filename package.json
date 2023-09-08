@@ -40,7 +40,6 @@
     "@ngx-translate/core": "^14.0.0",
     "@ngx-translate/http-loader": "^7.0.0",
     "autoprefixer": "^10.4.13",
-    "flag-icons": "^6.11.0",
     "luxon": "^2.3.2",
     "luxon-angular": "^5.0.0",
     "postcss": "^8.4.20",
