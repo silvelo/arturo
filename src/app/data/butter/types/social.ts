@@ -1,5 +1,7 @@
+import { IconName } from '@fortawesome/fontawesome-svg-core';
+
 export interface Social {
-  id: string;
+  id: IconName;
   link: string;
 }
 

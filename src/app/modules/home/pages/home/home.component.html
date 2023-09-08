@@ -1,15 +1,19 @@
-<section
-  *ngIf="me"
-  class="flex-col flex justify-center items-center">
-  <img
-    class="avatar"
-    alt="Profile"
-    [src]="me.profile_photo" />
-
-  <h3 class="name">
-    {{ me.name }} <span>{{ me.surname }}</span>
-  </h3>
-  <p class="job">{{ me.job }}</p>
-
-  <silvelo-social class="mt-4" />
-</section>
+<ng-container *ngIf="me">
+  <div class="w-full sm:max-w-sm max-w-xs bg-white border shadow-2xl md:max-w-sm rounded-xl">
+    <div class="pb-6">
+      <div class="flex justify-center">
+        <img
+          alt="Profile"
+          [src]="me.profile_photo"
+          class="border-white rounded-full border-8 -m-16 -ml-18 lg:-ml-16 max-w-[150px]" />
+      </div>
+      <div class="mt-20 text-center">
+        <h3 class="text-2xl text-gray-800 font-bold leading-none">{{ me.name }} {{ me.surname }}</h3>
+        <h3 class="text-xl mt-2 text-gray-500">{{ me.job }}</h3>
+        <div class="inline-flex">
+          <silvelo-social />
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>
