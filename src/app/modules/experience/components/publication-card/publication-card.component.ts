@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Publication } from '@data/butter/types/publication';
+import { Publication } from '@data/publications/publications';
 
 @Component({
   selector: 'silvelo-publication-card',

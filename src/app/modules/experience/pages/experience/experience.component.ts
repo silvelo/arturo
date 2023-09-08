@@ -1,29 +1,31 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouteNames } from '@core/common/routes';
-import { ButterService } from '@data/butter/service/butter.service';
-import { Experience } from '@data/butter/types/experience';
-import { Publication } from '@data/butter/types/publication';
-
-import { firstValueFrom } from 'rxjs';
+import { Experience } from '@data/experience/experience';
+import { ExperiencesService } from '@data/experience/experience.service';
+import { Publication } from '@data/publications/publications';
+import { PublicationsService } from '@data/publications/publications.service';
+import { forkJoin } from 'rxjs';
 
 @Component({
   selector: 'silvelo-experience',
   templateUrl: './experience.component.html',
   styleUrls: ['./experience.component.scss'],
 })
-export class ExperienceComponent implements OnInit {
+export class ExperienceComponent {
   public experienceList: Experience[] = [];
   public publications: Publication[] = [];
   public routeNames = RouteNames;
 
-  constructor(private butterService: ButterService) {}
-
-  async ngOnInit() {
-    [this.experienceList, this.publications] = await Promise.all([
-      firstValueFrom(this.butterService.getExperience()),
-      firstValueFrom(this.butterService.getPublications()),
-    ]);
+  constructor(
+    private experienceService: ExperiencesService,
+    private publicationsService: PublicationsService
+  ) {
+    forkJoin({
+      experience: this.experienceService.get(),
+      publications: this.publicationsService.get(),
+    }).subscribe(({ experience, publications }) => {
+      this.experienceList = experience;
+      this.publications = publications;
+    });
   }
-
-  onChangeTab() {}
 }

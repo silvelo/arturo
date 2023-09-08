@@ -11,7 +11,6 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
-import { TranslateModule } from '@ngx-translate/core';
 import { IconsModule } from '@root/src/app/shared/icons/icons.module';
 import { SocialComponent } from './components/social/social.component';
 
@@ -29,16 +28,11 @@ import { SocialComponent } from './components/social/social.component';
     MatSidenavModule,
     MatCardModule,
     MatListModule,
-    TranslateModule,
   ],
   exports: [
-    /* COMPONENTS */
     SocialComponent,
-
-    /* MODULES */
     CommonModule,
     IconsModule,
-    TranslateModule,
     MatTabsModule,
     MatProgressBarModule,
     MatSlideToggleModule,

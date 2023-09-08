@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Certification } from '@data/butter/types/certification';
+import { Certification } from '@data/certifications/certifications';
 
 @Component({
   selector: 'silvelo-certification-card',

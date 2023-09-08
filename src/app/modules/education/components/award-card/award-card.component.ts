@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Award } from '@data/butter/types/award';
+import { Award } from '@data/awards/awards';
 
 @Component({
   selector: 'silvelo-award-card',

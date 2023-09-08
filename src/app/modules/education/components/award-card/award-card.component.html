@@ -28,7 +28,7 @@
       class="flex-auto"
       color="primary"
       mat-stroked-button
-      *ngFor="let testimonial of award.testimonials"
+      *ngFor="let testimonial of award.testimonials.split(',')"
       target="_blank"
       [href]="testimonial">
       <fa-icon [icon]="['fas', 'share-from-square']" />
