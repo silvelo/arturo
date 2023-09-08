@@ -9,6 +9,7 @@ import {
   faBriefcase,
   faCalendar,
   faCertificate,
+  faCircleNotch,
   faClipboardList,
   faExternalLink,
   faFileLines,
@@ -48,7 +49,8 @@ export class IconsModule {
       faCertificate,
       faShareFromSquare,
       faBookmark,
-      faFileLines
+      faFileLines,
+      faCircleNotch
     );
   }
 }

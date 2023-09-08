@@ -1,44 +1,45 @@
-<div class="bg-white shadow-lg rounded-xl p-4">
-  <div class="flex">
-    <img
-      *ngIf="publication.editorial_logo"
-      class="w-16 h-16 object-scale-down"
-      [src]="publication.editorial_logo"
-      [alt]="publication.editorial" />
-    <div class="flex flex-col flex-auto ml-5">
-      <div class="flex">
-        <div class="flex-1 text-lg text-gray-800 font-bold leading-none">{{ publication.title }}</div>
-        <div class="text-sm text-gray-500">
-          <fa-icon
-            class="mr-2"
-            [icon]="['fas', 'calendar']" />
-          <span> {{ publication.publication_date | date: 'yyyy' }} </span>
+<ng-container *transloco="let t">
+  <div class="bg-white shadow-lg rounded-xl p-4">
+    <div class="flex">
+      <img
+        *ngIf="publication.editorial_logo"
+        class="w-16 h-16 object-scale-down"
+        [src]="publication.editorial_logo"
+        [alt]="publication.editorial" />
+      <div class="flex flex-col flex-auto ml-5">
+        <div class="flex">
+          <div class="flex-1 text-lg text-gray-800 font-bold leading-none">{{ publication.title }}</div>
+          <div class="text-sm text-gray-500">
+            <fa-icon
+              class="mr-2"
+              [icon]="['fas', 'calendar']" />
+            <span> {{ publication.publication_date | date: 'yyyy' }} </span>
+          </div>
         </div>
-      </div>
-      <div class="flex">
-        <div class="flex-1 text-gray-500 my-1">{{ publication.editorial }}</div>
-        <div
-          class="text-sm text-gray-500"
-          *ngIf="publication.grade">
-          <fa-icon
-            class="mr-2"
-            [icon]="['fas', 'star']" />
-          <span> {{ publication.grade }} </span>
+        <div class="flex">
+          <div class="flex-1 text-gray-500 my-1">{{ publication.editorial }}</div>
+          <div
+            class="text-sm text-gray-500"
+            *ngIf="publication.grade">
+            <fa-icon
+              class="mr-2"
+              [icon]="['fas', 'star']" />
+            <span> {{ publication.grade }} </span>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="flex justify-center gap-4 flex-wrap mt-4">
-    <a
-      class="flex-auto"
-      color="primary"
-      mat-stroked-button
-      target="_blank"
-      [href]="publication.url">
-      <fa-icon [icon]="['fas', 'share-from-square']" />
-      <!-- FIXME: Literal Translate -->
-      <span class="ml-2">Publicación</span>
-    </a>
+    <div class="flex justify-center gap-4 flex-wrap mt-4">
+      <a
+        class="flex-auto"
+        color="primary"
+        mat-stroked-button
+        target="_blank"
+        [href]="publication.url">
+        <fa-icon [icon]="['fas', 'share-from-square']" />
+        <span class="ml-2">{{ t('buttons.showPublication') }}</span>
+      </a>
+    </div>
   </div>
-</div>
+</ng-container>

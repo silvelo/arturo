@@ -1,21 +1,31 @@
-import { OverlayModule } from '@angular/cdk/overlay';
-import { CommonModule } from '@angular/common';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
-import { NgModule } from '@angular/core';
-import { MatCardModule } from '@angular/material/card';
-import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { NgModule, isDevMode } from '@angular/core';
 import { LoaderComponent } from '@core/components/loader/loader.component';
 import { LoaderInterceptor } from '@core/interceptors/loader.interceptor';
-
+import { TranslocoHttpLoader } from '@core/services/transloco-loader.service';
+import { DataModule } from '@data/data.module';
+import { TranslocoModule, provideTransloco } from '@ngneat/transloco';
+import { SharedModule } from '@shared/shared.module';
 @NgModule({
   declarations: [LoaderComponent],
-  imports: [CommonModule, HttpClientModule, OverlayModule, MatProgressBarModule, MatCardModule],
+  imports: [HttpClientModule, SharedModule, TranslocoModule, DataModule],
+  exports: [DataModule],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
       useClass: LoaderInterceptor,
       multi: true,
     },
+    provideTransloco({
+      config: {
+        availableLangs: ['en', 'es'],
+        defaultLang: 'es',
+        // Remove this option if your application doesn't support changing language in runtime.
+        reRenderOnLangChange: true,
+        prodMode: !isDevMode(),
+      },
+      loader: TranslocoHttpLoader,
+    }),
   ],
 })
 export class CoreModule {}

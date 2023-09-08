@@ -1,10 +1,10 @@
-<mat-card>
-  <mat-card-header>
-    <mat-card-title>
-      {{ 'COMMON.WAIT_MESSAGE' }}
-    </mat-card-title>
-  </mat-card-header>
-  <mat-card-content>
-    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
-  </mat-card-content> </mat-card
->`
+<ng-container *transloco="let t">
+  <div class="bg-white shadow-lg rounded-xl p-8">
+    <fa-icon
+      size="xl"
+      class="mr-4"
+      [icon]="['fas', 'circle-notch']"
+      [spin]="true" />
+    <span class="text-lg text-gray-800 font-bold leading-none">{{ t('common.waitMessage') }}</span>
+  </div>
+</ng-container>

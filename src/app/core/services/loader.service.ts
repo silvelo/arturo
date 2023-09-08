@@ -1,7 +1,7 @@
 import { Overlay, OverlayRef } from '@angular/cdk/overlay';
 import { ComponentPortal } from '@angular/cdk/portal';
 import { Injectable } from '@angular/core';
-import { LoaderComponent } from '@app/core/components/loader/loader.component';
+import { LoaderComponent } from '@core/components/loader/loader.component';
 import { BehaviorSubject } from 'rxjs';
 
 @Injectable({

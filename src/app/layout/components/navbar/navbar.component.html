@@ -1,37 +1,37 @@
-<img
-  class="w-full mx-auto px-4 my-4 md:max-w-sm max-w-[15rem]"
-  src="/assets/images/logo-black.png"
-  alt="Logo" />
+<ng-container *transloco="let t">
+  <img
+    class="w-full mx-auto px-4 my-4 md:max-w-sm max-w-[15rem]"
+    src="/assets/images/logo-black.png"
+    alt="Logo" />
 
-<section class="flex flex-col flex-1 justify-center">
-  <mat-nav-list>
+  <section class="flex flex-col flex-1 justify-center">
     <a
       *ngFor="let nav of sidenav"
       mat-list-item
       [routerLinkActiveOptions]="{ exact: true }"
-      routerLinkActive="active-route"
+      routerLinkActive="active"
       (click)="toggle.emit()"
       [routerLink]="nav.link"
-      class="border-2 mb-2">
+      class="mb-2 py-2 border-y-2 border-black">
       <fa-icon
-        class="mr-4"
+        class="mx-4"
         [icon]="['fas', nav.icon]"></fa-icon>
-      <span>{{ nav.name }}</span>
+      <span>{{ t(nav.name) }}</span>
     </a>
-  </mat-nav-list>
-</section>
+  </section>
 
-<section class="mb-4 flex flex-col justify-center items-center">
-  <a
-    target="_blank"
-    href="https://buttercms.com">
-    <img
-      class="w-full mx-auto px-4 my-4 md:max-w-sm max-w-[15rem]"
-      src="/assets/images/butter-b.png"
-      alt="buttercms logo" />
-  </a>
+  <section class="mb-4 flex flex-col justify-center items-center">
+    <a
+      target="_blank"
+      href="https://buttercms.com">
+      <img
+        class="w-full mx-auto px-4 my-4 md:max-w-sm max-w-[15rem]"
+        src="/assets/images/butter-b.png"
+        alt="buttercms logo" />
+    </a>
 
-  <silvelo-languages />
+    <silvelo-languages />
 
-  <silvelo-version />
-</section>
+    <small class="mt-4">{{ t('common.version') }} {{ version }}</small>
+  </section>
+</ng-container>

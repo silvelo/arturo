@@ -1,46 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
-import { MatButtonToggleModule } from '@angular/material/button-toggle';
-import { MatCardModule } from '@angular/material/card';
-import { MatExpansionModule } from '@angular/material/expansion';
-import { MatListModule } from '@angular/material/list';
-import { MatProgressBarModule } from '@angular/material/progress-bar';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import { MatTabsModule } from '@angular/material/tabs';
-import { MatToolbarModule } from '@angular/material/toolbar';
+import { TranslocoModule } from '@ngneat/transloco';
 
 import { IconsModule } from '@root/src/app/shared/icons/icons.module';
+import { MaterialModule } from '@shared/material/material.module';
 import { SocialComponent } from './components/social/social.component';
 
 @NgModule({
   declarations: [SocialComponent],
-  imports: [
-    CommonModule,
-    IconsModule,
-    MatExpansionModule,
-    MatTabsModule,
-    MatProgressBarModule,
-    MatSlideToggleModule,
-    MatButtonModule,
-    MatToolbarModule,
-    MatSidenavModule,
-    MatCardModule,
-    MatListModule,
-  ],
-  exports: [
-    SocialComponent,
-    CommonModule,
-    IconsModule,
-    MatTabsModule,
-    MatProgressBarModule,
-    MatSlideToggleModule,
-    MatButtonModule,
-    MatToolbarModule,
-    MatSidenavModule,
-    MatListModule,
-    MatButtonToggleModule,
-  ],
+  imports: [CommonModule, IconsModule, MaterialModule, TranslocoModule],
+  exports: [SocialComponent, CommonModule, IconsModule, TranslocoModule, MaterialModule],
 })
 export class SharedModule {}

@@ -1,26 +1,30 @@
-<div class="bg-white shadow-lg rounded-xl p-4">
-  <div class="flex">
-    <img
-      [src]="experience.company_logo"
-      [alt]="experience.company_name"
-      class="w-24 h-24 object-scale-down" />
-    <div class="flex flex-col flex-auto ml-5 mt-2">
-      <div class="text-lg text-gray-800 font-bold leading-none">{{ experience.job }}</div>
-      <div class="text-gray-500 my-1">{{ experience.company_name }}</div>
+<ng-container *transloco="let t">
+  <div class="bg-white shadow-lg rounded-xl p-4">
+    <div class="flex">
+      <img
+        *ngIf="experience.company_logo"
+        [src]="experience.company_logo"
+        [alt]="experience.company_name"
+        class="w-24 h-24 object-scale-down" />
+      <div class="flex flex-col flex-auto ml-5 mt-2">
+        <div class="text-lg text-gray-800 font-bold leading-none">{{ experience.job }}</div>
+        <div class="text-gray-500 my-1">{{ experience.company_name }}</div>
 
-      <div class="flex justify-between text-sm text-gray-500">
-        <div class="flex-1">
-          <fa-icon
-            class="mr-2"
-            [icon]="['fas', 'calendar']" />
-          <span>
-            {{ experience.start_date | date: 'yyyy' }}<ng-container *ngIf="!experience.current"> - {{ experience.end_date | date: 'yyyy' }}</ng-container>
-          </span>
+        <div class="flex justify-between text-sm text-gray-500">
+          <div class="flex-1">
+            <fa-icon
+              class="mr-2"
+              [icon]="['fas', 'calendar']" />
+            <span>
+              {{ experience.start_date | date: 'yyyy' }}<ng-container *ngIf="!experience.current"> - {{ experience.end_date | date: 'yyyy' }}</ng-container>
+            </span>
+          </div>
         </div>
       </div>
     </div>
+    <p
+      *ngIf="experience.description"
+      [innerHTML]="t(experience.description)"
+      class="text-gray-500 text-sm mt-3"></p>
   </div>
-  <p
-    [innerHTML]="experience.description"
-    class="text-gray-500 text-sm mt-3"></p>
-</div>
+</ng-container>
