@@ -10,8 +10,9 @@ import { Settings } from 'luxon';
 })
 export class LanguagesComponent {
   public languages = [
-    { code: 'en', label: 'EN' },
-    { code: 'es', label: 'ES' },
+    { code: 'es', label: 'fi fi-es' },
+    { code: 'en', label: 'fi fi-us' },
+    { code: 'ga', label: 'fi fi-es-ga' },
   ];
 
   languageControl: FormControl<string>;

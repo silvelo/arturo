@@ -1,7 +1,7 @@
 <mat-button-toggle-group [formControl]="languageControl">
   <mat-button-toggle
     *ngFor="let language of languages"
-    [value]="language.code"
-    >{{ language.label }}</mat-button-toggle
-  >
+    [value]="language.code">
+    <span [class]="language.label"></span>
+  </mat-button-toggle>
 </mat-button-toggle-group>
