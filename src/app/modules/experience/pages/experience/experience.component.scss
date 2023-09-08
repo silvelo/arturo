@@ -1,8 +1,5 @@
 :host {
   display: flex;
+  flex: auto;
   flex-direction: column;
-  height: 100%;
-  width: 100%;
-  min-width: 100%;
-  min-height: 100%;
 }

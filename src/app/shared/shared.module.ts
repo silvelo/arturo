@@ -34,12 +34,10 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 import { TranslateModule } from '@ngx-translate/core';
-import { ShortenPipe } from '@root/src/app/shared/pipes/shorten.pipe';
 import { SocialComponent } from './components/social/social.component';
-import { TimeDiffPipe } from './pipes/time-diff.pipe';
 
 @NgModule({
-  declarations: [SocialComponent, TimeDiffPipe, ShortenPipe],
+  declarations: [SocialComponent],
   imports: [
     CommonModule,
     FontAwesomeModule,
@@ -58,8 +56,6 @@ import { TimeDiffPipe } from './pipes/time-diff.pipe';
     /* COMPONENTS */
     SocialComponent,
 
-    /* PIPES */
-    TimeDiffPipe,
     /* MODULES */
     CommonModule,
     TranslateModule,
@@ -71,7 +67,6 @@ import { TimeDiffPipe } from './pipes/time-diff.pipe';
     MatToolbarModule,
     MatSidenavModule,
     MatListModule,
-    ShortenPipe,
   ],
 })
 export class SharedModule {

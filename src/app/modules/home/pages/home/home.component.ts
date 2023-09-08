@@ -4,7 +4,7 @@ import { Me } from '@data/butter/types/me';
 import { firstValueFrom } from 'rxjs';
 
 @Component({
-  selector: 'silvelo-elo-home',
+  selector: 'silvelo-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
