@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
 import { Settings } from 'luxon';
 
@@ -13,10 +14,14 @@ export class LanguagesComponent {
     { code: 'es', label: 'ES' },
   ];
 
-  constructor(private translateService: TranslateService) {}
+  languageControl: FormControl<string>;
 
-  onSelectLanguage(language: string) {
-    this.translateService.use(language);
-    Settings.defaultLocale = language;
+  constructor(private translateService: TranslateService) {
+    this.languageControl = new FormControl(this.translateService.currentLang || 'es', { nonNullable: true });
+
+    this.languageControl.valueChanges.subscribe(language => {
+      this.translateService.use(language);
+      Settings.defaultLocale = language;
+    });
   }
 }

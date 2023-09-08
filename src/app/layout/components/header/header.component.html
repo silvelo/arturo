@@ -1,16 +1,15 @@
-<mat-toolbar
-  color="primary"
-  class="flex-row justify-space-between items-center">
+<mat-toolbar>
   <button
     mat-icon-button
     (click)="toggle.emit()"
     aria-label="menu">
-    <fa-icon
-      class="fa-2x"
-      [icon]="['fas', 'bars']" />
+    <fa-icon [icon]="['fas', 'bars']" />
   </button>
 
-  <silvelo-logo
-    class="flex flex-auto justify-center"
-    logo="assets/images/logo-white.png" />
+  <section class="flex-1">
+    <img
+      class="min-[400px]:h-16 h-8 mx-auto"
+      src="/assets/images/logo-black.png"
+      alt="Logo" />
+  </section>
 </mat-toolbar>

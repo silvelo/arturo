@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatCardModule } from '@angular/material/card';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatListModule } from '@angular/material/list';
@@ -67,6 +68,7 @@ import { SocialComponent } from './components/social/social.component';
     MatToolbarModule,
     MatSidenavModule,
     MatListModule,
+    MatButtonToggleModule,
   ],
 })
 export class SharedModule {

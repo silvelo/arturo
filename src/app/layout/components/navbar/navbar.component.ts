@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { Sidenav, sidenav } from '@core/common/navbar';
 
 @Component({
@@ -7,8 +7,6 @@ import { Sidenav, sidenav } from '@core/common/navbar';
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  @Input() theme?: any;
   @Output() toggle = new EventEmitter();
 
   public sidenav: Sidenav[] = sidenav;

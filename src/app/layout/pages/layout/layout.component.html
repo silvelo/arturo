@@ -8,9 +8,7 @@
     #snav
     [mode]="mobileQuery.matches ? 'side' : 'over'"
     [opened]="mobileQuery.matches">
-    <silvelo-navbar
-      (toggle)="closeSidenav(snav)"
-      [theme]="theme$ | async" />
+    <silvelo-navbar (toggle)="closeSidenav(snav)" />
   </mat-sidenav>
 
   <mat-sidenav-content>

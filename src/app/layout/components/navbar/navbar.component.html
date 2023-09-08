@@ -1,46 +1,37 @@
-<silvelo-logo
-  class="my-2 self-center"
-  [logo]="theme.logo"></silvelo-logo>
+<img
+  class="w-full mx-auto px-4 my-4 md:max-w-sm max-w-[15rem]"
+  src="/assets/images/logo-black.png"
+  alt="Logo" />
 
-<mat-nav-list
-  fxFlex
-  class="flex flex-auto flex-col justify-center content-center">
-  <a
-    mat-list-item
-    class="flex-row justify-start items-center"
-    [routerLinkActiveOptions]="{ exact: true }"
-    routerLinkActive="active-route"
-    (click)="toggle.emit()"
-    [routerLink]="nav.link"
-    *ngFor="let nav of sidenav">
-    <fa-icon
-      class="basis-1/4"
-      [icon]="['fas', nav.icon]"></fa-icon>
-    <span class="basis-3/4">{{ nav.name | translate }}</span>
-  </a>
-</mat-nav-list>
-
-<section class="m-2 flex flex-col">
-  <div
-    class="version"
-    *ngIf="theme"
-    class="flex flex-row justify-between items-center">
-    <span>{{ 'NAVBAR.POWER_BY' | translate }}</span>
+<section class="flex flex-col flex-1 justify-center">
+  <mat-nav-list>
     <a
-      target="_blank"
-      href="https://buttercms.com"
-      ><img
-        class="butter_logo"
-        [src]="theme.butter"
-        alt="buttercms logo" />
+      *ngFor="let nav of sidenav"
+      mat-list-item
+      [routerLinkActiveOptions]="{ exact: true }"
+      routerLinkActive="active-route"
+      (click)="toggle.emit()"
+      [routerLink]="nav.link"
+      class="border-2 mb-2">
+      <fa-icon
+        class="mr-4"
+        [icon]="['fas', nav.icon]"></fa-icon>
+      <span>{{ nav.name | translate }}</span>
     </a>
-  </div>
+  </mat-nav-list>
+</section>
 
-  <silvelo-languages class="flex items-center self-center" />
+<section class="mb-4 flex flex-col justify-center items-center">
+  <a
+    target="_blank"
+    href="https://buttercms.com">
+    <img
+      class="w-full mx-auto px-4 my-4 md:max-w-sm max-w-[15rem]"
+      src="/assets/images/butter-b.png"
+      alt="buttercms logo" />
+  </a>
 
-  <div class="flex flex-row justify-around">
-    <silvelo-version />
+  <silvelo-languages />
 
-    <silvelo-toggle-theme />
-  </div>
+  <silvelo-version />
 </section>
