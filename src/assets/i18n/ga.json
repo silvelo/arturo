@@ -1,0 +1,33 @@
+{
+  "navbar": {
+    "home": "Inicio",
+    "education": "Educación",
+    "experience": "Experiencia",
+    "portfolio": "Portafolio",
+    "about": "Acerca de",
+    "publications": "Publicaciones",
+    "courses": "Cursos",
+    "awards": "Premios"
+  },
+  "about": {
+    "skills": "Pila Tecnolóxica",
+    "description": "Como graduado en informática, son un experto en tecnoloxía e desenvolvemento de software. Teño unha base sólida en teoría da informática e linguaxes de programación, e estou cualificado para traballar nunha ampla variedade de proxectos relacionados coa tecnoloxía. <br> Especialízome no desenvolvemento de aplicacións web e móbiles e teño unha gran habilidade para resolver problemas técnicos complexos. Gústame traballar en equipo e colaborar con outros desenvolvedores para crear solucións innovadoras e de alta calidade. <br> Ademais da miña formación académica, tamén teño experiencia no ámbito laboral e traballei en diferentes empresas como desenvolvedor de software. Isto permitiume adquirir habilidades prácticas e traballar en proxectos reais e desafiantes."
+  },
+  "buttons": {
+    "showPublication": "Amosar Publicación"
+  },
+  "portfolio": {
+    "silveloPortfolio": "Esta Páxina Web",
+    "tsSimple": "Unha colección de paquetes para simplificar a túa vida. Os paquetes máis comúns conteñen funcións sinxelas que empreguei en moitos dos meus proxectos. Deste xeito, trato de unificar estas funcións nun repositorio e probalas para evitar erros.",
+    "raspbot": "Raspbot é un programa sinxelo para escoitar o canle de bot de Telegram.",
+    "ngxCards": "Unha compilación de componentes de Angular para amosar información de perfil para sitios web."
+  },
+  "common": {
+    "version": "Versión",
+    "waitMessage": "Obtendo Información"
+  },
+  "experience": {
+    "agora": "Desenvolvín aplicacións web de unha única páxina utilizando o conxunto MEAN (MongoDB, Express.js, Angular e Node.js). <br> Usei MongoDB para xestionar bases de datos grandes sen esquema fixo e Express.js para construír APIs e aplicacións web. <br> Traballei con Angular para implementar lóxica de negocio e interfaces de usuario para aplicacións e usei Node.js para executar código do lado do servidor. <br> Participei no desenvolvemento de aplicacións web escalables e modernas utilizando o conxunto MEAN.",
+    "udc": "Participei en proxectos de investigación na universidade, usando unha ampla gama de tecnoloxías para desenvolver prototipos e demos. <br> Colaborei con outros investigadores para desenvolver e probar conceptos e teorías usando unha variedade de ferramentas e linguaxes. <br> Adquirín habilidades e coñecementos profundos en tecnoloxías de vangarda a través do meu traballo na investigación universitaria. <br> Contribuí ao desenvolvemento de ideas e enfoques innovadores nos meus proxectos de investigación na universidade."
+  }
+}

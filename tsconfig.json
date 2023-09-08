@@ -23,12 +23,6 @@
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
     "paths": {
-      "@root/*": ["./*"],
-      "@src/*": ["src/*"],
-      "@app/*": ["src/app/*"],
-      "@core/*": ["src/app/core/*"],
-      "@shared/*": ["src/app/shared/*"],
-      "@env": ["src/environments/environment"],
       "@modules/*": ["src/app/modules/*"],
       "@experience/*": ["src/app/modules/experience/*"],
       "@education/*": ["src/app/modules/education/*"],
@@ -36,7 +30,13 @@
       "@layout/*": ["src/app/modules/layout/*"],
       "@portfolio/*": ["src/app/modules/portfolio/*"],
       "@home/*": ["src/app/modules/home/*"],
-      "@data/*": ["src/app/data/*"]
+      "@shared/*": ["src/app/shared/*"],
+      "@env": ["src/environments/environment"],
+      "@data/*": ["src/app/data/*"],
+      "@core/*": ["src/app/core/*"],
+      "@app/*": ["src/app/*"],
+      "@src/*": ["src/*"],
+      "@root/*": ["./*"]
     }
   },
   "angularCompilerOptions": {

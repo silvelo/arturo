@@ -1,5 +1,7 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { Sidenav, sidenav } from '@core/common/navbar';
+import { sidenav } from '@core/common/navbar';
+import { Sidenav } from '@data/butter/types/butter';
+import packageJson from '@root/package.json';
 
 @Component({
   selector: 'silvelo-navbar',
@@ -9,5 +11,6 @@ import { Sidenav, sidenav } from '@core/common/navbar';
 export class NavbarComponent {
   @Output() toggle = new EventEmitter();
 
+  public version: string = packageJson.version;
   public sidenav: Sidenav[] = sidenav;
 }

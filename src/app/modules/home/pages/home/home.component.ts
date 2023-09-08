@@ -1,19 +1,18 @@
-import { Component, OnInit } from '@angular/core';
-import { ButterService } from '@data/butter/service/butter.service';
-import { Me } from '@data/butter/types/me';
-import { firstValueFrom } from 'rxjs';
+import { Component } from '@angular/core';
+import { Me } from '@data/me/me';
+import { MeService } from '@data/me/me.service';
 
 @Component({
   selector: 'silvelo-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent implements OnInit {
-  public me: Me | undefined;
+export class HomeComponent {
+  public me?: Me;
 
-  constructor(private butterService: ButterService) {}
-
-  async ngOnInit() {
-    this.me = await firstValueFrom(this.butterService.getMe());
+  constructor(private meService: MeService) {
+    this.meService.get().subscribe(me => {
+      this.me = me[0];
+    });
   }
 }

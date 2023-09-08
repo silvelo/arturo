@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Education } from '@data/butter/types/education';
+import { Education } from '@data/education/education';
 
 @Component({
   selector: 'silvelo-education-card',

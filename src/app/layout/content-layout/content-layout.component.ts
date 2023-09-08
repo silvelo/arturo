@@ -3,11 +3,11 @@ import { ChangeDetectorRef, Component, OnDestroy } from '@angular/core';
 import { MatDrawer } from '@angular/material/sidenav';
 
 @Component({
-  selector: 'silvelo-layout',
-  templateUrl: './layout.component.html',
-  styleUrls: ['./layout.component.scss'],
+  selector: 'silvelo-content-layout',
+  templateUrl: './content-layout.component.html',
+  styleUrls: ['./content-layout.component.scss'],
 })
-export class LayoutComponent implements OnDestroy {
+export class ContentLayoutComponent implements OnDestroy {
   public mobileQuery: MediaQueryList;
 
   private _mobileQueryListener: () => void;

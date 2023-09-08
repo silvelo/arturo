@@ -1,10 +1,10 @@
 export const RouteNames = {
-  HOME: 'NAVBAR.HOME',
-  ABOUT: 'NAVBAR.ABOUT',
-  PORTFOLIO: 'NAVBAR.PORTFOLIO',
-  EDUCATION: 'NAVBAR.EDUCATION',
-  EXPERIENCE: 'NAVBAR.EXPERIENCE',
-  PUBLICATIONS: 'NAVBAR.PUBLICATIONS',
-  COURSES: 'NAVBAR.COURSES',
-  AWARDS: 'NAVBAR.AWARDS',
+  home: 'navbar.home',
+  about: 'navbar.about',
+  portfolio: 'navbar.portfolio',
+  education: 'navbar.education',
+  experience: 'navbar.experience',
+  publications: 'navbar.publications',
+  courses: 'navbar.courses',
+  awards: 'navbar.awards',
 };

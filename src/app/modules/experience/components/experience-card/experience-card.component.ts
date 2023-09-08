@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Experience } from '@data/butter/types/experience';
+import { Experience } from '@data/experience/experience';
 
 @Component({
   selector: 'silvelo-experience-card',
