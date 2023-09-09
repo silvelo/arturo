@@ -1,3 +1,4 @@
+import { OverlayModule } from '@angular/cdk/overlay';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { NgModule, isDevMode } from '@angular/core';
 import { LoaderComponent } from '@core/components/loader/loader.component';
@@ -8,7 +9,7 @@ import { TranslocoModule, provideTransloco } from '@ngneat/transloco';
 import { SharedModule } from '@shared/shared.module';
 @NgModule({
   declarations: [LoaderComponent],
-  imports: [HttpClientModule, SharedModule, TranslocoModule, DataModule],
+  imports: [HttpClientModule, OverlayModule, SharedModule, TranslocoModule, DataModule],
   exports: [DataModule],
   providers: [
     {

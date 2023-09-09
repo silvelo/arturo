@@ -1,39 +1,36 @@
-<div class="bg-white shadow-lg rounded-xl p-4">
-  <div class="flex">
-    <img
-      *ngIf="award.issued_logo"
-      class="w-16 h-16 object-scale-down"
-      [src]="award.issued_logo"
-      [alt]="award.issued" />
-    <div class="flex flex-col flex-auto ml-5">
-      <div class="flex">
-        <div class="flex-1 text-lg text-gray-800 font-bold leading-none">{{ award.title }}</div>
-        <div class="text-sm text-gray-500">
+<ng-container *transloco="let t">
+  <silvelo-card>
+    <silvelo-card-header>
+      <img
+        *ngIf="award.issued_logo"
+        silvelo-card-lg-image
+        [src]="award.issued_logo"
+        [alt]="award.issued" />
+      <silvelo-card-title-group>
+        <silvelo-card-title>{{ award.title }}</silvelo-card-title>
+        <silvelo-card-title-right>
           <fa-icon
             class="mr-2"
             [icon]="['fas', 'calendar']" />
           <span> {{ award.expedition_date | date: 'yyyy' }} </span>
-        </div>
-      </div>
-      <div class="flex-1 text-gray-500 my-1">{{ award.issued }}</div>
-    </div>
-  </div>
-  <p
-    *ngIf="award.description"
-    class="text-gray-500 text-sm mt-3">
-    {{ award.description }}
-  </p>
-  <div class="flex justify-center gap-4 flex-wrap mt-4">
-    <a
-      class="flex-auto"
-      color="primary"
-      mat-stroked-button
-      *ngFor="let testimonial of award.testimonials.split(',')"
-      target="_blank"
-      [href]="testimonial">
-      <fa-icon [icon]="['fas', 'share-from-square']" />
-      <!-- FIXME: Literal Translate -->
-      <span class="ml-2">Publicación</span>
-    </a>
-  </div>
-</div>
+        </silvelo-card-title-right>
+        <silvelo-card-subtitle>{{ award.issued }}</silvelo-card-subtitle>
+      </silvelo-card-title-group>
+    </silvelo-card-header>
+    <silvelo-card-content>
+      {{ award.description }}
+    </silvelo-card-content>
+
+    <silvelo-card-actions>
+      <a
+        color="primary"
+        mat-stroked-button
+        *ngFor="let testimonial of award.testimonials.split(',')"
+        target="_blank"
+        [href]="testimonial">
+        <fa-icon [icon]="['fas', 'share-from-square']" />
+        <span class="ml-2">{{ t('buttons.showPublication') }}</span>
+      </a>
+    </silvelo-card-actions>
+  </silvelo-card>
+</ng-container>

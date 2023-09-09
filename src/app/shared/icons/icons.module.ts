@@ -3,7 +3,6 @@ import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontaweso
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import {
-  faArrowUpFromBracket,
   faBars,
   faBookmark,
   faBriefcase,
@@ -15,7 +14,6 @@ import {
   faFileLines,
   faGraduationCap,
   faHome,
-  faMoon,
   faShareFromSquare,
   faStar,
   faStarHalf,
@@ -38,14 +36,12 @@ export class IconsModule {
       faHome,
       faGraduationCap,
       faBriefcase,
-      faMoon,
       faClipboardList,
       faUser,
       faBars,
       faStar,
       faStarHalf,
       faCalendar,
-      faArrowUpFromBracket,
       faCertificate,
       faShareFromSquare,
       faBookmark,

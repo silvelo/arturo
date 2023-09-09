@@ -5,10 +5,10 @@ import { CertificationCardComponent } from '@education/components/certification-
 import { EducationCardComponent } from '@education/components/education-card/education-card.component';
 import { EducationRoutingModule } from '@education/education-routing.module';
 import { EducationComponent } from '@education/pages/education/education.component';
-import { SharedModule } from '@shared/shared.module';
+import { LazySharedModule } from '@shared/lazy-shared.module';
 
 @NgModule({
   declarations: [EducationComponent, EducationCardComponent, CertificationCardComponent, AwardCardComponent],
-  imports: [EducationRoutingModule, SharedModule],
+  imports: [EducationRoutingModule, LazySharedModule],
 })
 export class EducationModule {}

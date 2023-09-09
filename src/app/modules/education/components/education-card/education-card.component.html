@@ -1,27 +1,26 @@
-<div class="bg-white shadow-lg rounded-xl p-4">
-  <div class="flex">
+<silvelo-card>
+  <silvelo-card-header>
     <img
+      silvelo-card-xl-image
       [src]="education.institution_logo"
-      [alt]="education.institution"
-      class="w-24 h-24 object-scale-down" />
-    <div class="flex flex-col flex-auto ml-5 mt-2">
-      <div class="text-lg text-gray-800 font-bold leading-none">{{ education.degree }}</div>
-      <div class="text-gray-500 my-1">{{ education.institution }}</div>
+      [alt]="education.institution" />
 
-      <div class="flex justify-between text-sm text-gray-500">
-        <div class="flex-1">
-          <fa-icon
-            class="mr-2"
-            [icon]="['fas', 'calendar']" />
-          <span>{{ education.start_date | date: 'yyyy' }} - {{ education.end_date | date: 'yyyy' }}</span>
-        </div>
-        <div>
-          <fa-icon
-            class="mr-2"
-            [icon]="['fas', 'star']" />
-          <span>{{ education.grade }}</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+    <silvelo-card-title-group>
+      <silvelo-card-title>{{ education.degree }}</silvelo-card-title>
+      <silvelo-card-subtitle>{{ education.institution }}</silvelo-card-subtitle>
+
+      <silvelo-card-title-right>
+        <fa-icon
+          class="mr-2"
+          [icon]="['fas', 'calendar']" />
+        <span>{{ education.start_date | date: 'yyyy' }} - {{ education.end_date | date: 'yyyy' }}</span>
+      </silvelo-card-title-right>
+      <silvelo-card-subtitle-right>
+        <fa-icon
+          class="mr-2"
+          [icon]="['fas', 'star']" />
+        <span>{{ education.grade }}</span>
+      </silvelo-card-subtitle-right>
+    </silvelo-card-title-group>
+  </silvelo-card-header>
+</silvelo-card>
