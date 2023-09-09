@@ -2,10 +2,10 @@ import { NgModule } from '@angular/core';
 
 import { AboutRoutingModule } from '@about/about-routing.module';
 import { AboutComponent } from '@about/pages/about/about.component';
-import { SharedModule } from '@shared/shared.module';
+import { LazySharedModule } from '@shared/lazy-shared.module';
 
 @NgModule({
   declarations: [AboutComponent],
-  imports: [AboutRoutingModule, SharedModule],
+  imports: [AboutRoutingModule, LazySharedModule],
 })
 export class AboutModule {}

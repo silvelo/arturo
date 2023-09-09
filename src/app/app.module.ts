@@ -1,4 +1,3 @@
-import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -18,7 +17,7 @@ import { SharedModule } from '@shared/shared.module';
   declarations: [AppComponent, ContentLayoutComponent, HeaderComponent, LanguagesComponent, NavbarComponent],
   imports: [
     BrowserModule,
-    ReactiveFormsModule,
+    /* FIXME: Remove 17k*/ ReactiveFormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     CoreModule,
@@ -27,7 +26,6 @@ import { SharedModule } from '@shared/shared.module';
       enabled: environment.production,
       registrationStrategy: 'registerWhenStable:30000',
     }),
-    HttpClientModule,
   ],
   bootstrap: [AppComponent],
 })
