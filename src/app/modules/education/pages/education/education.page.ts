@@ -10,10 +10,10 @@ import { forkJoin } from 'rxjs';
 
 @Component({
   selector: 'silvelo-education',
-  templateUrl: './education.component.html',
-  styleUrls: ['./education.component.scss'],
+  templateUrl: './education.page.html',
+  styleUrls: ['./education.page.scss'],
 })
-export class EducationComponent {
+export class EducationPage {
   public educationList: Education[] = [];
   public awards: Award[] = [];
   public certifications: Certification[] = [];

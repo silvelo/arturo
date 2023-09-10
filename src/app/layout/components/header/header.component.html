@@ -1,9 +1,10 @@
 <mat-toolbar>
   <button
-    mat-icon-button
     (click)="toggle.emit()"
     aria-label="menu">
-    <fa-icon [icon]="['fas', 'bars']" />
+    <fa-icon
+      size="xl"
+      [icon]="['fas', 'bars']" />
   </button>
 
   <section class="flex-1">

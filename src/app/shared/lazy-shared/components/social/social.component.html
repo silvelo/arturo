@@ -2,8 +2,9 @@
   *ngFor="let social of socialList"
   [ngSwitch]="social.id">
   <a
+    class=""
+    silvelo-icon-button
     *ngSwitchCase="'github'"
-    mat-icon-button
     [href]="social.link"
     target="_blank"
     role="link"
@@ -15,7 +16,7 @@
 
   <a
     *ngSwitchCase="'linkedin'"
-    mat-icon-button
+    silvelo-icon-button
     [href]="social.link"
     target="_blank"
     role="link"
@@ -26,8 +27,8 @@
   </a>
 
   <a
+    silvelo-icon-button
     *ngSwitchCase="'email'"
-    mat-icon-button
     href="mailto:{{ social.link }}"
     role="link"
     aria-label="Email">

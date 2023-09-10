@@ -9,6 +9,7 @@ import { CardSubtitleRightDirective } from '@lazy-shared/directives/card-subtitl
 import { CardSubtitleDirective } from '@lazy-shared/directives/card-subtitle.directive';
 import { CardTitleRightDirective } from '@lazy-shared/directives/card-title-right.directive';
 import { CardXlImageDirective } from '@lazy-shared/directives/card-xl-image.directive';
+import { IconButtonDirective } from '@lazy-shared/directives/icon-button.directive';
 import { SharedModule } from '@shared/shared.module';
 
 const CARD_COMPONENT = [
@@ -25,7 +26,7 @@ const CARD_COMPONENT = [
 
 @NgModule({
   imports: [SharedModule],
-  exports: [CARD_COMPONENT, SocialComponent, SharedModule],
-  declarations: [SocialComponent, CARD_COMPONENT],
+  exports: [CARD_COMPONENT, IconButtonDirective, SocialComponent, SharedModule],
+  declarations: [SocialComponent, IconButtonDirective, CARD_COMPONENT],
 })
 export class LazySharedModule {}
