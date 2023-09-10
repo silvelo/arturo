@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SwUpdate } from '@angular/service-worker';
+import { LoaderService } from '@core/services/loader.service';
 
 @Component({
   selector: 'silvelo-root',
@@ -7,7 +8,10 @@ import { SwUpdate } from '@angular/service-worker';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  public constructor(private swUpdate: SwUpdate) {}
+  public constructor(
+    public loaderService: LoaderService,
+    private swUpdate: SwUpdate
+  ) {}
 
   ngOnInit(): void {
     if (this.swUpdate.isEnabled) {
