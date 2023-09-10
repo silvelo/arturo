@@ -4,10 +4,10 @@ import { MeService } from '@data/me/me.service';
 
 @Component({
   selector: 'silvelo-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
+  templateUrl: './home.page.html',
+  styleUrls: ['./home.page.scss'],
 })
-export class HomeComponent {
+export class HomePage {
   public me?: Me;
 
   constructor(private meService: MeService) {

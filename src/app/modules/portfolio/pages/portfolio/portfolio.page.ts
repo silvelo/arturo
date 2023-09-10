@@ -5,10 +5,10 @@ import { PortfolioService } from '@data/portfolio/portfolio.service';
 
 @Component({
   selector: 'silvelo-portfolio',
-  templateUrl: './portfolio.component.html',
-  styleUrls: ['./portfolio.component.scss'],
+  templateUrl: './portfolio.page.html',
+  styleUrls: ['./portfolio.page.scss'],
 })
-export class PortfolioComponent {
+export class PortfolioPage {
   public portfolioList: Portfolio[] = [];
   public routeNames = RouteNames;
   constructor(private portfolioService: PortfolioService) {

@@ -8,10 +8,10 @@ import { forkJoin } from 'rxjs';
 
 @Component({
   selector: 'silvelo-experience',
-  templateUrl: './experience.component.html',
-  styleUrls: ['./experience.component.scss'],
+  templateUrl: './experience.page.html',
+  styleUrls: ['./experience.page.scss'],
 })
-export class ExperienceComponent {
+export class ExperiencePage {
   public experienceList: Experience[] = [];
   public publications: Publication[] = [];
   public routeNames = RouteNames;

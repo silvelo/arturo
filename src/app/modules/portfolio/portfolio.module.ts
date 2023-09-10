@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
+import { LazySharedModule } from '@lazy-shared/lazy-shared.module';
 import { PortfolioRoutingModule } from '@portfolio//portfolio-routing.module';
 import { PortfolioCardComponent } from '@portfolio/components/portfolio-card/portfolio-card.component';
-import { PortfolioComponent } from '@portfolio/pages/portfolio/portfolio.component';
-import { LazySharedModule } from '@shared/lazy-shared.module';
+import { PortfolioPage } from '@portfolio/pages/portfolio/portfolio.page';
 
 @NgModule({
-  declarations: [PortfolioComponent, PortfolioCardComponent],
+  declarations: [PortfolioPage, PortfolioCardComponent],
   imports: [PortfolioRoutingModule, LazySharedModule],
 })
 export class PortfolioModule {}

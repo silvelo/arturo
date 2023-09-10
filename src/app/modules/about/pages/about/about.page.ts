@@ -11,10 +11,10 @@ import { forkJoin } from 'rxjs';
 
 @Component({
   selector: 'silvelo-about',
-  templateUrl: './about.component.html',
-  styleUrls: ['./about.component.scss'],
+  templateUrl: './about.page.html',
+  styleUrls: ['./about.page.scss'],
 })
-export class AboutComponent {
+export class AboutPage {
   public me?: Me;
   public skills: Skill[] = [];
   public socials: Social[] = [];

@@ -1,11 +1,11 @@
-import { AboutComponent } from '@about/pages/about/about.component';
+import { AboutPage } from '@about/pages/about/about.page';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
     path: '',
-    component: AboutComponent,
+    component: AboutPage,
   },
 ];
 @NgModule({

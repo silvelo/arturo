@@ -5,7 +5,7 @@ import { CertificationCardComponent } from '@education/components/certification-
 import { EducationCardComponent } from '@education/components/education-card/education-card.component';
 import { EducationRoutingModule } from '@education/education-routing.module';
 import { EducationComponent } from '@education/pages/education/education.component';
-import { LazySharedModule } from '@shared/lazy-shared.module';
+import { LazySharedModule } from '@lazy-shared/lazy-shared.module';
 
 @NgModule({
   declarations: [EducationComponent, EducationCardComponent, CertificationCardComponent, AwardCardComponent],
