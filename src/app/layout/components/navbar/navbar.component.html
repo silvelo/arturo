@@ -8,8 +8,8 @@
     <a
       *ngFor="let nav of sidenav"
       mat-list-item
-      [routerLinkActiveOptions]="{ exact: true }"
-      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: nav.exact }"
+      [routerLinkActive]="['bg-gray-200', 'text-lg', 'font-bold']"
       (click)="toggle.emit()"
       [routerLink]="nav.link"
       class="mb-2 py-2 border-y-2 border-black">

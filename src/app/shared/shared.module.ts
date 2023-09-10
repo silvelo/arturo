@@ -4,6 +4,7 @@ import { TranslocoModule } from '@ngneat/transloco';
 import { CardComponent } from '@shared/components/card/card.component';
 import { CardTitleDirective } from '@shared/directives/card-title.directive';
 
+import { RouterModule } from '@angular/router';
 import { IconsModule } from '@shared/icons/icons.module';
 import { MaterialModule } from '@shared/material/material.module';
 import { ButtonDirective } from './directives/button.directive';
@@ -15,6 +16,7 @@ import { ButtonDirective } from './directives/button.directive';
     ButtonDirective,
     CardTitleDirective,
     CommonModule,
+    RouterModule,
     /* FIXME: Reduce 66k*/ IconsModule,
     /*FIXME: Reduce: 127k  */ MaterialModule,
     TranslocoModule,

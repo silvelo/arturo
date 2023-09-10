@@ -16,6 +16,7 @@ export interface Metadata {
 }
 
 export interface Sidenav {
+  exact: boolean;
   link: string;
   name: string;
   icon: IconName;
