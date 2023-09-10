@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { LANGUAGES } from '@core/common/languages';
+import { TranslocoService } from '@ngneat/transloco';
 
 @Component({
   selector: 'silvelo-languages',
@@ -7,18 +8,15 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./languages.component.scss'],
 })
 export class LanguagesComponent {
-  public languages: {
-    code: string;
-    icon: string;
-  }[] = [
-    { code: 'es', icon: './assets/icons/es.svg' },
-    { code: 'en', icon: './assets/icons/us.svg' },
-    { code: 'ga', icon: './assets/icons/es-ga.svg' },
-  ];
+  public languages = LANGUAGES;
 
-  languageControl: FormControl<string>;
+  constructor(private translocoService: TranslocoService) {}
 
-  constructor() {
-    this.languageControl = new FormControl('es', { nonNullable: true });
+  changeLanguage(language: string) {
+    this.translocoService.setActiveLang(language);
+  }
+
+  isSelected(language: string): boolean {
+    return language === this.translocoService.getActiveLang();
   }
 }

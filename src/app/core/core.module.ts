@@ -19,7 +19,7 @@ import { SharedModule } from '@shared/shared.module';
     },
     provideTransloco({
       config: {
-        availableLangs: ['en', 'es'],
+        availableLangs: ['en', 'es', 'ga'],
         defaultLang: 'es',
         // Remove this option if your application doesn't support changing language in runtime.
         reRenderOnLangChange: true,

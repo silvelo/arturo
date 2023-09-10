@@ -20,3 +20,8 @@ export interface Sidenav {
   name: string;
   icon: IconName;
 }
+
+export interface Language {
+  code: string;
+  icon: string;
+}

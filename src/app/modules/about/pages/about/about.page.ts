@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouteNames } from '@core/common/routes';
+import { ROUTE_NAMES } from '@core/common/routes';
 import { Me } from '@data/me/me';
 import { MeService } from '@data/me/me.service';
 import { Skill } from '@data/skills/skills';
@@ -19,7 +19,7 @@ export class AboutPage {
   public skills: Skill[] = [];
   public socials: Social[] = [];
 
-  public routeNames = RouteNames;
+  public routeNames = ROUTE_NAMES;
 
   constructor(
     private meService: MeService,

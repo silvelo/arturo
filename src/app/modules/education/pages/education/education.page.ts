@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouteNames } from '@core/common/routes';
+import { ROUTE_NAMES } from '@core/common/routes';
 import { Award } from '@data/awards/awards';
 import { AwardsService } from '@data/awards/awards.service';
 import { Certification } from '@data/certifications/certifications';
@@ -17,7 +17,7 @@ export class EducationPage {
   public educationList: Education[] = [];
   public awards: Award[] = [];
   public certifications: Certification[] = [];
-  public routeNames = RouteNames;
+  public routeNames = ROUTE_NAMES;
 
   constructor(
     private educationsService: EducationsService,

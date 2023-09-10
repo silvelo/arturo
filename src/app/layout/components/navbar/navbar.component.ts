@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { sidenav } from '@core/common/navbar';
+import { SIDENAV } from '@core/common/navbar';
 import { Sidenav } from '@data/butter/types/butter';
 import packageJson from '@root/package.json';
 
@@ -12,5 +12,5 @@ export class NavbarComponent {
   @Output() toggle = new EventEmitter();
 
   public version: string = packageJson.version;
-  public sidenav: Sidenav[] = sidenav;
+  public sidenav: Sidenav[] = SIDENAV;
 }

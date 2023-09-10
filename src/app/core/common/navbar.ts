@@ -1,10 +1,10 @@
 import { Sidenav } from '@data/butter/types/butter';
-import { RouteNames } from './routes';
+import { ROUTE_NAMES } from './routes';
 
-export const sidenav: Sidenav[] = [
-  { link: '/', name: RouteNames.home, icon: 'home' },
-  { link: '/education', name: RouteNames.education, icon: 'graduation-cap' },
-  { link: '/experience', name: RouteNames.experience, icon: 'briefcase' },
-  { link: '/portfolio', name: RouteNames.portfolio, icon: 'clipboard-list' },
-  { link: '/about', name: RouteNames.about, icon: 'user' },
+export const SIDENAV: Sidenav[] = [
+  { link: '/', name: ROUTE_NAMES.home, icon: 'home' },
+  { link: '/education', name: ROUTE_NAMES.education, icon: 'graduation-cap' },
+  { link: '/experience', name: ROUTE_NAMES.experience, icon: 'briefcase' },
+  { link: '/portfolio', name: ROUTE_NAMES.portfolio, icon: 'clipboard-list' },
+  { link: '/about', name: ROUTE_NAMES.about, icon: 'user' },
 ];

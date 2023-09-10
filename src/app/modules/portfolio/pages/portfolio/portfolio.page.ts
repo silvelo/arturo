@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouteNames } from '@core/common/routes';
+import { ROUTE_NAMES } from '@core/common/routes';
 import { Portfolio } from '@data/portfolio/portfolio';
 import { PortfolioService } from '@data/portfolio/portfolio.service';
 
@@ -10,7 +10,7 @@ import { PortfolioService } from '@data/portfolio/portfolio.service';
 })
 export class PortfolioPage {
   public portfolioList: Portfolio[] = [];
-  public routeNames = RouteNames;
+  public routeNames = ROUTE_NAMES;
   constructor(private portfolioService: PortfolioService) {
     this.portfolioService.get().subscribe(portfolios => {
       this.portfolioList = portfolios;

@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ServiceWorkerModule } from '@angular/service-worker';
@@ -17,7 +16,6 @@ import { SharedModule } from '@shared/shared.module';
   declarations: [AppComponent, ContentLayoutComponent, HeaderComponent, LanguagesComponent, NavbarComponent],
   imports: [
     BrowserModule,
-    /* FIXME: Remove 17k*/ ReactiveFormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     CoreModule,

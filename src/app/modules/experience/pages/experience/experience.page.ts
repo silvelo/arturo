@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouteNames } from '@core/common/routes';
+import { ROUTE_NAMES } from '@core/common/routes';
 import { Experience } from '@data/experience/experience';
 import { ExperiencesService } from '@data/experience/experience.service';
 import { Publication } from '@data/publications/publications';
@@ -14,7 +14,7 @@ import { forkJoin } from 'rxjs';
 export class ExperiencePage {
   public experienceList: Experience[] = [];
   public publications: Publication[] = [];
-  public routeNames = RouteNames;
+  public routeNames = ROUTE_NAMES;
 
   constructor(
     private experienceService: ExperiencesService,
