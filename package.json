@@ -1,6 +1,6 @@
 {
   "name": "silvelo.github.io",
-  "version": "3.9.1",
+  "version": "3.9.2",
   "engines": {
     "npm": ">= 9",
     "node": ">= 18"

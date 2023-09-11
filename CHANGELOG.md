@@ -1,3 +1,11 @@
+## [3.9.2](https://github.com/silvelo/silvelo.github.io/compare/v3.9.1...v3.9.2) (2023-09-11)
+
+
+### Bug Fixes
+
+* create custom button ([d4609a0](https://github.com/silvelo/silvelo.github.io/commit/d4609a0bdb86d859d2fe7a1712336c27c1921892))
+* width 100% ([fccbbda](https://github.com/silvelo/silvelo.github.io/commit/fccbbda62d897411a2b4d7c06466a680a8afcaa7))
+
 ## [3.9.1](https://github.com/silvelo/silvelo.github.io/compare/v3.9.0...v3.9.1) (2023-09-06)
 
 
