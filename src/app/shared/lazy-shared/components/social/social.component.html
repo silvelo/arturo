@@ -1,8 +1,7 @@
-<div
+<ng-container
   *ngFor="let social of socialList"
   [ngSwitch]="social.id">
   <a
-    class=""
     silvelo-icon-button
     *ngSwitchCase="'github'"
     [href]="social.link"
@@ -10,7 +9,7 @@
     role="link"
     aria-label="Github">
     <fa-icon
-      size="2x"
+      size="xl"
       [icon]="['fab', 'github']" />
   </a>
 
@@ -22,7 +21,7 @@
     role="link"
     aria-label="Linkedin">
     <fa-icon
-      size="2x"
+      size="xl"
       [icon]="['fab', 'linkedin']" />
   </a>
 
@@ -33,7 +32,7 @@
     role="link"
     aria-label="Email">
     <fa-icon
-      size="2x"
+      size="xl"
       [icon]="['far', 'envelope']" />
   </a>
-</div>
+</ng-container>

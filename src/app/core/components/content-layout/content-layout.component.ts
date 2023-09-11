@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
   selector: 'silvelo-content-layout',
   templateUrl: './content-layout.component.html',
   styleUrls: ['./content-layout.component.scss'],
+  host: { class: 'flex flex-col h-screen' },
 })
 export class ContentLayoutComponent {
   isClosed = false;

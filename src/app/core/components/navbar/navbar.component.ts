@@ -7,7 +7,7 @@ import packageJson from '@root/package.json';
   selector: 'silvelo-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
-  host: { class: 'flex flex-col w-[16rem]' },
+  host: { class: 'flex flex-col w-[16rem] rounded-r-2xl	 shadow-2xl bg-white' },
 })
 export class NavbarComponent {
   @Output() toggle = new EventEmitter();

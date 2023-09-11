@@ -6,6 +6,7 @@ import { TranslocoService } from '@ngneat/transloco';
   selector: 'silvelo-languages',
   templateUrl: './languages.component.html',
   styleUrls: ['./languages.component.scss'],
+  host: { class: 'flex border divide-x cursor-pointer' },
 })
 export class LanguagesComponent {
   public languages = LANGUAGES;
