@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, delay, distinctUntilChanged } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class LoaderService {
-  public isLoading = new BehaviorSubject<boolean>(false);
+  private isLoading = new BehaviorSubject<boolean>(false);
   private pendingRequest = new BehaviorSubject<number>(0);
 
   constructor() {
@@ -18,6 +18,10 @@ export class LoaderService {
         this.hideOverlay();
       }
     });
+  }
+
+  get loading() {
+    return this.isLoading.asObservable().pipe(delay(0), distinctUntilChanged());
   }
 
   addRequest() {

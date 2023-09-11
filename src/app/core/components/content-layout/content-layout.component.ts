@@ -11,4 +11,11 @@ export class ContentLayoutComponent {
   onToggle() {
     this.isClosed = !this.isClosed;
   }
+
+  onClose() {
+    const screenWidth = window.innerWidth;
+    if (screenWidth < 768) {
+      this.isClosed = true;
+    }
+  }
 }
