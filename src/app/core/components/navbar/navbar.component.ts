@@ -1,5 +1,7 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Component, EventEmitter, Inject, Output } from '@angular/core';
 import { SIDENAV } from '@core/common/navbar';
+import { ThemeModeService } from '@core/services/theme-mode.service';
 import { Sidenav } from '@data/butter/types/butter';
 import packageJson from '@root/package.json';
 
@@ -14,4 +16,18 @@ export class NavbarComponent {
 
   public version: string = packageJson.version;
   public sidenav: Sidenav[] = SIDENAV;
+
+  constructor(
+    @Inject(DOCUMENT) private document: Document,
+    public themeModeService: ThemeModeService
+  ) {}
+
+  toggleDarkMode() {
+    this.themeModeService.toggleDarkMode();
+    if (this.themeModeService.darkMode) {
+      this.document.documentElement.classList.add('dark');
+    } else {
+      this.document.documentElement.classList.remove('dark');
+    }
+  }
 }

@@ -9,6 +9,6 @@
 <section class="flex-1">
   <img
     class="min-[400px]:h-16 h-8 mx-auto"
-    src="/assets/images/logo-black.png"
+    [src]="this.themeModeService.logoImage | async"
     alt="Logo" />
 </section>

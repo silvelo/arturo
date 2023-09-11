@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { ThemeModeService } from '@core/services/theme-mode.service';
 
 @Component({
   selector: 'silvelo-header',
@@ -8,4 +9,6 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class HeaderComponent {
   @Output() toggle = new EventEmitter();
+
+  constructor(public themeModeService: ThemeModeService) {}
 }

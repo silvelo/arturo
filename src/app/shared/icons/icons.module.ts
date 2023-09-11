@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
+import { faEnvelope, faMoon, faSun } from '@fortawesome/free-regular-svg-icons';
 import {
   faBars,
   faBookmark,
@@ -46,7 +46,9 @@ export class IconsModule {
       faShareFromSquare,
       faBookmark,
       faFileLines,
-      faCircleNotch
+      faCircleNotch,
+      faSun,
+      faMoon
     );
   }
 }

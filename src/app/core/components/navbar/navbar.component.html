@@ -1,7 +1,7 @@
 <ng-container *transloco="let t">
   <img
     class="w-full mx-auto px-4 my-4 md:max-w-sm max-w-[16rem]"
-    src="/assets/images/logo-black.png"
+    [src]="this.themeModeService.logoImage | async"
     alt="Logo" />
 
   <section class="flex flex-col flex-1 justify-center">
@@ -26,12 +26,24 @@
       href="https://buttercms.com">
       <img
         class="w-full mx-auto px-4 my-4 md:max-w-sm max-w-[15rem]"
-        src="/assets/images/butter-b.png"
+        [src]="this.themeModeService.butterImage | async"
         alt="buttercms logo" />
     </a>
 
     <silvelo-languages />
 
-    <small class="mt-4">{{ t('common.version') }} {{ version }}</small>
+    <div class="flex mt-2 items-center">
+      <small class="mr-4">{{ t('common.version') }} {{ version }}</small>
+      <div
+        (click)="toggleDarkMode()"
+        class="hover:cursor-pointer">
+        <fa-icon
+          *ngIf="!this.themeModeService.darkMode"
+          [icon]="['far', 'sun']"></fa-icon>
+        <fa-icon
+          *ngIf="this.themeModeService.darkMode"
+          [icon]="['far', 'moon']"></fa-icon>
+      </div>
+    </div>
   </section>
 </ng-container>
