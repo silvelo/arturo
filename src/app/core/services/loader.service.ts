@@ -1,32 +1,27 @@
-import { Overlay, OverlayRef } from '@angular/cdk/overlay';
-import { ComponentPortal } from '@angular/cdk/portal';
 import { Injectable } from '@angular/core';
-import { LoaderComponent } from '@core/components/loader/loader.component';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, delay, distinctUntilChanged } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class LoaderService {
-  public isLoading: boolean = false;
-  private overlayRef: OverlayRef;
+  private isLoading = new BehaviorSubject<boolean>(false);
   private pendingRequest = new BehaviorSubject<number>(0);
 
-  constructor(private overlay: Overlay) {
-    this.overlayRef = this.overlay.create({
-      positionStrategy: this.overlay.position().global().centerHorizontally().centerVertically(),
-      hasBackdrop: true,
-    });
-
+  constructor() {
     this.pendingRequest.subscribe(numOfRequest => {
-      if (numOfRequest > 0 && !this.overlayRef.hasAttached()) {
+      if (numOfRequest > 0) {
         this.showOverlay();
       }
 
-      if (numOfRequest <= 0 && this.overlayRef.hasAttached()) {
+      if (numOfRequest <= 0) {
         this.hideOverlay();
       }
     });
+  }
+
+  get loading() {
+    return this.isLoading.asObservable().pipe(delay(0), distinctUntilChanged());
   }
 
   addRequest() {
@@ -38,12 +33,10 @@ export class LoaderService {
   }
 
   private showOverlay() {
-    this.overlayRef.attach(new ComponentPortal(LoaderComponent));
-    this.isLoading = true;
+    this.isLoading.next(true);
   }
 
   private hideOverlay() {
-    this.overlayRef.detach();
-    this.isLoading = false;
+    this.isLoading.next(false);
   }
 }

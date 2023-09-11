@@ -1,4 +1,4 @@
-export const RouteNames = {
+export const ROUTE_NAMES = {
   home: 'navbar.home',
   about: 'navbar.about',
   portfolio: 'navbar.portfolio',

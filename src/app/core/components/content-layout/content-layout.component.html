@@ -1,0 +1,13 @@
+<silvelo-header
+  class="md:hidden"
+  (toggle)="onToggle()" />
+
+<div class="h-screen flex">
+  <silvelo-navbar
+    (click)="onClose()"
+    class="md:flex hidden"
+    [ngClass]="{ hidden: isClosed, flex: !isClosed }" />
+  <section class="h-full flex w-full">
+    <router-outlet />
+  </section>
+</div>

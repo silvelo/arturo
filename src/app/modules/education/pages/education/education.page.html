@@ -1,0 +1,23 @@
+<ng-container *transloco="let t">
+  <silvelo-tab-group>
+    <router-outlet></router-outlet>
+
+    <silvelo-tab link="/education">
+      <fa-icon
+        class="mr-2"
+        [icon]="['fas', 'graduation-cap']" />
+      {{t(routeNames.education)}}
+    </silvelo-tab>
+    <silvelo-tab link="/education/certifications">
+      <fa-icon
+        class="mr-2"
+        [icon]="['fas', 'bookmark']" />
+      {{t(routeNames.courses)}}
+    </silvelo-tab>
+    <silvelo-tab link="/education/awards">
+      <fa-icon
+        class="mr-2"
+        [icon]="['fas', 'trophy']" />{{t(routeNames.awards)}}
+    </silvelo-tab>
+  </silvelo-tab-group>
+</ng-container>

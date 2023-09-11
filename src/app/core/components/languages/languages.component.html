@@ -1,0 +1,10 @@
+<div
+  *ngFor="let language of languages"
+  class="p-2 hover:bg-gray-200"
+  (click)="changeLanguage(language.code)"
+  [ngClass]="{ 'bg-gray-200': isSelected(language.code) }">
+  <img
+    class="w-6 h-6"
+    [src]="language.icon"
+    [alt]="language.code" />
+</div>

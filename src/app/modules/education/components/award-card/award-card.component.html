@@ -23,8 +23,7 @@
 
     <silvelo-card-actions>
       <a
-        color="primary"
-        mat-stroked-button
+        silvelo-button
         *ngFor="let testimonial of award.testimonials.split(',')"
         target="_blank"
         [href]="testimonial">

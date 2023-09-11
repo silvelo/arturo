@@ -17,11 +17,12 @@
       <silvelo-card-subtitle class="flex-1 text-gray-500 my-1">{{ certification.company }}</silvelo-card-subtitle>
       <silvelo-card-subtitle-right>
         <a
-          mat-icon-button
-          color="primary"
+          silvelo-icon-button
           [href]="certification.url"
           target="_blank">
-          <fa-icon [icon]="['fas', 'share-from-square']" />
+          <fa-icon
+            size="lg"
+            [icon]="['fas', 'share-from-square']" />
         </a>
       </silvelo-card-subtitle-right>
     </silvelo-card-title-group>

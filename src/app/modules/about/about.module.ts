@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 
 import { AboutRoutingModule } from '@about/about-routing.module';
-import { AboutComponent } from '@about/pages/about/about.component';
-import { LazySharedModule } from '@shared/lazy-shared.module';
+import { AboutPage } from '@about/pages/about/about.page';
+import { SkillsService } from '@data/skills/skills.service';
+import { LazySharedModule } from '@lazy-shared/lazy-shared.module';
 
 @NgModule({
-  declarations: [AboutComponent],
+  declarations: [AboutPage],
   imports: [AboutRoutingModule, LazySharedModule],
+  providers: [SkillsService],
 })
 export class AboutModule {}

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ContentLayoutComponent } from '@app/layout/content-layout/content-layout.component';
+import { ContentLayoutComponent } from '@core/components/content-layout/content-layout.component';
 
 const routes: Routes = [
   {
@@ -29,7 +29,7 @@ const routes: Routes = [
       },
     ],
   },
-  { path: '**', redirectTo: '', pathMatch: 'full' },
+  { path: '**', redirectTo: '' },
 ];
 
 @NgModule({

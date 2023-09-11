@@ -1,0 +1,14 @@
+<button
+  (click)="toggle.emit()"
+  aria-label="menu">
+  <fa-icon
+    size="xl"
+    [icon]="['fas', 'bars']" />
+</button>
+
+<section class="flex-1">
+  <img
+    class="min-[400px]:h-16 h-8 mx-auto"
+    [src]="this.themeModeService.logoImage | async"
+    alt="Logo" />
+</section>

@@ -1,7 +1,8 @@
 {
   "extends": "./node_modules/gts/",
   "rules": {
-    "max-classes-per-file": ["error", 1]
+    "max-classes-per-file": ["error", 1],
+    "@angular-eslint/no-host-metadata-property": ["error", { "allowStatic": true }]
   },
   "overrides": [
     {

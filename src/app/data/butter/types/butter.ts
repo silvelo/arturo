@@ -16,7 +16,13 @@ export interface Metadata {
 }
 
 export interface Sidenav {
+  exact: boolean;
   link: string;
   name: string;
   icon: IconName;
+}
+
+export interface Language {
+  code: string;
+  icon: string;
 }

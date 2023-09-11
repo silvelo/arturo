@@ -10,6 +10,7 @@
         <silvelo-card-title>{{ portfolio.title }}</silvelo-card-title>
         <silvelo-card-title-right>
           <a
+            silvelo-icon-button
             [href]="portfolio.url"
             target="_blank">
             <fa-icon
@@ -20,7 +21,7 @@
         <silvelo-card-subtitle class="flex flex-wrap gap-2">
           <div
             *ngFor="let lang of portfolio.languages"
-            class="inline-block font-bold rounded p-1 text-xs text-black"
+            class="inline-block font-bold rounded p-1 text-xs text-slate-900 dark:text-white tracking-tight"
             [ngStyle]="{ 'background-color': lang.color }">
             {{ lang.language }}
           </div>

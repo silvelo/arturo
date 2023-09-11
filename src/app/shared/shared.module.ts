@@ -1,11 +1,15 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { TranslocoModule } from '@ngneat/transloco';
+import { CardComponent } from '@shared/components/card/card.component';
+import { CardTitleDirective } from '@shared/directives/card-title.directive';
 
-import { IconsModule } from '@root/src/app/shared/icons/icons.module';
-import { MaterialModule } from '@shared/material/material.module';
+import { RouterModule } from '@angular/router';
+import { IconsModule } from '@shared/icons/icons.module';
+import { ButtonDirective } from './directives/button.directive';
 
 @NgModule({
-  exports: [CommonModule, /* FIXME: Reduce 66k*/ IconsModule, /*FIXME: Reduce: 127k  */ MaterialModule, TranslocoModule],
+  declarations: [CardComponent, ButtonDirective, CardTitleDirective, ButtonDirective],
+  exports: [CardComponent, ButtonDirective, CardTitleDirective, CommonModule, RouterModule, /* FIXME: Reduce 66k*/ IconsModule, TranslocoModule],
 })
 export class SharedModule {}

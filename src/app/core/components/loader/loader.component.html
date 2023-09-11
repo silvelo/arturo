@@ -1,10 +1,10 @@
 <ng-container *transloco="let t">
-  <div class="block bg-white shadow-lg rounded-xl p-4">
+  <silvelo-card>
     <fa-icon
       size="xl"
       class="mr-4"
       [icon]="['fas', 'circle-notch']"
       [spin]="true" />
-    <span class="text-lg text-gray-800 font-bold leading-none">{{ t('common.waitMessage') }}</span>
-  </div>
+    <silvelo-card-title>{{ t('common.waitMessage') }} </silvelo-card-title>
+  </silvelo-card>
 </ng-container>
