@@ -1,6 +1,7 @@
 <button
   (click)="toggle.emit()"
-  aria-label="menu">
+  aria-label="menu"
+  class="mx-8">
   <fa-icon
     size="xl"
     [icon]="['fas', 'bars']" />
@@ -8,7 +9,7 @@
 
 <section class="flex-1">
   <img
-    class="min-[400px]:h-16 h-8 mx-auto"
+    class="mx-auto max-h-12"
     [src]="this.themeModeService.logoImage | async"
     alt="Logo" />
 </section>
