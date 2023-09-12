@@ -2,11 +2,14 @@
   class="md:hidden z-50"
   (toggle)="onToggle()" />
 <div class="flex h-full overflow-hidden">
-  <silvelo-navbar
-    #sidebar
-    (toggle)="onClick()"
-    class="md:flex hidden z-50"
-    [ngClass]="{ hidden: isClosed, flex: !isClosed }" />
+  <section
+    class="md:flex hidden z-50 relative md:static"
+    [ngClass]="{ hidden: isClosed, flex: !isClosed }">
+    <silvelo-navbar
+      class="absolute h-full md:static"
+      #sidebar
+      (toggle)="onClick()" />
+  </section>
   <section class="h-full flex w-full">
     <router-outlet />
   </section>
