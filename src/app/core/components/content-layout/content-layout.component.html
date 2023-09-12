@@ -1,10 +1,11 @@
 <silvelo-header
-  class="md:hidden"
+  class="md:hidden z-50"
   (toggle)="onToggle()" />
 <div class="flex h-full overflow-hidden">
   <silvelo-navbar
-    (click)="onClose()"
-    class="md:flex hidden"
+    #sidebar
+    (toggle)="onClick()"
+    class="md:flex hidden z-50"
     [ngClass]="{ hidden: isClosed, flex: !isClosed }" />
   <section class="h-full flex w-full">
     <router-outlet />
