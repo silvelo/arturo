@@ -5,7 +5,7 @@ import { ThemeModeService } from '@core/services/theme-mode.service';
   selector: 'silvelo-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
-  host: { class: 'flex px-4 bg-white dark:bg-slate-800' },
+  host: { class: 'bg-white dark:bg-slate-800 h-14 flex shadow-xl' },
 })
 export class HeaderComponent {
   @Output() toggle = new EventEmitter();

@@ -6,6 +6,7 @@
 
   <section class="flex flex-col flex-1 justify-center">
     <a
+      (click)="toggle.emit()"
       *ngFor="let nav of sidenav"
       mat-list-item
       [routerLinkActiveOptions]="{ exact: nav.exact }"
