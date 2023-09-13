@@ -8,7 +8,7 @@
         [alt]="portfolio.title" />
       <silvelo-card-title-group>
         <silvelo-card-title>{{ portfolio.title }}</silvelo-card-title>
-        <silvelo-card-title-right>
+        <silvelo-card-title-right class="flex">
           <a
             silvelo-icon-button
             [href]="portfolio.url"
@@ -16,6 +16,15 @@
             <fa-icon
               size="xl"
               [icon]="['fab', 'github']" />
+          </a>
+          <a
+            *ngIf="portfolio.project"
+            silvelo-icon-button
+            [href]="portfolio.project"
+            target="_blank">
+            <fa-icon
+              size="xl"
+              [icon]="['fas', 'link']" />
           </a>
         </silvelo-card-title-right>
         <silvelo-card-subtitle class="flex flex-wrap gap-2">
