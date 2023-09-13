@@ -14,6 +14,7 @@ import {
   faFileLines,
   faGraduationCap,
   faHome,
+  faLink,
   faShareFromSquare,
   faStar,
   faStarHalf,
@@ -48,7 +49,8 @@ export class IconsModule {
       faFileLines,
       faCircleNotch,
       faSun,
-      faMoon
+      faMoon,
+      faLink
     );
   }
 }

@@ -7,6 +7,7 @@ import { PortfolioService } from '@data/portfolio/portfolio.service';
   selector: 'silvelo-portfolio',
   templateUrl: './portfolio.page.html',
   styleUrls: ['./portfolio.page.scss'],
+  host: { class: 'flex flex-col gap-4 p-4 overflow-auto' },
 })
 export class PortfolioPage {
   public portfolioList: Portfolio[] = [];

@@ -5,6 +5,7 @@ export interface Portfolio extends Metadata {
   title: string;
   url: string;
   photo?: string;
+  project?: string;
   description: string;
   languages: Skill[];
 }

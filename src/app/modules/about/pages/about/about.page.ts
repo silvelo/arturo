@@ -13,6 +13,7 @@ import { forkJoin } from 'rxjs';
   selector: 'silvelo-about',
   templateUrl: './about.page.html',
   styleUrls: ['./about.page.scss'],
+  host: { class: 'flex flex-col p-4 overflow-auto' },
 })
 export class AboutPage {
   public me?: Me;
