@@ -1,3 +1,10 @@
+## [3.10.1](https://github.com/silvelo/arturo/compare/v3.10.0...v3.10.1) (2023-10-16)
+
+
+### Bug Fixes
+
+* rename project ([de531bb](https://github.com/silvelo/arturo/commit/de531bb74295062627aaf80f785c5fd614854157))
+
 # [3.10.0](https://github.com/silvelo/silvelo.github.io/compare/v3.9.2...v3.10.0) (2023-09-13)
 
 
