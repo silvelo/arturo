@@ -1,5 +1,5 @@
 {
-  "name": "silvelo.github.io",
+  "name": "arturo",
   "version": "3.10.0",
   "engines": {
     "npm": ">= 9",
@@ -15,7 +15,7 @@
     "fix": "gts fix",
     "build:prod": "ng build --configuration production",
     "build:stats": "ng build --stats-json",
-    "build:analyze": "npm run build:stats && webpack-bundle-analyzer ./dist/silvelo-github-io/stats.json",
+    "build:analyze": "npm run build:stats && webpack-bundle-analyzer ./dist/arturo/stats.json",
     "watch": "ng build --watch --configuration development",
     "test": "echo \"Error: no test specified\" && exit 0"
   },
